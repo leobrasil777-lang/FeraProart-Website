@@ -1,0 +1,15 @@
+<svg width="756" height="1134" viewBox="0 0 756 1134" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder local de barretina preta com pluma">
+  <path d="M391 75C451 180 458 277 414 366" stroke="#1A1919" stroke-width="34" stroke-linecap="round"/>
+  <path d="M424 96C540 230 534 361 418 456" stroke="#2B2B2B" stroke-width="28" stroke-linecap="round"/>
+  <path d="M365 114C303 231 316 349 402 461" stroke="#111" stroke-width="24" stroke-linecap="round"/>
+  <path d="M405 82C400 236 396 372 398 542" stroke="#C8CDD2" stroke-width="18" stroke-linecap="round"/>
+  <path d="M246 412C246 337 307 276 382 276C457 276 518 337 518 412V491H246V412Z" fill="#151515" stroke="#1A1919" stroke-width="10"/>
+  <path d="M219 468H545C578 468 606 494 609 527L642 883C649 957 591 1021 517 1021H247C173 1021 115 957 122 883L155 527C158 494 186 468 219 468Z" fill="#111" stroke="#1A1919" stroke-width="12"/>
+  <path d="M151 569H613" stroke="#D4D8DC" stroke-width="36" stroke-linecap="round"/>
+  <path d="M160 635H604" stroke="#F3F4F5" stroke-width="20" stroke-linecap="round"/>
+  <path d="M207 552C245 613 519 615 558 552" stroke="#8B9095" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="382" cy="734" rx="106" ry="126" fill="#1A1919" stroke="#D4D8DC" stroke-width="14"/>
+  <path d="M310 697C347 724 418 724 455 697" stroke="#F2F2F2" stroke-width="14" stroke-linecap="round"/>
+  <path d="M287 885H477" stroke="#D4D8DC" stroke-width="18" stroke-linecap="round"/>
+  <path d="M232 1012C261 1086 504 1086 532 1012" stroke="#1A1919" stroke-width="36" stroke-linecap="round"/>
+</svg>
