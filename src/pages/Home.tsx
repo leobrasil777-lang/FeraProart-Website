@@ -1,36 +1,9 @@
 import CTAButton from '../components/CTAButton/CTAButton'
 import Container from '../components/Container/Container'
 import HeroSection from '../components/HeroSection/HeroSection'
-import ProductCard from '../components/ProductCard/ProductCard'
 import SectionTitle from '../components/SectionTitle/SectionTitle'
+import HomeServicesSection from '../components/HomeServicesSection/HomeServicesSection'
 import './Home.css'
-
-const categories = [
-  {
-    title: 'Uniformes',
-    description: 'Fardamentos sob medida para bandas, fanfarras, escolas e equipes institucionais.',
-    href: '/uniformes',
-    label: 'Linha têxtil',
-  },
-  {
-    title: 'Calçados',
-    description: 'Botas, sapatos e modelos de apoio para apresentações, desfiles e rotinas oficiais.',
-    href: '/calcados',
-    label: 'Linha operacional',
-  },
-  {
-    title: 'Acessórios',
-    description: 'Complementos que padronizam a composição visual com acabamento elegante.',
-    href: '/acessorios',
-    label: 'Linha complementar',
-  },
-  {
-    title: 'Barretinas e Quepes',
-    description: 'Peças de impacto para cerimônias, regências, balizas e apresentações formais.',
-    href: '/barretinas-e-quepes',
-    label: 'Linha cerimonial',
-  },
-]
 
 const institutions = ['Bandas', 'Fanfarras', 'Escolas', 'Prefeituras']
 
@@ -55,23 +28,7 @@ function Home() {
         />
       </div>
 
-      <section className="home-section home-section--products section-light">
-        <Container>
-          <div className="home-section-heading-row">
-            <SectionTitle
-              eyebrow="Produtos"
-              title="Categorias para compor a identidade da sua instituição"
-              subtitle="Linhas organizadas para apresentar a Fera Proart com a mesma leitura premium e institucional do protótipo."
-            />
-            <span className="home-section-number" aria-hidden="true">01</span>
-          </div>
-          <div className="home-product-grid">
-            {categories.map((category, index) => (
-              <ProductCard key={category.title} {...category} mediaLabel={`Placeholder visual: produto ${index + 1}`} />
-            ))}
-          </div>
-        </Container>
-      </section>
+      <HomeServicesSection />
 
       <section className="home-section home-section--bid section-dark">
         <Container className="home-split">
