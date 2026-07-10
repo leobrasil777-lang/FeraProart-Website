@@ -8,25 +8,25 @@ import './Home.css'
 const categories = [
   {
     title: 'Uniformes',
-    description: 'Peças institucionais com presença, conforto e acabamento premium.',
+    description: 'Fardamentos sob medida para bandas, fanfarras, escolas e equipes institucionais.',
     href: '/uniformes',
     label: 'Linha têxtil',
   },
   {
     title: 'Calçados',
-    description: 'Modelos para rotinas formais, operacionais e cerimônias.',
+    description: 'Botas, sapatos e modelos de apoio para apresentações, desfiles e rotinas oficiais.',
     href: '/calcados',
     label: 'Linha operacional',
   },
   {
     title: 'Acessórios',
-    description: 'Complementos para composição completa da identidade visual.',
+    description: 'Complementos que padronizam a composição visual com acabamento elegante.',
     href: '/acessorios',
     label: 'Linha complementar',
   },
   {
     title: 'Barretinas e Quepes',
-    description: 'Itens de destaque para bandas, fanfarras e apresentações oficiais.',
+    description: 'Peças de impacto para cerimônias, regências, balizas e apresentações formais.',
     href: '/barretinas-e-quepes',
     label: 'Linha cerimonial',
   },
@@ -43,26 +43,31 @@ const impactNumbers = [
 function Home() {
   return (
     <>
-      <HeroSection
-        eyebrow="Fera Proart"
-        title="Presença institucional para grandes apresentações."
-        subtitle="Uniformes, calçados e acessórios desenvolvidos para bandas, fanfarras e instituições que valorizam tradição, elegância e excelência."
-        primaryButtonLabel="Conhecer produtos"
-        primaryButtonHref="/uniformes"
-        secondaryButtonLabel="Falar sobre licitação"
-        secondaryButtonHref="/licitacao"
-      />
+      <div className="home-hero-shell">
+        <HeroSection
+          eyebrow="Fera Proart"
+          title="Presença institucional para grandes apresentações."
+          subtitle="Uniformes, calçados e acessórios desenvolvidos para bandas, fanfarras e instituições que valorizam tradição, elegância e excelência."
+          primaryButtonLabel="Conhecer produtos"
+          primaryButtonHref="/uniformes"
+          secondaryButtonLabel="Falar sobre licitação"
+          secondaryButtonHref="/licitacao"
+        />
+      </div>
 
       <section className="home-section home-section--products section-light">
         <Container>
-          <SectionTitle
-            eyebrow="Produtos"
-            title="Categorias para compor a identidade da sua instituição"
-            subtitle="Uma base inicial para apresentar as principais linhas da Fera Proart de forma objetiva e elegante."
-          />
+          <div className="home-section-heading-row">
+            <SectionTitle
+              eyebrow="Produtos"
+              title="Categorias para compor a identidade da sua instituição"
+              subtitle="Linhas organizadas para apresentar a Fera Proart com a mesma leitura premium e institucional do protótipo."
+            />
+            <span className="home-section-number" aria-hidden="true">01</span>
+          </div>
           <div className="home-product-grid">
-            {categories.map((category) => (
-              <ProductCard key={category.title} {...category} />
+            {categories.map((category, index) => (
+              <ProductCard key={category.title} {...category} mediaLabel={`Placeholder visual: produto ${index + 1}`} />
             ))}
           </div>
         </Container>
@@ -74,15 +79,15 @@ function Home() {
             <SectionTitle
               eyebrow="Licitação"
               title="Apoio para processos de compra pública"
-              subtitle="Estrutura provisória para destacar atendimento consultivo, documentação e orientação para instituições públicas."
+              subtitle="Atendimento consultivo para orientar demandas, documentação e padronização de itens em compras institucionais."
             />
             <CTAButton href="/licitacao" variant="outline">
               Entender processo
             </CTAButton>
           </div>
-          <div className="home-feature-card" aria-label="Placeholder visual de licitação">
+          <div className="home-feature-card" aria-label="Resumo visual de licitação">
             <span>Documentação</span>
-            <strong>Processo claro e institucional</strong>
+            <strong>Processo claro, técnico e institucional</strong>
           </div>
         </Container>
       </section>
@@ -110,7 +115,7 @@ function Home() {
             <SectionTitle
               eyebrow="Idealizador"
               title="Uma visão criada para elevar apresentações oficiais"
-              subtitle="Bloco inicial para contar, em breve, a trajetória por trás da marca e sua relação com o universo institucional."
+              subtitle="Espaço preparado para receber o retrato e a narrativa do idealizador, preservando a composição vertical e elegante da referência."
             />
             <CTAButton href="/idealizador" variant="secondary">
               Conhecer idealizador
@@ -141,7 +146,7 @@ function Home() {
         <Container className="home-final-cta">
           <span className="home-final-cta__script highlight-font">Fera Proart</span>
           <h2>Vamos iniciar a composição da sua instituição?</h2>
-          <p>CTA provisório para direcionar o visitante ao próximo contato comercial.</p>
+          <p>Converse com a equipe e organize os próximos passos para produtos, padronização ou licitação.</p>
           <CTAButton href="/licitacao">Solicitar atendimento</CTAButton>
         </Container>
       </section>

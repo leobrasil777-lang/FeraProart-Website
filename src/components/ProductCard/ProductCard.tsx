@@ -6,14 +6,15 @@ interface ProductCardProps {
   image?: string
   href?: string
   label?: string
+  mediaLabel?: string
 }
 
-function ProductCard({ title, description, image, href, label }: ProductCardProps) {
+function ProductCard({ title, description, image, href, label, mediaLabel }: ProductCardProps) {
   const content = (
     <>
-      {image && (
-        <div className="product-card__media">
-          <img className="product-card__image" src={image} alt="" />
+      {(image || mediaLabel) && (
+        <div className="product-card__media" aria-label={mediaLabel}>
+          {image && <img className="product-card__image" src={image} alt="" />}
         </div>
       )}
       <div className="product-card__content">
