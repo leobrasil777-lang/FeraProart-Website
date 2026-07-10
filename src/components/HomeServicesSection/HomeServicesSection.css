@@ -43,22 +43,29 @@
   display: grid;
   position: relative;
   z-index: 2;
-  width: 586px;
-  gap: 36px;
-  margin-top: 64px;
+  width: 500px;
+  gap: 24px;
+  margin-top: 52px;
 }
 
 .service-category-card {
   display: flex;
-  width: 586px;
-  min-height: 186px;
+  width: 500px;
+  min-height: 144px;
   flex-direction: column;
   justify-content: flex-start;
-  border: 4px solid #1a1919;
+  border: 3px solid #1a1919;
   border-radius: 10px;
-  padding: 24px 25px 22px;
+  padding: 19px 21px 18px;
   background: #ffffff;
   color: #1a1919;
+  text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.service-category-card:focus-visible {
+  outline: 3px solid #1a1919;
+  outline-offset: 4px;
 }
 
 .service-category-card--active {
@@ -67,17 +74,17 @@
 }
 
 .service-category-card h3 {
-  margin: 0 0 16px;
-  font-size: 35px;
+  margin: 0 0 12px;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: -0.045em;
   line-height: 0.99;
 }
 
 .service-category-card p {
-  max-width: 436px;
+  max-width: 390px;
   margin: 0;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 0.99;
@@ -87,7 +94,7 @@
   position: absolute;
   z-index: 1;
   top: 260px;
-  left: 587px;
+  left: 545px;
   width: 756px;
   height: 1134px;
   pointer-events: none;
@@ -119,16 +126,16 @@
 
   .home-services-section__cards,
   .service-category-card {
-    width: clamp(470px, 44.3vw, 586px);
+    width: clamp(410px, 37.8vw, 500px);
   }
 
   .service-category-card {
-    min-height: clamp(166px, 14.1vw, 186px);
+    min-height: clamp(132px, 10.9vw, 144px);
   }
 
   .home-services-section__visual {
     top: clamp(235px, 19.7vw, 260px);
-    left: clamp(500px, 44.4vw, 587px);
+    left: clamp(455px, 41.2vw, 545px);
     width: clamp(590px, 57.2vw, 756px);
     height: auto;
     aspect-ratio: 756 / 1134;
@@ -155,26 +162,26 @@
 
   .home-services-section__cards,
   .service-category-card {
-    width: clamp(390px, 54vw, 500px);
+    width: clamp(350px, 47vw, 430px);
   }
 
   .home-services-section__cards {
-    gap: 28px;
-    margin-top: 54px;
+    gap: 22px;
+    margin-top: 46px;
   }
 
   .service-category-card {
-    min-height: 164px;
-    padding: 22px;
+    min-height: 134px;
+    padding: 18px 19px;
   }
 
   .service-category-card h3 {
-    font-size: clamp(28px, 3.7vw, 32px);
+    font-size: clamp(25px, 3.1vw, 28px);
   }
 
   .service-category-card p {
     max-width: 360px;
-    font-size: clamp(17px, 2.2vw, 19px);
+    font-size: clamp(15px, 1.9vw, 17px);
   }
 
   .home-services-section__visual {
@@ -225,18 +232,18 @@
 
   .service-category-card {
     width: 100%;
-    min-height: 158px;
-    padding: 22px 20px;
+    min-height: 132px;
+    padding: 18px 18px;
   }
 
   .service-category-card h3 {
     margin-bottom: 14px;
-    font-size: clamp(25px, 7.4vw, 28px);
+    font-size: clamp(23px, 6.7vw, 26px);
   }
 
   .service-category-card p {
     max-width: 100%;
-    font-size: clamp(16px, 4.8vw, 18px);
+    font-size: clamp(15px, 4.4vw, 17px);
     line-height: 1.08;
   }
 }
