@@ -1,0 +1,200 @@
+.home-section {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--section-spacing);
+}
+
+.home-section--products {
+  border-top: 1px solid rgba(185, 188, 193, 0.22);
+}
+
+.home-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+}
+
+.home-section--bid {
+  background:
+    radial-gradient(circle at top right, rgba(185, 188, 193, 0.18), transparent 34rem),
+    var(--color-black);
+}
+
+.home-split,
+.home-founder {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.home-split__content,
+.home-founder__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-xl);
+}
+
+.home-feature-card,
+.home-founder__portrait {
+  min-height: clamp(18rem, 36vw, 28rem);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(145deg, rgba(245, 242, 234, 0.12), rgba(185, 188, 193, 0.04)),
+    var(--color-black-soft);
+  box-shadow: var(--shadow-lg);
+}
+
+.home-feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xl);
+}
+
+.home-feature-card span,
+.home-impact-card span {
+  color: var(--color-silver);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-feature-card strong {
+  max-width: 18rem;
+  color: var(--color-off-white);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.home-institution-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-2xl);
+}
+
+.home-institution-list span {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-md) var(--spacing-lg);
+  color: var(--color-silver-dark);
+  font-weight: 600;
+  text-align: center;
+}
+
+.home-section--founder {
+  background:
+    linear-gradient(180deg, rgba(21, 21, 21, 0.92), rgba(10, 10, 10, 1)),
+    var(--color-black);
+}
+
+.home-founder {
+  grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1fr);
+}
+
+.home-founder__portrait {
+  position: relative;
+}
+
+.home-founder__portrait::after {
+  position: absolute;
+  right: var(--spacing-xl);
+  bottom: var(--spacing-xl);
+  color: var(--color-silver);
+  content: 'Imagem provisória';
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.home-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+}
+
+.home-impact-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background-color: rgba(255, 255, 255, 0.42);
+  text-align: center;
+}
+
+.home-impact-card strong {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-black);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.home-final-cta {
+  display: flex;
+  max-width: 48rem;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  text-align: center;
+}
+
+.home-final-cta__script {
+  color: var(--color-silver);
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 0.7;
+}
+
+.home-final-cta h2 {
+  margin: 0;
+  color: var(--color-off-white);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.04;
+}
+
+.home-final-cta p {
+  max-width: 34rem;
+  margin: 0;
+  color: var(--color-silver-light);
+}
+
+@media (max-width: 58rem) {
+  .home-product-grid,
+  .home-institution-list,
+  .home-impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-split,
+  .home-founder {
+    grid-template-columns: 1fr;
+  }
+
+  .home-founder__portrait {
+    order: 2;
+  }
+}
+
+@media (max-width: 36rem) {
+  .home-product-grid,
+  .home-institution-list,
+  .home-impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-institution-list span {
+    text-align: left;
+  }
+}
