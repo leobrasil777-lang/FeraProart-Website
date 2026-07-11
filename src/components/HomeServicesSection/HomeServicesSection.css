@@ -107,36 +107,55 @@
   object-position: top center;
 }
 
-@media (max-width: 82.625rem) {
+@media (min-width: 64.001rem) and (max-width: 82.5rem) {
   .home-services-section__inner {
     width: 100%;
-    min-height: clamp(920px, 108vw, 1280px);
-    padding-left: clamp(40px, 5.7vw, 75px);
+    min-height: clamp(860px, 82vw, 1080px);
+    padding: clamp(36px, 3.4vw, 45px) 0 clamp(72px, 7vw, 96px) clamp(40px, 4.6vw, 60px);
   }
 
   .home-services-section__title {
-    width: min(52.6vw, 695px);
-    font-size: clamp(56px, 5.7vw, 75px);
+    width: min(45vw, 590px);
+    min-height: clamp(116px, 10vw, 132px);
+    font-size: clamp(50px, 4.55vw, 60px);
   }
 
   .home-services-section__script {
-    width: min(62.5vw, 826px);
-    font-size: clamp(96px, 10.5vw, 139px);
+    width: min(54vw, 690px);
+    margin-top: clamp(-42px, -3.2vw, -32px);
+    font-size: clamp(82px, 8vw, 106px);
   }
 
   .home-services-section__cards,
   .service-category-card {
-    width: clamp(410px, 37.8vw, 500px);
+    width: clamp(360px, 32vw, 420px);
+  }
+
+  .home-services-section__cards {
+    gap: clamp(18px, 1.7vw, 22px);
+    margin-top: clamp(36px, 3.5vw, 46px);
   }
 
   .service-category-card {
-    min-height: clamp(132px, 10.9vw, 144px);
+    min-height: clamp(112px, 9.3vw, 124px);
+    padding: clamp(15px, 1.35vw, 18px) clamp(17px, 1.5vw, 20px);
+  }
+
+  .service-category-card h3 {
+    margin-bottom: clamp(9px, 0.9vw, 11px);
+    font-size: clamp(24px, 2.35vw, 28px);
+  }
+
+  .service-category-card p {
+    max-width: 340px;
+    font-size: clamp(14px, 1.35vw, 16px);
+    line-height: 1.05;
   }
 
   .home-services-section__visual {
-    top: clamp(235px, 19.7vw, 260px);
-    left: clamp(455px, 41.2vw, 545px);
-    width: clamp(590px, 57.2vw, 756px);
+    top: clamp(210px, 18vw, 238px);
+    left: clamp(430px, 39vw, 515px);
+    width: clamp(500px, 44.7vw, 590px);
     height: auto;
     aspect-ratio: 756 / 1134;
   }
