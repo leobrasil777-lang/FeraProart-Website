@@ -3,6 +3,7 @@ import Container from '../components/Container/Container'
 import HeroSection from '../components/HeroSection/HeroSection'
 import SectionTitle from '../components/SectionTitle/SectionTitle'
 import HomeServicesSection from '../components/HomeServicesSection/HomeServicesSection'
+import heroBanner from '../assets/images/home/hero-banner.png'
 import './Home.css'
 
 const institutions = ['Bandas', 'Fanfarras', 'Escolas', 'Prefeituras']
@@ -19,6 +20,7 @@ function Home() {
       <div className="home-hero-shell">
         <HeroSection
           className="hero-section--home"
+          backgroundImage={heroBanner}
           title="Vista sua identidade com quem vive a música."
           titleContent={(
             <>
