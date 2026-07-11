@@ -37,7 +37,7 @@
 .home-hero-shell .hero-section {
   position: relative;
   z-index: 1;
-  min-height: 882px;
+  min-height: min(760px, 100vh);
   background: transparent;
 }
 
@@ -48,35 +48,45 @@
 .home-hero-shell .hero-section__content {
   max-width: 624px;
   gap: 0;
-  padding-top: 315px;
-  padding-bottom: 120px;
+  padding-top: 230px;
+  padding-bottom: 90px;
 }
 
 .home-hero-shell .hero-section__title {
   max-width: 624px;
   margin: 0;
   color: var(--color-white);
-  font-size: clamp(3.875rem, 5.3vw, 70px);
+  font-size: clamp(3.25rem, 5vw, 64px);
   font-weight: 600;
   letter-spacing: -0.055em;
   line-height: 1;
 }
 
+.home-hero-shell .hero-section__title-line {
+  display: block;
+}
+
+.home-hero-shell .hero-section__title-line--primary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.22em;
+  white-space: nowrap;
+}
+
 .home-hero-shell .hero-section__identity {
   display: inline-block;
-  min-width: min(100%, 497px);
   color: var(--color-white);
-  font-size: 1.28em;
+  font-size: 1.06em;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 0.78;
+  line-height: 0.82;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.28);
-  transform: translateY(0.05em);
+  transform: translateY(0.03em);
 }
 
 .home-hero-shell .hero-section__actions {
   gap: 35px;
-  padding-top: 54px;
+  padding-top: 42px;
 }
 
 .home-hero-shell .hero-section__button {
@@ -415,7 +425,7 @@
 
 @media (max-width: 68rem) {
   .home-hero-shell .hero-section {
-    min-height: 760px;
+    min-height: min(680px, 100vh);
   }
 
   .home-hero-shell .container {
@@ -423,11 +433,20 @@
   }
 
   .home-hero-shell .hero-section__content {
-    padding-top: 250px;
+    padding-top: 190px;
+    padding-bottom: 78px;
   }
 
   .home-hero-shell .hero-section__title {
-    font-size: clamp(52px, 7vw, 62px);
+    font-size: clamp(46px, 6.5vw, 58px);
+  }
+}
+
+@media (max-width: 44rem) {
+  .home-hero-shell .hero-section__title-line--primary {
+    flex-wrap: wrap;
+    row-gap: 0;
+    white-space: normal;
   }
 }
 
@@ -439,7 +458,7 @@
   }
 
   .home-hero-shell .hero-section {
-    min-height: 720px;
+    min-height: 640px;
   }
 
   .home-hero-shell .container {
@@ -448,12 +467,12 @@
 
   .home-hero-shell .hero-section__content {
     max-width: 100%;
-    padding-top: 190px;
-    padding-bottom: 64px;
+    padding-top: 154px;
+    padding-bottom: 56px;
   }
 
   .home-hero-shell .hero-section__title {
-    font-size: clamp(42px, 12vw, 48px);
+    font-size: clamp(38px, 11vw, 44px);
   }
 
   .home-hero-shell .hero-section__identity {
