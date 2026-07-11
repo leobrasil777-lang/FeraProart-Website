@@ -24,7 +24,11 @@ function Home() {
           title="Vista sua identidade com quem vive a música."
           titleContent={(
             <>
-              Vista sua <span className="hero-section__identity highlight-font">identidade</span> com quem vive a música.
+              <span className="hero-section__title-line hero-section__title-line--primary">
+                <span>Vista sua</span>
+                <span className="hero-section__identity highlight-font">identidade</span>
+              </span>
+              <span className="hero-section__title-line">com quem vive a música</span>
             </>
           )}
           primaryButtonLabel="Solicitar orçamento"
