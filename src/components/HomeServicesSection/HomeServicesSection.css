@@ -16,6 +16,7 @@
   position: relative;
   z-index: 2;
   width: min(100%, 900px);
+  transform: translateY(40px);
 }
 
 .home-services-section__title {
@@ -93,10 +94,11 @@
 .home-services-section__visual {
   position: absolute;
   z-index: 1;
-  top: 195px;
-  left: 545px;
-  width: 756px;
-  height: 1134px;
+  top: 50px;
+  left: 800px;
+  width: 700px;
+  height: auto;
+  aspect-ratio: 756 / 1134;
   pointer-events: none;
 }
 
@@ -111,12 +113,12 @@
   .home-services-section__inner {
     width: 100%;
     min-height: clamp(860px, 82vw, 1080px);
-    padding: clamp(52px, 4.6vw, 61px) 0 clamp(72px, 7vw, 96px) clamp(40px, 4.6vw, 60px);
+    padding: clamp(100px, 4.6vw, 61px) 0 clamp(72px, 7vw, 96px) clamp(40px, 4.6vw, 60px);
   }
 
   .home-services-section__title {
     width: min(45vw, 590px);
-    min-height: clamp(116px, 10vw, 132px);
+    min-height: clamp(120px, 10vw, 132px);
     font-size: clamp(50px, 4.55vw, 60px);
   }
 
@@ -133,7 +135,7 @@
 
   .home-services-section__cards {
     gap: clamp(18px, 1.7vw, 22px);
-    margin-top: clamp(44px, 4.1vw, 54px);
+    margin-top: clamp(49px, 4.1vw, 54px);
   }
 
   .service-category-card {
