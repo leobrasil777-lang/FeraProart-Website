@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import CTAButton from '../CTAButton/CTAButton'
 import Container from '../Container/Container'
 import './HeroSection.css'
@@ -12,6 +13,10 @@ interface HeroSectionProps {
   secondaryButtonLabel?: string
   secondaryButtonHref?: string
   align?: 'left' | 'center'
+  className?: string
+  titleContent?: ReactNode
+  primaryButtonClassName?: string
+  secondaryButtonClassName?: string
 }
 
 function HeroSection({
@@ -24,6 +29,10 @@ function HeroSection({
   secondaryButtonLabel,
   secondaryButtonHref,
   align = 'left',
+  className = '',
+  titleContent,
+  primaryButtonClassName = '',
+  secondaryButtonClassName = '',
 }: HeroSectionProps) {
   const background = backgroundImage
     ? `linear-gradient(rgba(10, 10, 10, 0.72), rgba(10, 10, 10, 0.82)), url("${backgroundImage}")`
@@ -31,21 +40,21 @@ function HeroSection({
 
   return (
     <section
-      className={`hero-section hero-section--${align}`}
+      className={[`hero-section hero-section--${align}`, className].filter(Boolean).join(' ')}
       style={background ? { backgroundImage: background } : undefined}
     >
       <Container>
         <div className="hero-section__content">
           {eyebrow && <span className="hero-section__eyebrow">{eyebrow}</span>}
-          <h1 className="hero-section__title">{title}</h1>
+          <h1 className="hero-section__title" aria-label={title}>{titleContent ?? title}</h1>
           {subtitle && <p className="hero-section__subtitle">{subtitle}</p>}
           {(primaryButtonLabel || secondaryButtonLabel) && (
             <div className="hero-section__actions">
               {primaryButtonLabel && (
-                <CTAButton href={primaryButtonHref}>{primaryButtonLabel}</CTAButton>
+                <CTAButton href={primaryButtonHref} className={primaryButtonClassName}>{primaryButtonLabel}</CTAButton>
               )}
               {secondaryButtonLabel && (
-                <CTAButton href={secondaryButtonHref} variant="outline">
+                <CTAButton href={secondaryButtonHref} variant="outline" className={secondaryButtonClassName}>
                   {secondaryButtonLabel}
                 </CTAButton>
               )}

@@ -18,13 +18,19 @@ function Home() {
     <>
       <div className="home-hero-shell">
         <HeroSection
-          eyebrow="Fera Proart"
-          title="Presença institucional para grandes apresentações."
-          subtitle="Uniformes, calçados e acessórios desenvolvidos para bandas, fanfarras e instituições que valorizam tradição, elegância e excelência."
-          primaryButtonLabel="Conhecer produtos"
-          primaryButtonHref="/uniformes"
-          secondaryButtonLabel="Falar sobre licitação"
-          secondaryButtonHref="/licitacao"
+          className="hero-section--home"
+          title="Vista sua identidade com quem vive a música."
+          titleContent={(
+            <>
+              Vista sua <span className="hero-section__identity highlight-font">identidade</span> com quem vive a música.
+            </>
+          )}
+          primaryButtonLabel="Solicitar orçamento"
+          primaryButtonHref="/licitacao"
+          primaryButtonClassName="hero-section__button hero-section__button--primary"
+          secondaryButtonLabel="Ver catálogo"
+          secondaryButtonHref="/uniformes"
+          secondaryButtonClassName="hero-section__button hero-section__button--secondary"
         />
       </div>
 
