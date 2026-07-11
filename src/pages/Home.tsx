@@ -3,6 +3,7 @@ import Container from '../components/Container/Container'
 import HeroSection from '../components/HeroSection/HeroSection'
 import SectionTitle from '../components/SectionTitle/SectionTitle'
 import HomeServicesSection from '../components/HomeServicesSection/HomeServicesSection'
+import HomeBiddingSection from '../components/HomeBiddingSection/HomeBiddingSection'
 import heroBanner from '../assets/images/home/hero-banner.png'
 import './Home.css'
 
@@ -42,24 +43,7 @@ function Home() {
 
       <HomeServicesSection />
 
-      <section className="home-section home-section--bid section-dark">
-        <Container className="home-split">
-          <div className="home-split__content">
-            <SectionTitle
-              eyebrow="Licitação"
-              title="Apoio para processos de compra pública"
-              subtitle="Atendimento consultivo para orientar demandas, documentação e padronização de itens em compras institucionais."
-            />
-            <CTAButton href="/licitacao" variant="outline">
-              Entender processo
-            </CTAButton>
-          </div>
-          <div className="home-feature-card" aria-label="Resumo visual de licitação">
-            <span>Documentação</span>
-            <strong>Processo claro, técnico e institucional</strong>
-          </div>
-        </Container>
-      </section>
+      <HomeBiddingSection />
 
       <section className="home-section home-section--institutions section-light">
         <Container>
