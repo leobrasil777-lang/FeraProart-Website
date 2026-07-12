@@ -50,8 +50,11 @@ function HomeBiddingSection() {
       <Container className="home-bidding-section__container">
         <div className="home-bidding-section__copy">
           <h2 id="home-bidding-title" className="home-bidding-section__title">
-            <span className="home-bidding-section__title-main">Trabalhamos com</span>
-            <span className="home-bidding-section__title-script highlight-font">licitação</span>
+            <span className="home-bidding-section__title-main">Trabalhamos</span>
+            <span className="home-bidding-section__title-line">
+              <span className="home-bidding-section__title-main">com</span>
+              <span className="home-bidding-section__title-script highlight-font">licitação</span>
+            </span>
           </h2>
 
           <div className="home-bidding-section__description">
