@@ -1,22 +1,25 @@
 .home-institutions-section {
   width: 100%;
+  max-width: 100%;
   background: #ffffff;
   color: #1a1919;
   padding: clamp(2.5rem, 5vw, 4.375rem) 0 clamp(3.4375rem, 6vw, 5.625rem);
-  overflow-x: clip;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .home-institutions-section__inner {
-  width: min(100% - 48px, 1307px);
-  margin: 0 auto;
+  width: calc(100% - 48px);
+  max-width: 1307px;
+  margin-inline: auto;
+  box-sizing: border-box;
 }
 
 .home-institutions-section__title {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: clamp(0.25rem, 0.8vw, 0.75rem);
-  margin: 0;
+  display: block;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
   color: #1a1919;
   font-weight: 500;
   line-height: 0.95;
@@ -24,14 +27,17 @@
 }
 
 .home-institutions-section__title-text {
+  display: inline-block;
   font-family: var(--font-primary, 'Epilogue', sans-serif);
   font-size: clamp(2.375rem, 5.2vw, 4.6875rem);
   font-weight: 500;
   letter-spacing: -0.06em;
+  vertical-align: top;
 }
 
 .home-institutions-section__title-script {
   display: inline-block;
+  margin-left: clamp(0.25rem, 0.8vw, 0.75rem);
   color: #1a1919;
   font-family: var(--font-highlight, 'Italianno', cursive);
   font-size: clamp(3rem, 6.4vw, 6rem);
@@ -39,10 +45,12 @@
   letter-spacing: 0;
   line-height: 0.72;
   transform: translateY(-0.08em);
+  vertical-align: top;
 }
 
 .home-institutions-section__subtitle {
-  width: min(100%, 651px);
+  width: 100%;
+  max-width: 651px;
   margin: clamp(1rem, 1.8vw, 1.5rem) auto 0;
   color: #1a1919;
   font-family: var(--font-primary, 'Epilogue', sans-serif);
@@ -54,15 +62,19 @@
 
 .home-institutions-section__carousel {
   width: 100%;
+  max-width: 100%;
   margin-top: clamp(2.5rem, 5vw, 4.5rem);
   overflow: hidden;
+  contain: paint;
 }
 
 .home-institutions-section__track {
   display: flex;
   width: max-content;
+  max-width: none;
   align-items: center;
   gap: clamp(3rem, 6vw, 6.25rem);
+  margin: 0;
   animation: home-institutions-section-scroll 38s linear infinite;
   will-change: transform;
 }
@@ -81,7 +93,9 @@
 }
 
 .home-institutions-section__logo {
+  display: block;
   width: 100%;
+  max-width: 100%;
   height: 100%;
   object-fit: contain;
 }
@@ -98,11 +112,7 @@
 
 @media (max-width: 900px) {
   .home-institutions-section__inner {
-    width: min(100% - 40px, 1307px);
-  }
-
-  .home-institutions-section__title {
-    flex-wrap: wrap;
+    width: calc(100% - 40px);
   }
 
   .home-institutions-section__track {
@@ -116,11 +126,11 @@
   }
 
   .home-institutions-section__inner {
-    width: min(100% - 40px, 1307px);
+    width: calc(100% - 40px);
   }
 
-  .home-institutions-section__title {
-    gap: 0.25rem;
+  .home-institutions-section__title-script {
+    margin-left: 0.25rem;
   }
 
   .home-institutions-section__subtitle {
