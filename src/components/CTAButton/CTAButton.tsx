@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import './CTAButton.css'
 
 interface CTAButtonProps {
@@ -6,6 +7,7 @@ interface CTAButtonProps {
   href?: string
   variant?: 'primary' | 'secondary' | 'outline'
   className?: string
+  icon?: ReactNode
 }
 
 function CTAButton({
@@ -13,22 +15,38 @@ function CTAButton({
   href,
   variant = 'primary',
   className = '',
+  icon,
 }: CTAButtonProps) {
   const classes = ['cta-button', `cta-button--${variant}`, className]
     .filter(Boolean)
     .join(' ')
 
+  const content = (
+    <>
+      <span className="cta-button__label">{children}</span>
+      {icon}
+    </>
+  )
+
   if (href) {
+    if (href.startsWith('/')) {
+      return (
+        <Link className={classes} to={href}>
+          {content}
+        </Link>
+      )
+    }
+
     return (
       <a className={classes} href={href}>
-        {children}
+        {content}
       </a>
     )
   }
 
   return (
     <button className={classes} type="button">
-      {children}
+      {content}
     </button>
   )
 }

@@ -5,6 +5,7 @@ import SectionTitle from '../components/SectionTitle/SectionTitle'
 import HomeServicesSection from '../components/HomeServicesSection/HomeServicesSection'
 import HomeBiddingSection from '../components/HomeBiddingSection/HomeBiddingSection'
 import HomeInstitutionsSection from '../components/HomeInstitutionsSection/HomeInstitutionsSection'
+import HomeFounderSection from '../components/HomeFounderSection/HomeFounderSection'
 import heroBanner from '../assets/images/home/hero-banner.png'
 import './Home.css'
 
@@ -47,21 +48,7 @@ function Home() {
 
       <HomeInstitutionsSection />
 
-      <section className="home-section home-section--founder section-dark">
-        <Container className="home-founder">
-          <div className="home-founder__portrait" aria-label="Placeholder de imagem do idealizador" />
-          <div className="home-founder__content">
-            <SectionTitle
-              eyebrow="Idealizador"
-              title="Uma visão criada para elevar apresentações oficiais"
-              subtitle="Espaço preparado para receber o retrato e a narrativa do idealizador, preservando a composição vertical e elegante da referência."
-            />
-            <CTAButton href="/idealizador" variant="secondary">
-              Conhecer idealizador
-            </CTAButton>
-          </div>
-        </Container>
-      </section>
+      <HomeFounderSection />
 
       <section className="home-section home-section--impact section-light">
         <Container>
