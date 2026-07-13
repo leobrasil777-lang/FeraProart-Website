@@ -4,10 +4,10 @@ import HeroSection from '../components/HeroSection/HeroSection'
 import SectionTitle from '../components/SectionTitle/SectionTitle'
 import HomeServicesSection from '../components/HomeServicesSection/HomeServicesSection'
 import HomeBiddingSection from '../components/HomeBiddingSection/HomeBiddingSection'
+import HomeInstitutionsSection from '../components/HomeInstitutionsSection/HomeInstitutionsSection'
 import heroBanner from '../assets/images/home/hero-banner.png'
 import './Home.css'
 
-const institutions = ['Bandas', 'Fanfarras', 'Escolas', 'Prefeituras']
 
 const impactNumbers = [
   { value: '+20', label: 'anos de experiência' },
@@ -45,21 +45,7 @@ function Home() {
 
       <HomeBiddingSection />
 
-      <section className="home-section home-section--institutions section-light">
-        <Container>
-          <SectionTitle
-            eyebrow="Instituições"
-            title="Atendimento para diferentes frentes institucionais"
-            highlight="Tradição em movimento"
-            align="center"
-          />
-          <div className="home-institution-list" aria-label="Instituições atendidas">
-            {institutions.map((institution) => (
-              <span key={institution}>{institution}</span>
-            ))}
-          </div>
-        </Container>
-      </section>
+      <HomeInstitutionsSection />
 
       <section className="home-section home-section--founder section-dark">
         <Container className="home-founder">
