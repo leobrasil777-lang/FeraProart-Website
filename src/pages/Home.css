@@ -251,55 +251,6 @@
   line-height: 1;
 }
 
-.home-section--institutions {
-  background:
-    radial-gradient(circle at 50% 0, rgba(217, 219, 222, 0.55), transparent 28rem),
-    var(--color-off-white);
-}
-
-.home-institution-carousel {
-  width: 100%;
-  margin-top: clamp(2.5rem, 5vw, 4rem);
-  overflow: hidden;
-}
-
-.home-institution-carousel__track {
-  display: flex;
-  width: max-content;
-  align-items: center;
-  animation: home-institution-carousel 36s linear infinite;
-  will-change: transform;
-}
-
-.home-institution-carousel:hover .home-institution-carousel__track {
-  animation-play-state: paused;
-}
-
-.home-institution-carousel__item {
-  display: flex;
-  flex: 0 0 clamp(12rem, 20vw, 18rem);
-  align-items: center;
-  justify-content: center;
-  margin-right: clamp(4rem, 8vw, 8rem);
-}
-
-.home-institution-carousel__item img {
-  display: block;
-  width: 100%;
-  height: clamp(4rem, 8vw, 7rem);
-  object-fit: contain;
-}
-
-@keyframes home-institution-carousel {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 .home-section--founder {
   background:
     linear-gradient(180deg, rgba(21, 21, 21, 0.94), rgba(10, 10, 10, 1)),
@@ -428,17 +379,6 @@
   }
 }
 
-@media (max-width: 58rem) {
-  .home-institution-carousel__item {
-    flex-basis: clamp(9rem, 26vw, 12rem);
-    margin-right: clamp(3rem, 7vw, 5rem);
-  }
-
-  .home-institution-carousel__item img {
-    height: clamp(3.5rem, 9vw, 5.5rem);
-  }
-}
-
 @media (max-width: 36rem) {
   .home-section-heading-row {
     display: block;
@@ -451,25 +391,6 @@
   .home-product-grid,
   .home-impact-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 36rem) {
-  .home-institution-carousel {
-    margin-top: 2rem;
-  }
-
-  .home-institution-carousel__track {
-    animation-duration: 32s;
-  }
-
-  .home-institution-carousel__item {
-    flex-basis: 8rem;
-    margin-right: 2.5rem;
-  }
-
-  .home-institution-carousel__item img {
-    height: 3.75rem;
   }
 }
 
@@ -499,7 +420,6 @@
     white-space: normal;
   }
 }
-
 
 @media (max-width: 36rem) {
   .home-hero-shell {

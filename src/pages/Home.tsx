@@ -1,22 +1,12 @@
 import CTAButton from '../components/CTAButton/CTAButton'
 import Container from '../components/Container/Container'
-import HeroSection from '../components/HeroSection/HeroSection'
 import SectionTitle from '../components/SectionTitle/SectionTitle'
+import HeroSection from '../components/HeroSection/HeroSection'
 import HomeServicesSection from '../components/HomeServicesSection/HomeServicesSection'
 import HomeBiddingSection from '../components/HomeBiddingSection/HomeBiddingSection'
+import HomeInstitutionsSection from '../components/HomeInstitutionsSection/HomeInstitutionsSection'
 import heroBanner from '../assets/images/home/hero-banner.png'
-import logoApae from '../assets/icons/home/logo-apae.svg'
-import logoGoias from '../assets/icons/home/logo-goias.svg'
-import logoEinsten from '../assets/icons/home/logo-einsten.svg'
 import './Home.css'
-
-const institutions = [
-  { name: 'APAE', image: logoApae, alt: 'Logo APAE' },
-  { name: 'Goiás', image: logoGoias, alt: 'Logo Governo de Goiás' },
-  { name: 'Einstein', image: logoEinsten, alt: 'Logo Einstein' },
-]
-
-const institutionCarouselItems = [...institutions, ...institutions]
 
 const impactNumbers = [
   { value: '+20', label: 'anos de experiência' },
@@ -54,29 +44,7 @@ function Home() {
 
       <HomeBiddingSection />
 
-      <section className="home-section home-section--institutions section-light">
-        <Container>
-          <SectionTitle
-            eyebrow="Instituições"
-            title="Atendimento para diferentes frentes institucionais"
-            highlight="Tradição em movimento"
-            align="center"
-          />
-          <div className="home-institution-carousel" aria-label="Instituições atendidas">
-            <div className="home-institution-carousel__track">
-              {institutionCarouselItems.map((institution, index) => (
-                <div
-                  className="home-institution-carousel__item"
-                  key={`${institution.name}-${index}`}
-                  aria-hidden={index >= institutions.length}
-                >
-                  <img src={institution.image} alt={institution.alt} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
+      <HomeInstitutionsSection />
 
       <section className="home-section home-section--founder section-dark">
         <Container className="home-founder">

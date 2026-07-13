@@ -1,0 +1,91 @@
+.home-institutions-section {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding-block: var(--section-spacing);
+  background:
+    radial-gradient(circle at 50% 0, rgba(217, 219, 222, 0.55), transparent 28rem),
+    var(--color-off-white);
+}
+
+.home-institutions-section__carousel {
+  width: 100%;
+  max-width: 100%;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  overflow: hidden;
+}
+
+.home-institutions-section__track {
+  display: flex;
+  width: max-content;
+  max-width: none;
+  align-items: center;
+  animation: home-institutions-section-scroll 42s linear infinite;
+  will-change: transform;
+}
+
+.home-institutions-section__carousel:hover .home-institutions-section__track {
+  animation-play-state: paused;
+}
+
+.home-institutions-section__logo-card {
+  display: flex;
+  flex: 0 0 clamp(9rem, 16vw, 14rem);
+  align-items: center;
+  justify-content: center;
+  margin-right: clamp(2rem, 5vw, 5rem);
+  border: 1px solid rgba(119, 123, 130, 0.16);
+  border-radius: 1.25rem;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.home-institutions-section__logo {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: clamp(3.5rem, 7vw, 6rem);
+  object-fit: contain;
+}
+
+@keyframes home-institutions-section-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (max-width: 58rem) {
+  .home-institutions-section__logo-card {
+    flex-basis: clamp(8rem, 24vw, 11rem);
+    margin-right: clamp(1.5rem, 5vw, 3rem);
+  }
+
+  .home-institutions-section__logo {
+    height: clamp(3rem, 8vw, 4.75rem);
+  }
+}
+
+@media (max-width: 36rem) {
+  .home-institutions-section__carousel {
+    margin-top: 2rem;
+  }
+
+  .home-institutions-section__track {
+    animation-duration: 36s;
+  }
+
+  .home-institutions-section__logo-card {
+    flex-basis: 7.5rem;
+    margin-right: 1.25rem;
+    padding: 0.875rem;
+  }
+
+  .home-institutions-section__logo {
+    height: 3.25rem;
+  }
+}
