@@ -109,11 +109,11 @@
 
 .home-bidding-section__image-wrap {
   position: absolute;
-  top: 54px;
-  right: -132px;
+  top: 10px;
+  right: -40px;
   z-index: 1;
-  width: min(56vw, 690px);
-  height: 560px;
+  width: min(68vw, 900px);
+  height: 670px;
   pointer-events: none;
 }
 

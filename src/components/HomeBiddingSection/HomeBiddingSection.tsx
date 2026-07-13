@@ -1,9 +1,9 @@
 import Container from '../Container/Container'
-import biddingImage from '../../assets/images/home/home-licitacao-martelo.svg'
-import supplierImage from '../../assets/images/home/beneficio-fornecedor-completo.svg'
-import standardImage from '../../assets/images/home/beneficio-padronizacao-visual.svg'
-import simplePurchaseImage from '../../assets/images/home/beneficio-compra-simples.svg'
-import whatsappIcon from '../../assets/icons/whatsapp.svg'
+import biddingImage from '../../assets/images/home/home-licitacao.png'
+import supplierImage from '../../assets/icons/home/beneficio-fornecedor-completo.svg'
+import standardImage from '../../assets/icons/home/beneficio-padronizacao-visual.svg'
+import simplePurchaseImage from '../../assets/icons/home/compra-simples.svg'
+import whatsappIcon from '../../assets/icons/home/whatsapp.svg'
 import './HomeBiddingSection.css'
 
 type BiddingBenefitProps = {
