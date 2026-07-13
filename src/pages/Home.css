@@ -257,21 +257,47 @@
     var(--color-off-white);
 }
 
-.home-institution-list {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--spacing-md);
-  margin-top: clamp(2rem, 5vw, 3.5rem);
+.home-institution-carousel {
+  width: 100%;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  overflow: hidden;
 }
 
-.home-institution-list span {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
-  padding: var(--spacing-md) var(--spacing-lg);
-  background: rgba(255, 255, 255, 0.36);
-  color: var(--color-silver-dark);
-  font-weight: 600;
-  text-align: center;
+.home-institution-carousel__track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: home-institution-carousel 36s linear infinite;
+  will-change: transform;
+}
+
+.home-institution-carousel:hover .home-institution-carousel__track {
+  animation-play-state: paused;
+}
+
+.home-institution-carousel__item {
+  display: flex;
+  flex: 0 0 clamp(12rem, 20vw, 18rem);
+  align-items: center;
+  justify-content: center;
+  margin-right: clamp(4rem, 8vw, 8rem);
+}
+
+.home-institution-carousel__item img {
+  display: block;
+  width: 100%;
+  height: clamp(4rem, 8vw, 7rem);
+  object-fit: contain;
+}
+
+@keyframes home-institution-carousel {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .home-section--founder {
@@ -388,7 +414,6 @@
   }
 
   .home-product-grid,
-  .home-institution-list,
   .home-impact-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -403,6 +428,17 @@
   }
 }
 
+@media (max-width: 58rem) {
+  .home-institution-carousel__item {
+    flex-basis: clamp(9rem, 26vw, 12rem);
+    margin-right: clamp(3rem, 7vw, 5rem);
+  }
+
+  .home-institution-carousel__item img {
+    height: clamp(3.5rem, 9vw, 5.5rem);
+  }
+}
+
 @media (max-width: 36rem) {
   .home-section-heading-row {
     display: block;
@@ -413,13 +449,27 @@
   }
 
   .home-product-grid,
-  .home-institution-list,
   .home-impact-grid {
     grid-template-columns: 1fr;
   }
+}
 
-  .home-institution-list span {
-    text-align: left;
+@media (max-width: 36rem) {
+  .home-institution-carousel {
+    margin-top: 2rem;
+  }
+
+  .home-institution-carousel__track {
+    animation-duration: 32s;
+  }
+
+  .home-institution-carousel__item {
+    flex-basis: 8rem;
+    margin-right: 2.5rem;
+  }
+
+  .home-institution-carousel__item img {
+    height: 3.75rem;
   }
 }
 
@@ -449,6 +499,7 @@
     white-space: normal;
   }
 }
+
 
 @media (max-width: 36rem) {
   .home-hero-shell {
