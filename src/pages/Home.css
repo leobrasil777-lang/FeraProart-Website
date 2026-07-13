@@ -186,24 +186,21 @@
     var(--color-black);
 }
 
-.home-split,
-.home-founder {
+.home-split {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
   align-items: center;
   gap: clamp(2rem, 6vw, 5rem);
 }
 
-.home-split__content,
-.home-founder__content {
+.home-split__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--spacing-xl);
 }
 
-.home-feature-card,
-.home-founder__portrait {
+.home-feature-card {
   min-height: clamp(22rem, 38vw, 32rem);
   border: 1px solid var(--color-border-light);
   border-radius: clamp(1.25rem, 3vw, 2.25rem);
@@ -272,49 +269,6 @@
   color: var(--color-silver-dark);
   font-weight: 600;
   text-align: center;
-}
-
-.home-section--founder {
-  background:
-    linear-gradient(180deg, rgba(21, 21, 21, 0.94), rgba(10, 10, 10, 1)),
-    var(--color-black);
-}
-
-.home-founder {
-  grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1fr);
-}
-
-.home-founder__portrait {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 50% 24%, rgba(245, 242, 234, 0.18), transparent 11rem),
-    linear-gradient(180deg, rgba(245, 242, 234, 0.11), rgba(185, 188, 193, 0.03)),
-    var(--color-black-soft);
-}
-
-.home-founder__portrait::before {
-  position: absolute;
-  right: 22%;
-  bottom: 0;
-  width: 52%;
-  height: 78%;
-  border: 1px solid rgba(245, 242, 234, 0.18);
-  border-bottom: 0;
-  border-radius: 999px 999px 0 0;
-  background: linear-gradient(180deg, rgba(245, 242, 234, 0.16), rgba(185, 188, 193, 0.06));
-  content: '';
-}
-
-.home-founder__portrait::after {
-  position: absolute;
-  right: var(--spacing-xl);
-  bottom: var(--spacing-xl);
-  color: var(--color-silver);
-  content: 'Imagem provisória';
-  font-size: 0.75rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
 }
 
 .home-impact-grid {
@@ -393,13 +347,8 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .home-split,
-  .home-founder {
+  .home-split {
     grid-template-columns: 1fr;
-  }
-
-  .home-founder__portrait {
-    order: 2;
   }
 }
 
