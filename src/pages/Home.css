@@ -230,8 +230,7 @@
   content: '';
 }
 
-.home-feature-card span,
-.home-impact-card span {
+.home-feature-card span {
   color: var(--color-silver);
   font-size: 0.75rem;
   font-weight: 600;
@@ -269,31 +268,6 @@
   color: var(--color-silver-dark);
   font-weight: 600;
   text-align: center;
-}
-
-.home-impact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--spacing-lg);
-  margin-top: clamp(2rem, 5vw, 3.5rem);
-}
-
-.home-impact-card {
-  border: 1px solid rgba(119, 123, 130, 0.24);
-  border-radius: 1.5rem;
-  padding: clamp(1.75rem, 4vw, 3rem);
-  background-color: rgba(255, 255, 255, 0.46);
-  text-align: center;
-}
-
-.home-impact-card strong {
-  display: block;
-  margin-bottom: var(--spacing-sm);
-  color: var(--color-black);
-  font-size: clamp(3rem, 6vw, 5.25rem);
-  font-weight: 500;
-  letter-spacing: -0.07em;
-  line-height: 0.9;
 }
 
 .home-section--final-cta {
@@ -342,8 +316,7 @@
   }
 
   .home-product-grid,
-  .home-institution-list,
-  .home-impact-grid {
+  .home-institution-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -362,8 +335,7 @@
   }
 
   .home-product-grid,
-  .home-institution-list,
-  .home-impact-grid {
+  .home-institution-list {
     grid-template-columns: 1fr;
   }
 

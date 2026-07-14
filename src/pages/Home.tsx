@@ -1,20 +1,14 @@
 import CTAButton from '../components/CTAButton/CTAButton'
 import Container from '../components/Container/Container'
 import HeroSection from '../components/HeroSection/HeroSection'
-import SectionTitle from '../components/SectionTitle/SectionTitle'
 import HomeServicesSection from '../components/HomeServicesSection/HomeServicesSection'
 import HomeBiddingSection from '../components/HomeBiddingSection/HomeBiddingSection'
 import HomeInstitutionsSection from '../components/HomeInstitutionsSection/HomeInstitutionsSection'
 import HomeFounderSection from '../components/HomeFounderSection/HomeFounderSection'
+import HomeMetricsSection from '../components/HomeMetricsSection/HomeMetricsSection'
 import heroBanner from '../assets/images/home/hero-banner.png'
 import './Home.css'
 
-
-const impactNumbers = [
-  { value: '+20', label: 'anos de experiência' },
-  { value: '+100', label: 'instituições atendidas' },
-  { value: 'BR', label: 'atuação nacional' },
-]
 
 function Home() {
   return (
@@ -50,23 +44,7 @@ function Home() {
 
       <HomeFounderSection />
 
-      <section className="home-section home-section--impact section-light">
-        <Container>
-          <SectionTitle
-            eyebrow="Impacto"
-            title="Números que ajudam a apresentar a dimensão da marca"
-            align="center"
-          />
-          <div className="home-impact-grid">
-            {impactNumbers.map((item) => (
-              <article className="home-impact-card" key={item.label}>
-                <strong>{item.value}</strong>
-                <span>{item.label}</span>
-              </article>
-            ))}
-          </div>
-        </Container>
-      </section>
+      <HomeMetricsSection />
 
       <section className="home-section home-section--final-cta section-dark">
         <Container className="home-final-cta">
