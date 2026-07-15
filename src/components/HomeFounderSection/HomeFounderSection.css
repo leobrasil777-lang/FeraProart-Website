@@ -24,6 +24,7 @@
   flex-direction: column;
   align-items: flex-start;
   margin: clamp(54px, 6vw, 78px) 0 0;
+  transform: translateY(clamp(16px, 2vw, 24px));
   color: #1a1919;
   font-family: var(--font-primary);
   font-size: clamp(48px, 4.6vw, 64px);
@@ -155,6 +156,7 @@
   .home-founder-section__title {
     width: 100%;
     margin: 0;
+    transform: none;
     font-size: clamp(48px, 8vw, 56px);
   }
 
