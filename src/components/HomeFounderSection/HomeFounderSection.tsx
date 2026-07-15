@@ -1,5 +1,6 @@
 import CTAButton from '../CTAButton/CTAButton'
 import Container from '../Container/Container'
+import founderImage from '../../assets/images/home/home-idealizador.png'
 import './HomeFounderSection.css'
 
 const founderDescription = 'Fernando Rabelo é maestro, trompetista e idealizador da Fera Proart. Fundou e regeu diversas corporações musicais e, em 2004, transformou sua vivência na música e na confecção em uma empresa especializada no universo de bandas e fanfarras.'
@@ -22,15 +23,13 @@ function HomeFounderSection() {
           <span className="home-founder-section__title-script highlight-font">idealizador</span>
         </h2>
 
-        <div className="home-founder-section__portrait-wrap">
-          <div
-            className="home-founder-section__portrait-placeholder"
-            role="img"
-            aria-label="Fernando Rabelo, maestro e idealizador da Fera Proart"
-          >
-            <span>Retrato de Fernando Rabelo pendente</span>
-          </div>
-        </div>
+      <div className="home-founder-section__portrait-wrap">
+        <img
+          className="home-founder-section__portrait"
+          src={founderImage}
+          alt="Fernando Rabelo, maestro e idealizador da Fera Proart"
+        />
+      </div>
 
         <div className="home-founder-section__content">
           <p className="home-founder-section__description">{founderDescription}</p>
