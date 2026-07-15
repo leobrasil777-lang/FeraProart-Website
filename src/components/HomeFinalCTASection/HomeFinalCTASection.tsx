@@ -1,5 +1,6 @@
 import CTAButton from '../CTAButton/CTAButton'
 import Container from '../Container/Container'
+import homeNotebookImage from '../../assets/images/home/home-notebook.png'
 import './HomeFinalCTASection.css'
 
 const finalCtaHref = '/licitacao'
@@ -22,7 +23,12 @@ function HomeFinalCTASection() {
           </CTAButton>
         </div>
         <div className="home-final-cta-section__media" aria-hidden="true">
-          <div className="home-final-cta-section__notebook-placeholder" />
+          <img
+            className="home-final-cta-section__notebook"
+            src={homeNotebookImage}
+            alt=""
+            draggable="false"
+          />
         </div>
       </Container>
     </section>
