@@ -16,14 +16,18 @@
 }
 
 .home-institutions-section__title {
-  display: block;
+  display: flex;
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
+  align-items: baseline;
+  justify-content: center;
+  gap: clamp(0.25rem, 0.65vw, 0.625rem);
   color: #1a1919;
   font-weight: 500;
-  line-height: 0.95;
+  line-height: 1;
   text-align: center;
+  white-space: nowrap;
 }
 
 .home-institutions-section__title-text {
@@ -37,15 +41,13 @@
 
 .home-institutions-section__title-script {
   display: inline-block;
-  margin-left: clamp(0.25rem, 0.8vw, 0.75rem);
   color: #1a1919;
   font-family: var(--font-highlight, 'Italianno', cursive);
   font-size: clamp(2.875rem, 5.8vw, 5.25rem);
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 0.72;
-  transform: translateY(-0.08em);
-  vertical-align: top;
+  line-height: 0.76;
+  transform: translateY(0.055em);
 }
 
 .home-institutions-section__subtitle {
@@ -61,11 +63,26 @@
 }
 
 .home-institutions-section__carousel {
-  width: 100%;
+  position: relative;
+  width: min(100%, 1200px);
   max-width: 100%;
-  margin-top: clamp(2rem, 4vw, 3.5rem);
+  margin: clamp(2rem, 4vw, 3.5rem) auto 0;
   overflow: hidden;
   contain: paint;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000000 9%,
+    #000000 91%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000000 9%,
+    #000000 91%,
+    transparent 100%
+  );
 }
 
 .home-institutions-section__track {
@@ -129,8 +146,14 @@
     width: calc(100% - 40px);
   }
 
+  .home-institutions-section__title {
+    flex-wrap: wrap;
+    row-gap: 0;
+    white-space: normal;
+  }
+
   .home-institutions-section__title-script {
-    margin-left: 0.25rem;
+    transform: translateY(0.035em);
   }
 
   .home-institutions-section__subtitle {
@@ -138,7 +161,22 @@
   }
 
   .home-institutions-section__carousel {
+    width: 100%;
     margin-top: 2.5rem;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #000000 12%,
+      #000000 88%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #000000 12%,
+      #000000 88%,
+      transparent 100%
+    );
   }
 }
 
