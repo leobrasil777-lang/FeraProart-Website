@@ -23,7 +23,8 @@ function Home() {
                 <span>Vista sua</span>
                 <span className="hero-section__identity highlight-font">identidade</span>
               </span>
-              <span className="hero-section__title-line">com quem vive a música</span>
+              <span className="hero-section__title-line">com quem vive a</span>
+              <span className="hero-section__title-line">música.</span>
             </>
           )}
           primaryButtonLabel="Solicitar orçamento"
