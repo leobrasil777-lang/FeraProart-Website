@@ -1,5 +1,1 @@
-function Footer() {
-  return <footer>Fera Pro Art</footer>
-}
-
-export default Footer
+export { default } from './Footer/Footer'

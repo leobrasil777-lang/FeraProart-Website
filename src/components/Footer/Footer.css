@@ -1,0 +1,236 @@
+.site-footer {
+  min-height: 529px;
+  background: var(--color-background-dark);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+}
+
+.site-footer__inner {
+  width: min(100% - (var(--container-padding) * 2), 1123px);
+  margin-inline: auto;
+  padding-block: 66px 38px;
+}
+
+.site-footer__content {
+  display: grid;
+  grid-template-columns: 215px minmax(180px, 1fr) minmax(250px, 1.1fr) minmax(260px, 1fr);
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: start;
+}
+
+.site-footer__brand {
+  display: flex;
+  width: 215px;
+  min-height: 231px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px 999px 24px 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.03));
+  text-align: center;
+}
+
+.site-footer__brand-mark {
+  font-size: 46px;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 0.9;
+}
+
+.site-footer__brand-name {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.site-footer__brand-subtitle {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  text-transform: uppercase;
+}
+
+.site-footer__group {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  line-height: 24px;
+}
+
+.site-footer__title {
+  margin: 0 0 20px;
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.15px;
+  line-height: 24px;
+}
+
+.site-footer__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  gap: 9px;
+  list-style: none;
+}
+
+.site-footer__link {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  color: var(--color-white);
+}
+
+.site-footer__contact-list {
+  gap: 12px;
+}
+
+.site-footer__contact-link {
+  gap: 10px;
+}
+
+.site-footer__contact-icon {
+  display: inline-grid;
+  width: 22px;
+  min-width: 22px;
+  height: 22px;
+  place-items: center;
+}
+
+.site-footer__contact-icon img,
+.site-footer__contact-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.site-footer__contact-icon svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.site-footer__social {
+  margin-top: 32px;
+}
+
+.site-footer__social-list {
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+}
+
+.site-footer__social-item {
+  display: inline-grid;
+  min-width: 44px;
+  min-height: 44px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.site-footer__address p {
+  margin: 0;
+}
+
+.site-footer__divider {
+  height: 1px;
+  margin-top: 58px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.site-footer__copyright {
+  max-width: 499px;
+  margin: 47px auto 0;
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  line-height: 24px;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .site-footer__content {
+    grid-template-columns: minmax(160px, 0.8fr) repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .site-footer__brand {
+    width: 170px;
+    min-height: 186px;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-footer {
+    min-height: auto;
+  }
+
+  .site-footer__inner {
+    padding-block: 48px 34px;
+  }
+
+  .site-footer__content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer__inner {
+    width: min(100% - 32px, 1123px);
+    padding-block: 40px 30px;
+  }
+
+  .site-footer__content {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .site-footer__brand {
+    width: 154px;
+    min-height: 168px;
+  }
+
+  .site-footer__brand-mark {
+    font-size: 36px;
+  }
+
+  .site-footer__brand-name {
+    font-size: 29px;
+  }
+
+  .site-footer__group,
+  .site-footer__copyright {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .site-footer__title {
+    margin-bottom: 14px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .site-footer__divider {
+    margin-top: 38px;
+  }
+
+  .site-footer__copyright {
+    margin-top: 30px;
+  }
+}
