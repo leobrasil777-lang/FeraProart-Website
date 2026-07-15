@@ -21,16 +21,16 @@ const serviceCategories: ServiceCategory[] = [
     image: barretinaImage,
   },
   {
-    title: 'Quepes e Barretinas',
-    description: 'Peças de impacto para cerimônias, regências, balizas e apresentações formais.',
-    to: '/barretinas-e-quepes',
-    image: barretinaImage,
-  },
-  {
     title: 'Calçados',
     description: 'Botas, sapatos e modelos de apoio para apresentações, desfiles e rotinas oficiais.',
     to: '/calcados',
     image: botaImage,
+  },
+  {
+    title: 'Quepes e Barretinas',
+    description: 'Peças de impacto para cerimônias, regências, balizas e apresentações formais.',
+    to: '/barretinas-e-quepes',
+    image: barretinaImage,
   },
   {
     title: 'Acessórios em geral',
