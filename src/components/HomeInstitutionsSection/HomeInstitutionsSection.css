@@ -3,7 +3,7 @@
   max-width: 100%;
   background: #ffffff;
   color: #1a1919;
-  padding: clamp(2.5rem, 5vw, 4.375rem) 0 clamp(3.4375rem, 6vw, 5.625rem);
+  padding: clamp(2.25rem, 4vw, 3.75rem) 0 clamp(2.75rem, 5vw, 4.75rem);
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -29,7 +29,7 @@
 .home-institutions-section__title-text {
   display: inline-block;
   font-family: var(--font-primary, 'Epilogue', sans-serif);
-  font-size: clamp(2.375rem, 5.2vw, 4.6875rem);
+  font-size: clamp(2.25rem, 4.6vw, 4rem);
   font-weight: 500;
   letter-spacing: -0.06em;
   vertical-align: top;
@@ -40,7 +40,7 @@
   margin-left: clamp(0.25rem, 0.8vw, 0.75rem);
   color: #1a1919;
   font-family: var(--font-highlight, 'Italianno', cursive);
-  font-size: clamp(3rem, 6.4vw, 6rem);
+  font-size: clamp(2.875rem, 5.8vw, 5.25rem);
   font-weight: 400;
   letter-spacing: 0;
   line-height: 0.72;
@@ -54,7 +54,7 @@
   margin: clamp(1rem, 1.8vw, 1.5rem) auto 0;
   color: #1a1919;
   font-family: var(--font-primary, 'Epilogue', sans-serif);
-  font-size: clamp(1rem, 1.85vw, 1.5rem);
+  font-size: clamp(1rem, 1.55vw, 1.25rem);
   font-weight: 300;
   line-height: 1.2;
   text-align: center;
@@ -63,7 +63,7 @@
 .home-institutions-section__carousel {
   width: 100%;
   max-width: 100%;
-  margin-top: clamp(2.5rem, 5vw, 4.5rem);
+  margin-top: clamp(2rem, 4vw, 3.5rem);
   overflow: hidden;
   contain: paint;
 }
@@ -73,7 +73,7 @@
   width: max-content;
   max-width: none;
   align-items: center;
-  gap: clamp(3rem, 6vw, 6.25rem);
+  gap: clamp(2.5rem, 5vw, 5.25rem);
   margin: 0;
   animation: home-institutions-section-scroll 38s linear infinite;
   will-change: transform;
@@ -88,8 +88,8 @@
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  width: clamp(8.75rem, 14vw, 12.5rem);
-  height: clamp(4rem, 7vw, 6rem);
+  width: clamp(8rem, 12vw, 11rem);
+  height: clamp(3.5rem, 6vw, 5.25rem);
 }
 
 .home-institutions-section__logo {
@@ -106,7 +106,7 @@
   }
 
   to {
-    transform: translate3d(calc(-50% - (clamp(3rem, 6vw, 6.25rem) / 2)), 0, 0);
+    transform: translate3d(calc(-50% - (clamp(2.5rem, 5vw, 5.25rem) / 2)), 0, 0);
   }
 }
 

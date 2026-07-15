@@ -1,6 +1,6 @@
 .home-final-cta-section {
   position: relative;
-  min-height: 635px;
+  min-height: clamp(500px, 48vw, 560px);
   overflow: hidden;
   background: #ffffff;
   color: #000000;
@@ -9,7 +9,7 @@
 
 .home-final-cta-section__background {
   position: absolute;
-  inset: 118px 0 0;
+  inset: clamp(78px, 8vw, 104px) 0 0;
   z-index: 0;
   background: linear-gradient(180deg, #d9d9d9 0%, #737373 100%);
   pointer-events: none;
@@ -20,15 +20,15 @@
   z-index: 1;
   width: min(100%, 1322px);
   max-width: 1322px;
-  min-height: 635px;
+  min-height: clamp(500px, 48vw, 560px);
 }
 
 .home-final-cta-section__content {
   position: relative;
   z-index: 3;
   width: min(657px, 52vw);
-  padding-top: 184px;
-  padding-left: 88px;
+  padding-top: clamp(132px, 13vw, 160px);
+  padding-left: clamp(42px, 6vw, 78px);
 }
 
 .home-final-cta-section__title {
@@ -38,7 +38,7 @@
   margin: 0;
   color: #1a1919;
   font-family: var(--font-primary);
-  font-size: 96px;
+  font-size: clamp(62px, 6vw, 82px);
   font-weight: 500;
   letter-spacing: -0.055em;
   line-height: 0.99;
@@ -53,7 +53,7 @@
   display: inline-block;
   color: #1a1919;
   font-family: var(--font-highlight);
-  font-size: 116px;
+  font-size: clamp(78px, 7.5vw, 100px);
   font-weight: 400;
   letter-spacing: 0;
   line-height: 0.56;
@@ -62,10 +62,10 @@
 
 .home-final-cta-section__description {
   max-width: 593px;
-  margin: 42px 0 0;
+  margin: clamp(24px, 3vw, 34px) 0 0;
   color: #000000;
   font-family: var(--font-primary);
-  font-size: 24px;
+  font-size: clamp(19px, 1.75vw, 22px);
   font-weight: 300;
   line-height: 1.2;
 }
@@ -73,7 +73,7 @@
 .home-final-cta-section__button {
   width: 258px;
   min-height: 61px;
-  margin-top: 45px;
+  margin-top: clamp(30px, 3.6vw, 40px);
   border-radius: 10px;
   background-color: #1a1919;
   color: #ffffff;
@@ -94,11 +94,11 @@
 
 .home-final-cta-section__media {
   position: absolute;
-  top: 101px;
-  left: 560px;
+  top: clamp(88px, 8vw, 104px);
+  left: min(47vw, 560px);
   z-index: 2;
-  width: 773px;
-  height: 540px;
+  width: min(54vw, 690px);
+  height: clamp(360px, 38vw, 470px);
   pointer-events: none;
 }
 
@@ -113,7 +113,7 @@
 
 @media (max-width: 75rem) {
   .home-final-cta-section__container {
-    width: min(100%, 100vw);
+    width: 100%;
   }
 
   .home-final-cta-section__content {
@@ -188,7 +188,7 @@
     position: relative;
     top: auto;
     left: auto;
-    width: min(100vw, 680px);
+    width: min(100%, 640px);
     height: min(70vw, 475px);
     margin: 24px auto -6px;
   }
@@ -229,9 +229,9 @@
   }
 
   .home-final-cta-section__media {
-    width: min(108vw, 520px);
+    width: min(100%, 500px);
     height: min(76vw, 367px);
     margin-top: 18px;
-    transform: translateX(-2vw);
+
   }
 }
