@@ -37,26 +37,26 @@
 .home-hero-shell .hero-section {
   position: relative;
   z-index: 1;
-  min-height: min(760px, 100vh);
+  min-height: clamp(560px, 88vh, 700px);
   background: transparent;
 }
 
 .home-hero-shell .container {
-  width: min(100% - 150px, 1172px);
+  width: min(calc(100% - clamp(40px, 8vw, 120px)), 1172px);
 }
 
 .home-hero-shell .hero-section__content {
   max-width: 624px;
   gap: 0;
-  padding-top: 230px;
-  padding-bottom: 90px;
+  padding-top: clamp(150px, 17vh, 190px);
+  padding-bottom: clamp(54px, 8vh, 76px);
 }
 
 .home-hero-shell .hero-section__title {
   max-width: 624px;
   margin: 0;
   color: var(--color-white);
-  font-size: clamp(3.25rem, 5vw, 64px);
+  font-size: clamp(2.7rem, 4.4vw, 3.75rem);
   font-weight: 600;
   letter-spacing: -0.055em;
   line-height: 1;
@@ -85,29 +85,29 @@
 }
 
 .home-hero-shell .hero-section__actions {
-  gap: 35px;
-  padding-top: 42px;
+  gap: clamp(16px, 2.4vw, 28px);
+  padding-top: clamp(28px, 4vw, 36px);
 }
 
 .home-hero-shell .hero-section__button {
-  min-height: 53px;
+  min-height: clamp(46px, 4vw, 52px);
   border-radius: 10px;
-  padding: 0 24px;
-  font-size: 20px;
+  padding: 0 clamp(18px, 2vw, 24px);
+  font-size: clamp(17px, 1.45vw, 19px);
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1;
 }
 
 .home-hero-shell .hero-section__button--primary {
-  width: 275px;
+  width: min(100%, 250px);
   background: #f9f5f5;
   color: var(--color-black);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .home-hero-shell .hero-section__button--secondary {
-  width: 206px;
+  width: min(100%, 190px);
   border-color: transparent;
   background: rgba(217, 217, 217, 0.2);
   color: var(--color-white);
@@ -374,4 +374,14 @@
   .home-hero-shell .hero-section__actions .cta-button {
     width: 100%;
   }
+}
+
+@media (max-width: 68rem) {
+  .home-hero-shell .hero-section { min-height: clamp(520px, 82vh, 640px); }
+  .home-hero-shell .hero-section__content { padding-top: clamp(130px, 16vh, 160px); padding-bottom: 54px; }
+}
+
+@media (max-width: 36rem) {
+  .home-hero-shell .container { width: calc(100% - 40px); }
+  .home-hero-shell .hero-section__title { font-size: clamp(2.35rem, 11vw, 3.1rem); }
 }
