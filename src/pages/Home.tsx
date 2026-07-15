@@ -3,7 +3,7 @@ import HomeServicesSection from '../components/HomeServicesSection/HomeServicesS
 import HomeBiddingSection from '../components/HomeBiddingSection/HomeBiddingSection'
 import HomeInstitutionsSection from '../components/HomeInstitutionsSection/HomeInstitutionsSection'
 import HomeFounderSection from '../components/HomeFounderSection/HomeFounderSection'
-import HomeMetricsSection from '../components/HomeMetricsSection/HomeMetricsSection'
+import HomeStatsSection from '../components/HomeStatsSection/HomeStatsSection'
 import HomeFinalCTASection from '../components/HomeFinalCTASection/HomeFinalCTASection'
 import heroBanner from '../assets/images/home/hero-banner.png'
 import './Home.css'
@@ -44,7 +44,7 @@ function Home() {
 
       <HomeFounderSection />
 
-      <HomeMetricsSection />
+      <HomeStatsSection />
 
       <HomeFinalCTASection />
     </>

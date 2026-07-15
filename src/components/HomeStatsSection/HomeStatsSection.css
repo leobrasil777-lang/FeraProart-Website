@@ -1,0 +1,103 @@
+.home-stats-section {
+  overflow: hidden;
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+}
+
+.home-stats-section__container {
+  max-width: 1310px;
+}
+
+.home-stats-section__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(24px, 3vw, 48px);
+  margin: 0;
+  padding: clamp(72px, 7vw, 105px) 0 clamp(52px, 5vw, 72px);
+}
+
+.home-stats-section__item {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-stats-section__value {
+  margin: 0;
+  color: #000000;
+  font-family: var(--font-primary);
+  font-size: clamp(88px, 9.68vw, 128px);
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  line-height: 0.99;
+  white-space: nowrap;
+}
+
+.home-stats-section__label {
+  max-width: 310px;
+  margin: 6px 0 0;
+  color: #1a1919;
+  font-family: var(--font-primary);
+  font-size: clamp(32px, 3.63vw, 48px);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.99;
+  text-align: center;
+}
+
+@media (max-width: 75rem) {
+  .home-stats-section__list {
+    gap: clamp(18px, 2.2vw, 28px);
+  }
+
+  .home-stats-section__value {
+    font-size: clamp(78px, 9vw, 112px);
+  }
+
+  .home-stats-section__label {
+    max-width: 270px;
+    font-size: clamp(28px, 3.4vw, 42px);
+  }
+}
+
+@media (max-width: 58rem) {
+  .home-stats-section__list {
+    gap: clamp(14px, 2vw, 22px);
+    padding: 64px 0;
+  }
+
+  .home-stats-section__value {
+    font-size: clamp(62px, 8.7vw, 86px);
+    letter-spacing: -0.075em;
+  }
+
+  .home-stats-section__label {
+    max-width: 210px;
+    font-size: clamp(22px, 3.2vw, 30px);
+  }
+}
+
+@media (max-width: 44rem) {
+  .home-stats-section__container {
+    width: calc(100% - 40px);
+  }
+
+  .home-stats-section__list {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 64px 0;
+  }
+
+  .home-stats-section__value {
+    font-size: clamp(66px, 18vw, 84px);
+  }
+
+  .home-stats-section__label {
+    max-width: 300px;
+    font-size: clamp(26px, 7vw, 32px);
+  }
+}
