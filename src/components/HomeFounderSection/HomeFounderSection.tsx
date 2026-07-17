@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import CTAButton from '../CTAButton/CTAButton'
 import Container from '../Container/Container'
 import founderImage from '../../assets/images/home/home-idealizador.png'
@@ -15,21 +16,59 @@ function SendIcon() {
 }
 
 function HomeFounderSection() {
+  const sectionRef = useRef<HTMLElement | null>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const section = sectionRef.current
+
+    if (!section || isVisible) {
+      return undefined
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      setIsVisible(true)
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      {
+        root: null,
+        rootMargin: '0px 0px -12% 0px',
+        threshold: 0.2,
+      },
+    )
+
+    observer.observe(section)
+
+    return () => observer.disconnect()
+  }, [isVisible])
+
   return (
-    <section className="home-founder-section" aria-labelledby="home-founder-section-title">
+    <section
+      ref={sectionRef}
+      className={`home-founder-section${isVisible ? ' home-founder-section--visible' : ''}`}
+      aria-labelledby="home-founder-section-title"
+    >
       <Container className="home-founder-section__container">
         <h2 id="home-founder-section-title" className="home-founder-section__title">
           <span className="home-founder-section__title-main">Conheça o nosso</span>
           <span className="home-founder-section__title-script highlight-font">idealizador</span>
         </h2>
 
-      <div className="home-founder-section__portrait-wrap">
-        <img
-          className="home-founder-section__portrait"
-          src={founderImage}
-          alt="Fernando Rabelo, maestro e idealizador da Fera Proart"
-        />
-      </div>
+        <div className="home-founder-section__portrait-wrap">
+          <img
+            className="home-founder-section__portrait"
+            src={founderImage}
+            alt="Fernando Rabelo, maestro e idealizador da Fera Proart"
+          />
+        </div>
 
         <div className="home-founder-section__content">
           <p className="home-founder-section__description">{founderDescription}</p>
