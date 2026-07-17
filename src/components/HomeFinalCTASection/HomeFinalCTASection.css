@@ -45,16 +45,17 @@
 
 .home-final-cta-section__title {
   display: flex;
-  align-items: baseline;
-  gap: 19px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
   margin: 0;
   color: #1a1919;
   font-family: var(--font-primary);
-  font-size: clamp(62px, 6vw, 82px);
+  font-size: clamp(72px, 6.8vw, 96px);
   font-weight: 500;
   letter-spacing: -0.055em;
-  line-height: 0.99;
-  white-space: nowrap;
+  line-height: 0.88;
+  white-space: normal;
 }
 
 .home-final-cta-section__title-main {
