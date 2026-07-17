@@ -95,9 +95,9 @@
 .home-final-cta-section__media {
   position: absolute;
   top: clamp(88px, 8vw, 104px);
-  left: min(47vw, 560px);
+  left: min(46vw, 560px);
   z-index: 2;
-  width: min(54vw, 690px);
+  width: min(52vw, 690px);
   height: clamp(360px, 38vw, 470px);
   pointer-events: none;
 }
@@ -137,8 +137,8 @@
   }
 
   .home-final-cta-section__media {
-    left: 42vw;
-    width: min(58vw, 700px);
+    left: 41vw;
+    width: min(56vw, 680px);
     height: min(40.5vw, 489px);
   }
 }
