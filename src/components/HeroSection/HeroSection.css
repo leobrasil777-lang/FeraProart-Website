@@ -22,7 +22,7 @@
 }
 
 .hero-section--home .hero-section__content {
-  animation: heroContentEnter 1000ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: heroContentEnter 3000ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes heroContentEnter {
@@ -67,12 +67,12 @@
 .hero-section.hero-section--home .hero-section__identity {
   display: inline-block;
   flex: 0 0 auto;
-  font-size: 1.36em;
+  font-size: 1.70em;
   letter-spacing: 0;
   line-height: 0.58;
   vertical-align: baseline;
   white-space: nowrap;
-  transform: translateY(0.14em);
+  transform: translateY(0.01em);
 }
 
 .hero-section__subtitle {

@@ -4,7 +4,7 @@
   color: #1a1919;
   opacity: 0;
   transform: translateY(-20px);
-  transition: opacity 700ms ease, transform 700ms ease;
+  transition: opacity 1000ms ease, transform 10000ms ease;
 }
 
 .home-services-section--visible {
@@ -75,7 +75,7 @@
   background: #ffffff;
   color: #1a1919;
   text-decoration: none;
-  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+  transition: background-color 3000ms ease, color 3000ms ease, border-color 3000ms ease;
 }
 
 .service-category-card:focus-visible { outline: 3px solid #1a1919; outline-offset: 4px; }
