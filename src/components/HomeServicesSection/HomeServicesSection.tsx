@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './HomeServicesSection.css'
 import barretinaImage from '../../assets/images/home/services-barretina.png'
@@ -42,12 +42,42 @@ const serviceCategories: ServiceCategory[] = [
 
 function HomeServicesSection() {
   const [activeCategory, setActiveCategory] = useState(DEFAULT_ACTIVE_CATEGORY)
+  const [isVisible, setIsVisible] = useState(false)
+  const sectionRef = useRef<HTMLElement | null>(null)
   const activeService =
     serviceCategories.find((category) => category.title === activeCategory) ?? serviceCategories[1]
 
+  useEffect(() => {
+    const section = sectionRef.current
+
+    if (!section) {
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.2 },
+    )
+
+    observer.observe(section)
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section
-      className="home-services-section"
+      ref={sectionRef}
+      className={[
+        'home-services-section',
+        isVisible ? 'home-services-section--visible' : '',
+      ]
+        .filter(Boolean)
+        .join(' ')}
       aria-labelledby="home-services-title"
       onMouseLeave={() => setActiveCategory(DEFAULT_ACTIVE_CATEGORY)}
       onBlur={(event) => {
