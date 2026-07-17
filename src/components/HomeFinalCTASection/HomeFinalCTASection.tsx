@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import CTAButton from '../CTAButton/CTAButton'
 import Container from '../Container/Container'
 import homeNotebookImage from '../../assets/images/home/home-notebook.png'
@@ -6,8 +7,44 @@ import './HomeFinalCTASection.css'
 const finalCtaHref = '/licitacao'
 
 function HomeFinalCTASection() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const section = sectionRef.current
+
+    if (!section) {
+      return
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      setIsVisible(true)
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      {
+        threshold: 0.2,
+      },
+    )
+
+    observer.observe(section)
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section className="home-final-cta-section" aria-labelledby="home-final-cta-title">
+    <section
+      ref={sectionRef}
+      className={`home-final-cta-section${isVisible ? ' home-final-cta-section--visible' : ''}`}
+      aria-labelledby="home-final-cta-title"
+    >
       <div className="home-final-cta-section__background" aria-hidden="true" />
       <Container className="home-final-cta-section__container">
         <div className="home-final-cta-section__content">
