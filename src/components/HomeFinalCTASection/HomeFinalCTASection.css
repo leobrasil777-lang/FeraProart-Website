@@ -5,6 +5,18 @@
   background: #ffffff;
   color: #000000;
   isolation: isolate;
+  opacity: 0;
+  transform: translate3d(0, 80px, 0);
+  transition:
+    opacity 1200ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.home-final-cta-section--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
 }
 
 .home-final-cta-section__background {
@@ -109,6 +121,15 @@
   object-fit: contain;
   object-position: center;
   user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-final-cta-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
 }
 
 @media (max-width: 75rem) {
