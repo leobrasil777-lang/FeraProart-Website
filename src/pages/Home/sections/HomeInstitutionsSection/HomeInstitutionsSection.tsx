@@ -1,10 +1,10 @@
-import logoApae from '../../assets/icons/home/logo-apae.svg'
-import logoGoias from '../../assets/icons/home/logo-goias.svg'
-import logoEinsten from '../../assets/icons/home/logo-einsten.svg'
-import logoBotuactu from '../../assets/icons/home/logo-botucatu.svg'
-import logoBamaso from '../../assets/icons/home/logo-bamaso.svg'
-import logoHalley from '../../assets/icons/home/logo-halley.svg'
-import logoSaquarema from '../../assets/icons/home/logo-saquarema.svg'
+import logoApae from '../../../../assets/icons/home/logo-apae.svg'
+import logoGoias from '../../../../assets/icons/home/logo-goias.svg'
+import logoEinsten from '../../../../assets/icons/home/logo-einsten.svg'
+import logoBotuactu from '../../../../assets/icons/home/logo-botucatu.svg'
+import logoBamaso from '../../../../assets/icons/home/logo-bamaso.svg'
+import logoHalley from '../../../../assets/icons/home/logo-halley.svg'
+import logoSaquarema from '../../../../assets/icons/home/logo-saquarema.svg'
 import './HomeInstitutionsSection.css'
 
 const institutions = [

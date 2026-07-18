@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './HomeServicesSection.css'
-import barretinaImage from '../../assets/images/home/services-barretina.png'
-import botaImage from '../../assets/images/home/services-bota.png'
+import barretinaImage from '../../../../assets/images/home/services-barretina.png'
+import botaImage from '../../../../assets/images/home/services-bota.png'
 
 type ServiceCategory = {
   title: string

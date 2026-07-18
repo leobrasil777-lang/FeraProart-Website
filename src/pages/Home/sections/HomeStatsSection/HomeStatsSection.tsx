@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import Container from '../Container/Container'
+import Container from '../../../../components/Container/Container'
 import './HomeStatsSection.css'
 
 type Stat = {

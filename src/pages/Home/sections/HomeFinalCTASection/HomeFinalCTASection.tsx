@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import CTAButton from '../CTAButton/CTAButton'
-import Container from '../Container/Container'
-import homeNotebookImage from '../../assets/images/home/home-notebook.png'
+import CTAButton from '../../../../components/CTAButton/CTAButton'
+import Container from '../../../../components/Container/Container'
+import homeNotebookImage from '../../../../assets/images/home/home-notebook.png'
 import './HomeFinalCTASection.css'
 
 const finalCtaHref = '/licitacao'
