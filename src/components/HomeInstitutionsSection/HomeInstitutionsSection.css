@@ -43,11 +43,11 @@
   display: inline-block;
   color: #1a1919;
   font-family: var(--font-highlight, 'Italianno', cursive);
-  font-size: clamp(2.875rem, 5.8vw, 5.25rem);
+  font-size: clamp(4.5rem, 7.5vw, 7.5rem);
   font-weight: 400;
   letter-spacing: 0;
   line-height: 0.76;
-  transform: translateY(0.055em);
+  transform: translateY(-0.030em);
 }
 
 .home-institutions-section__subtitle {

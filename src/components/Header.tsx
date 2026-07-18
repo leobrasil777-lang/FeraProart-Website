@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import CTAButton from './CTAButton/CTAButton'
+import logoFeraProart from '../assets/images/logo-feraproart.png'
 import './Header.css'
 
 const navigation = [
@@ -16,9 +17,18 @@ function Header() {
   return (
     <header className="site-header">
       <nav className="site-header__nav" data-open={isMenuOpen} aria-label="Navegação principal">
-        <NavLink className="site-header__logo" to="/" end onClick={() => setIsMenuOpen(false)} aria-label="Fera Proart - Home">
-          <span>Fera Proart</span>
-          <span>Uniformes</span>
+        <NavLink
+          className="site-header__logo"
+          to="/"
+          end
+          onClick={() => setIsMenuOpen(false)}
+          aria-label="Fera Proart - Home"
+        >
+          <img
+            src={logoFeraProart}
+            alt="Fera Proart"
+            className="site-header__logo-image"
+          />
         </NavLink>
         <div className="site-header__links">
           {navigation.map(({ label, to }) => (
