@@ -4,7 +4,7 @@ import Acessorios from './pages/Acessorios'
 import BarretinasQuepes from './pages/BarretinasQuepes'
 import Calcados from './pages/Calcados'
 import Home from './pages/Home'
-import Idealizador from './pages/Idealizador'
+import Idealizador from './pages/Idealizador/Idealizador'
 import Licitacao from './pages/Licitacao'
 import Uniformes from './pages/Uniformes'
 
