@@ -8,6 +8,7 @@ interface TimelineMilestone {
   description: string
   position: TimelinePosition
   isCurrent?: boolean
+  isWide?: boolean
 }
 
 const timelineMilestones: TimelineMilestone[] = [
@@ -25,6 +26,7 @@ const timelineMilestones: TimelineMilestone[] = [
     label: '1900',
     description: 'Formação: Trompete na faculdade de Marcelo Tuinambá.',
     position: 'top',
+    isWide: true,
   },
   {
     label: '1900',
@@ -59,24 +61,33 @@ function IdealizadorTimelineSection() {
         <div className="idealizador-timeline__track" aria-label="Linha do tempo da trajetória de Fernando Rabelo">
           <div className="idealizador-timeline__line" aria-hidden="true" />
           <ol className="idealizador-timeline__list">
-            {timelineMilestones.map((milestone) => (
-              <li
-                className={`idealizador-timeline__item idealizador-timeline__item--${milestone.position}`}
-                key={`${milestone.label}-${milestone.description}`}
-              >
-                <article className="idealizador-timeline__card">
-                  {milestone.isCurrent ? (
-                    <span className="idealizador-timeline__year">{milestone.label}</span>
-                  ) : (
-                    <time className="idealizador-timeline__year" dateTime={milestone.label}>
-                      {milestone.label}
-                    </time>
-                  )}
-                  <p className="idealizador-timeline__description">{milestone.description}</p>
-                </article>
-                <span className="idealizador-timeline__marker" aria-hidden="true" />
-              </li>
-            ))}
+            {timelineMilestones.map((milestone) => {
+              const cardClassName = [
+                'idealizador-timeline__card',
+                milestone.isWide ? 'idealizador-timeline__card--wide' : '',
+              ]
+                .filter(Boolean)
+                .join(' ')
+
+              return (
+                <li
+                  className={`idealizador-timeline__item idealizador-timeline__item--${milestone.position}`}
+                  key={`${milestone.label}-${milestone.description}`}
+                >
+                  <article className={cardClassName}>
+                    {milestone.isCurrent ? (
+                      <span className="idealizador-timeline__year">{milestone.label}</span>
+                    ) : (
+                      <time className="idealizador-timeline__year" dateTime={milestone.label}>
+                        {milestone.label}
+                      </time>
+                    )}
+                    <p className="idealizador-timeline__description">{milestone.description}</p>
+                  </article>
+                  <span className="idealizador-timeline__marker" aria-hidden="true" />
+                </li>
+              )
+            })}
           </ol>
         </div>
       </Container>
