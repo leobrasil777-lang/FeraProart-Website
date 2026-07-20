@@ -1,4 +1,4 @@
-import IdealizadorIntroduction from '../../components/IdealizadorIntroduction/IdealizadorIntroduction'
+import IdealizadorOriginSection from './sections/IdealizadorOriginSection/IdealizadorOriginSection'
 import IdealizadorHeroSection from './sections/IdealizadorHeroSection/IdealizadorHeroSection'
 import IdealizadorTimelineSection from './sections/IdealizadorTimelineSection/IdealizadorTimelineSection'
 import './Idealizador.css'
