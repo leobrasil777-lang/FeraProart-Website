@@ -10,9 +10,9 @@ function Idealizador() {
     <div className="idealizador-page">
       <IdealizadorHeroSection />
       <IdealizadorTimelineSection />
-      <IdealizadorInnovationsSection />
       <IdealizadorCorporationsSection />
       <IdealizadorOriginSection />
+      <IdealizadorInnovationsSection />
     </div>
   )
 }

@@ -15,7 +15,7 @@ const innovations: Innovation[] = [
     title: 'TERMOFORMAÇÕES',
     description:
       'Trouxe dos EUA uma estrutura com melhor caimento, acabamento e resistência para as barretinas usadas por bandas e fanfarras',
-    image: '/src/assets/images/idealizador/idealizador-termoformação.png',
+    image: '/src/assets/images/idealizador/founder-termoformacao.png',
     alt: 'Barretina termoformada prateada com pluma branca.',
   },
   {
@@ -23,7 +23,7 @@ const innovations: Innovation[] = [
     title: 'AIRBLADES',
     description:
       'Nacionalizou um acessório desejado por linhas de frente, com investimento pesado com moldes próprios e 1.500kg de aço usinado',
-    image: '/src/assets/images/idealizador/idealizador-airblase.png',
+    image: '/src/assets/images/idealizador/founder-airblade.png',
     alt: 'Airblade branco sobre fundo preto.',
   },
   {
@@ -31,7 +31,7 @@ const innovations: Innovation[] = [
     title: 'MOLDES PRÓPRIOS',
     description:
       'Aumentou o padrão de produção deixando as peças mais uniformes, duráveis e elegantes, além de permitir maior escala e menor custo ao cliente final.',
-    image: '/src/assets/images/idealizador/idealizador-moldes.png',
+    image: '/src/assets/images/idealizador/founder-quepe.png',
     alt: 'Quepe preto e amarelo produzido com moldes próprios.',
   },
   {
@@ -39,7 +39,7 @@ const innovations: Innovation[] = [
     title: 'BASTÕES DE LED',
     description:
       'Criado em 2010 para o corpo da BAMASO, trouxe impacto visual e inovação cênica para apresentações',
-    image: '/src/assets/images/idealizador/idealizador-bastao.png',
+    image: '/src/assets/images/idealizador/founder-bastao.png',
     alt: 'Bastão de LED aceso em posição diagonal.',
   },
 ]
