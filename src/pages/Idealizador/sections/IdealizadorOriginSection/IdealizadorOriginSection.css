@@ -18,13 +18,14 @@
 }
 
 .idealizador-origin__image {
-  width: 100%;
+  width: 70%;
   height: auto;
 }
 
 .idealizador-origin__content {
   min-width: 0;
   padding-top: clamp(0px, 0.8vw, 8px);
+  transform: translateX(-70px);
 }
 
 .idealizador-origin__eyebrow {
@@ -73,7 +74,7 @@
 .idealizador-origin__copy p {
   margin: 0;
   color: var(--color-white);
-  font-size: clamp(20px, 1.9vw, 25px);
+  font-size: clamp(16px, 1.9vw, 18px);
   font-weight: 400;
   line-height: 1.12;
 }
