@@ -1,0 +1,121 @@
+.idealizador-hero {
+  position: relative;
+  display: flex;
+  min-height: clamp(620px, 86vh, 712px);
+  align-items: center;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.idealizador-hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 66% center;
+}
+
+.idealizador-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.82) 28%, rgba(0, 0, 0, 0.46) 52%, rgba(0, 0, 0, 0.12) 78%, rgba(0, 0, 0, 0.28) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.08) 44%, rgba(0, 0, 0, 0.46) 100%);
+  pointer-events: none;
+}
+
+.idealizador-hero__content {
+  width: min(calc(100% - clamp(48px, 8vw, 120px)), 1172px);
+  margin-inline: auto;
+  padding-top: clamp(150px, 17vh, 190px);
+  padding-bottom: clamp(64px, 8vh, 86px);
+}
+
+.idealizador-hero__eyebrow {
+  margin: 0 0 clamp(-22px, -2.1vw, -12px);
+  color: var(--color-white);
+  font-size: clamp(82px, 9.2vw, 142px);
+  line-height: 0.8;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.38);
+}
+
+.idealizador-hero__title {
+  max-width: 720px;
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(48px, 5.6vw, 82px);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 0.96;
+}
+
+.idealizador-hero__description {
+  max-width: 520px;
+  margin: clamp(22px, 3vw, 32px) 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(18px, 1.55vw, 22px);
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+@media (max-width: 72rem) {
+  .idealizador-hero {
+    min-height: clamp(600px, 82vh, 680px);
+  }
+
+  .idealizador-hero__image {
+    object-position: 62% center;
+  }
+
+  .idealizador-hero__overlay {
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.78) 36%, rgba(0, 0, 0, 0.34) 66%, rgba(0, 0, 0, 0.2) 100%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.08) 42%, rgba(0, 0, 0, 0.46) 100%);
+  }
+}
+
+@media (max-width: 48rem) {
+  .idealizador-hero {
+    min-height: clamp(620px, 92vh, 720px);
+    align-items: flex-end;
+  }
+
+  .idealizador-hero__image {
+    object-position: 61% center;
+  }
+
+  .idealizador-hero__overlay {
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0.52) 44%, rgba(0, 0, 0, 0.16) 100%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0.08) 34%, rgba(0, 0, 0, 0.88) 100%);
+  }
+
+  .idealizador-hero__content {
+    width: calc(100% - 48px);
+    padding-top: 140px;
+    padding-bottom: 64px;
+  }
+
+  .idealizador-hero__eyebrow {
+    margin-bottom: -10px;
+    font-size: clamp(64px, 19vw, 76px);
+  }
+
+  .idealizador-hero__title {
+    max-width: 360px;
+    font-size: clamp(36px, 10.5vw, 42px);
+    line-height: 1;
+  }
+
+  .idealizador-hero__description {
+    max-width: 330px;
+    margin-top: 20px;
+    font-size: clamp(17px, 4.5vw, 19px);
+    line-height: 1.55;
+  }
+}
