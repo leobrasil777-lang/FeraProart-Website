@@ -1,4 +1,4 @@
-import IdealizadorIntroduction from '../../components/IdealizadorIntroduction/IdealizadorIntroduction'
+import IdealizadorOriginSection from './sections/IdealizadorOriginSection/IdealizadorOriginSection'
 import IdealizadorHeroSection from './sections/IdealizadorHeroSection/IdealizadorHeroSection'
 import IdealizadorCorporationsSection from './sections/IdealizadorCorporationsSection/IdealizadorCorporationsSection'
 import IdealizadorTimelineSection from './sections/IdealizadorTimelineSection/IdealizadorTimelineSection'
@@ -8,7 +8,7 @@ function Idealizador() {
   return (
     <div className="idealizador-page">
       <IdealizadorHeroSection />
-      <IdealizadorIntroduction />
+      <IdealizadorOriginSection />
       <IdealizadorTimelineSection />
       <IdealizadorCorporationsSection />
     </div>
