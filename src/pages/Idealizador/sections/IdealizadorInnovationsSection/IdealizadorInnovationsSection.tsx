@@ -1,0 +1,94 @@
+import Container from '../../../../components/Container/Container'
+import './IdealizadorInnovationsSection.css'
+
+type Innovation = {
+  number: string
+  title: string
+  description: string
+  image: string
+  alt: string
+}
+
+const innovations: Innovation[] = [
+  {
+    number: '01',
+    title: 'TERMOFORMAÇÕES',
+    description:
+      'Trouxe dos EUA uma estrutura com melhor caimento, acabamento e resistência para as barretinas usadas por bandas e fanfarras',
+    image: '/src/assets/images/idealizador/idealizador-termoformação.png',
+    alt: 'Barretina termoformada prateada com pluma branca.',
+  },
+  {
+    number: '02',
+    title: 'AIRBLADES',
+    description:
+      'Nacionalizou um acessório desejado por linhas de frente, com investimento pesado com moldes próprios e 1.500kg de aço usinado',
+    image: '/src/assets/images/idealizador/idealizador-airblase.png',
+    alt: 'Airblade branco sobre fundo preto.',
+  },
+  {
+    number: '03',
+    title: 'MOLDES PRÓPRIOS',
+    description:
+      'Aumentou o padrão de produção deixando as peças mais uniformes, duráveis e elegantes, além de permitir maior escala e menor custo ao cliente final.',
+    image: '/src/assets/images/idealizador/idealizador-moldes.png',
+    alt: 'Quepe preto e amarelo produzido com moldes próprios.',
+  },
+  {
+    number: '04',
+    title: 'BASTÕES DE LED',
+    description:
+      'Criado em 2010 para o corpo da BAMASO, trouxe impacto visual e inovação cênica para apresentações',
+    image: '/src/assets/images/idealizador/idealizador-bastao.png',
+    alt: 'Bastão de LED aceso em posição diagonal.',
+  },
+]
+
+function InnovationCard({ innovation }: { innovation: Innovation }) {
+  return (
+    <li className="idealizador-innovations__item">
+      <article className="idealizador-innovations__card">
+        <img
+          className="idealizador-innovations__image"
+          src={innovation.image}
+          alt={innovation.alt}
+          loading="lazy"
+        />
+        <div className="idealizador-innovations__content">
+          <span className="idealizador-innovations__number" aria-hidden="true">
+            {innovation.number}
+          </span>
+          <span className="idealizador-innovations__divider" aria-hidden="true" />
+          <h3 className="idealizador-innovations__card-title">{innovation.title}</h3>
+          <p className="idealizador-innovations__description">{innovation.description}</p>
+        </div>
+      </article>
+    </li>
+  )
+}
+
+function IdealizadorInnovationsSection() {
+  return (
+    <section className="idealizador-innovations" aria-labelledby="idealizador-innovations-title">
+      <Container className="idealizador-innovations__container">
+        <header className="idealizador-innovations__header">
+          <h2 className="idealizador-innovations__title" id="idealizador-innovations-title">
+            <span className="idealizador-innovations__title-highlight highlight-font">Inovações</span>{' '}
+            <span className="idealizador-innovations__title-main">que marcaram.</span>
+          </h2>
+          <p className="idealizador-innovations__subtitle">
+            Ao longo de sua trajetória, o Maestro Fernando Rabelo trouxe ao Brasil soluções que transformaram o universo das bandas e fanfarras.
+          </p>
+        </header>
+
+        <ol className="idealizador-innovations__list">
+          {innovations.map((innovation) => (
+            <InnovationCard innovation={innovation} key={innovation.number} />
+          ))}
+        </ol>
+      </Container>
+    </section>
+  )
+}
+
+export default IdealizadorInnovationsSection
