@@ -2,6 +2,7 @@ import IdealizadorOriginSection from './sections/IdealizadorOriginSection/Ideali
 import IdealizadorHeroSection from './sections/IdealizadorHeroSection/IdealizadorHeroSection'
 import IdealizadorCorporationsSection from './sections/IdealizadorCorporationsSection/IdealizadorCorporationsSection'
 import IdealizadorTimelineSection from './sections/IdealizadorTimelineSection/IdealizadorTimelineSection'
+import IdealizadorInnovationsSection from './sections/IdealizadorInnovationsSection/IdealizadorInnovationsSection'
 import './Idealizador.css'
 
 function Idealizador() {
@@ -10,6 +11,7 @@ function Idealizador() {
       <IdealizadorHeroSection />
       <IdealizadorOriginSection />
       <IdealizadorTimelineSection />
+      <IdealizadorInnovationsSection />
       <IdealizadorCorporationsSection />
     </div>
   )
