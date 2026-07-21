@@ -12,8 +12,8 @@
 
 .licitacao-contact__card {
   display: grid;
-  width: min(100%, 789px);
-  min-height: 507px;
+  width: min(100%, 980px);
+  min-height: 390px;
   grid-template-areas:
     "copy form"
     "media form";
@@ -74,10 +74,10 @@
   display: flex;
   grid-area: media;
   align-items: end;
-  align-self: end;
   justify-content: start;
   min-width: 0;
   margin: 0 0 0 -1px;
+  overflow: hidden;
 }
 
 .licitacao-contact__image {

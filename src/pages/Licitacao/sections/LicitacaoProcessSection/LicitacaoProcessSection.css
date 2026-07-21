@@ -59,10 +59,10 @@
 
 .licitacao-process__list {
   display: flex;
-  width: min(100%, 1188px);
+  width: min(100%, 980px);
   flex-direction: column;
-  gap: clamp(32px, 6vw, 82px);
-  margin: clamp(74px, 8.1vw, 108px) 0 0;
+  gap: clamp(24px, 3.2vw, 44px);
+  margin: clamp(48px, 5.2vw, 72px) 0 0;
   padding: 0;
   list-style: decimal;
   list-style-position: inside;
@@ -74,10 +74,10 @@
 
 .licitacao-process__card {
   width: 100%;
-  min-height: clamp(210px, 24.7vw, 337px);
+  min-height: clamp(150px, 15vw, 210px);
   border: 1px solid #a8a8a8;
   border-radius: clamp(6px, 0.72vw, 10px);
-  padding: clamp(28px, 3.45vw, 46px) clamp(28px, 3.45vw, 46px) clamp(30px, 3.7vw, 50px);
+  padding: clamp(22px, 2.4vw, 32px) clamp(24px, 2.8vw, 38px);
   background: #2e2e2f;
   color: var(--color-white);
 }
@@ -91,7 +91,7 @@
 .licitacao-process__number {
   flex: 0 0 auto;
   color: var(--color-white);
-  font-size: clamp(82px, 9.9vw, 132px);
+  font-size: clamp(58px, 7.2vw, 88px);
   line-height: 0.72;
 }
 
@@ -99,7 +99,7 @@
   margin: 0;
   color: var(--color-white);
   font-family: var(--font-primary);
-  font-size: clamp(28px, 3.24vw, 43px);
+  font-size: clamp(22px, 2.46vw, 36px);
   font-weight: 700;
   letter-spacing: -0.045em;
   line-height: 1.08;
@@ -110,7 +110,7 @@
   margin: clamp(18px, 1.5vw, 22px) 0 0;
   color: var(--color-white);
   font-family: var(--font-primary);
-  font-size: clamp(18px, 1.95vw, 26px);
+  font-size: clamp(14px, 1.24vw, 22px);
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1.08;
