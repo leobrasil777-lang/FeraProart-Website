@@ -11,6 +11,10 @@ function Idealizador() {
     <div className="idealizador-page">
       <IdealizadorHeroSection />
       <IdealizadorTimelineSection />
+      <IdealizadorCorporationsSection />
+      <IdealizadorOriginSection />
+      <IdealizadorInnovationsSection />
+      <IdealizadorMaestroQuoteSection />
     </div>
   )
 }
