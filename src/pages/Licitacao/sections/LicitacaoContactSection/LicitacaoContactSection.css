@@ -11,23 +11,23 @@
 }
 
 .licitacao-contact__card {
+  position: relative;
   display: grid;
   width: min(100%, 980px);
-  min-height: 390px;
-  grid-template-areas:
-    "copy form"
-    "media form";
+  min-height: 480px;
+  grid-template-areas: "copy form";
   grid-template-columns: minmax(0, 54%) minmax(295px, 38%);
-  grid-template-rows: auto 1fr;
   column-gap: 8%;
   overflow: hidden;
   border: 1px solid rgba(119, 123, 130, 0.36);
   border-radius: 9px;
-  background: #f9f6f0;
+  background: #EBE3D9;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
 .licitacao-contact__copy {
+  position: relative;
+  z-index: 1;
   grid-area: copy;
   padding: 39px 0 0 30px;
 }
@@ -71,23 +71,26 @@
 }
 
 .licitacao-contact__media {
-  display: flex;
-  grid-area: media;
-  align-items: end;
-  justify-content: start;
-  min-width: 0;
-  margin: 0 0 0 -1px;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  margin: 0;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .licitacao-contact__image {
-  width: min(100%, 421px);
-  height: auto;
+  width: 100%;
+  height: 100%;
+  display: block;
   object-fit: contain;
   object-position: left bottom;
+  transform: translate(0, 18px) scale(0.88);
 }
 
 .licitacao-contact__form {
+  position: relative;
+  z-index: 1;
   display: flex;
   grid-area: form;
   width: 100%;
