@@ -1,0 +1,165 @@
+.licitacao-hero {
+  position: relative;
+  display: flex;
+  min-height: clamp(640px, 86vh, 838px);
+  overflow: hidden;
+  align-items: center;
+  isolation: isolate;
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.licitacao-hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.licitacao-hero__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  min-height: inherit;
+  padding-top: clamp(132px, 17vh, 178px);
+  padding-bottom: clamp(72px, 9vh, 108px);
+}
+
+.licitacao-hero__content {
+  width: min(47%, 600px);
+  color: var(--color-white);
+}
+
+.licitacao-hero__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  color: var(--color-white);
+}
+
+.licitacao-hero__title-main {
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: clamp(48px, 4.85vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+  white-space: nowrap;
+}
+
+.licitacao-hero__title-highlight {
+  display: block;
+  margin-top: clamp(-13px, -0.9vw, -7px);
+  color: var(--color-white);
+  font-size: clamp(86px, 8.7vw, 114px);
+  line-height: 0.86;
+}
+
+.licitacao-hero__description {
+  max-width: 595px;
+  margin: clamp(18px, 2.6vw, 30px) 0 0;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: clamp(22px, 2vw, 26px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+@media (max-width: 75rem) {
+  .licitacao-hero {
+    min-height: clamp(610px, 82vh, 760px);
+  }
+
+  .licitacao-hero__image {
+    object-position: 56% center;
+  }
+
+  .licitacao-hero__content {
+    width: min(48%, 540px);
+  }
+
+  .licitacao-hero__title-main {
+    font-size: clamp(44px, 5vw, 58px);
+  }
+
+  .licitacao-hero__title-highlight {
+    font-size: clamp(78px, 8.4vw, 100px);
+  }
+
+  .licitacao-hero__description {
+    max-width: 520px;
+    font-size: clamp(19px, 2vw, 23px);
+  }
+}
+
+@media (max-width: 56rem) {
+  .licitacao-hero__image {
+    object-position: 60% center;
+  }
+
+  .licitacao-hero__content {
+    width: min(52%, 460px);
+  }
+
+  .licitacao-hero__title-main {
+    white-space: normal;
+  }
+
+  .licitacao-hero__description {
+    max-width: 430px;
+    font-size: clamp(18px, 2.35vw, 21px);
+  }
+}
+
+@media (max-width: 43.75rem) {
+  .licitacao-hero {
+    display: block;
+    min-height: 0;
+    padding-top: 0;
+  }
+
+  .licitacao-hero__image {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: clamp(280px, 78vw, 360px);
+    object-fit: cover;
+    object-position: 70% center;
+  }
+
+  .licitacao-hero__container {
+    display: block;
+    min-height: 0;
+    padding-top: clamp(128px, 33vw, 158px);
+    padding-bottom: clamp(28px, 8vw, 40px);
+  }
+
+  .licitacao-hero__content {
+    width: 100%;
+    max-width: 460px;
+  }
+
+  .licitacao-hero__title-main {
+    font-size: clamp(36px, 10.7vw, 42px);
+    line-height: 1.06;
+  }
+
+  .licitacao-hero__title-highlight {
+    margin-top: -5px;
+    font-size: clamp(60px, 18vw, 74px);
+    line-height: 0.9;
+  }
+
+  .licitacao-hero__description {
+    max-width: 100%;
+    margin-top: 14px;
+    font-size: clamp(16px, 4.45vw, 18px);
+    line-height: 1.22;
+  }
+}
