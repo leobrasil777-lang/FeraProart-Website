@@ -1,5 +1,7 @@
+import LicitacaoHeroSection from './Licitacao/sections/LicitacaoHeroSection/LicitacaoHeroSection'
+
 function Licitacao() {
-  return null
+  return <LicitacaoHeroSection />
 }
 
 export default Licitacao
