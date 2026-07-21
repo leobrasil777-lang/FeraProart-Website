@@ -46,6 +46,8 @@
   font-weight: 700;
   letter-spacing: -0.055em;
   line-height: 0.94;
+  transform: translateY(-90px);
+
 }
 
 .idealizador-maestro-quote__title-line {
@@ -57,11 +59,11 @@
   display: inline-block;
   color: var(--color-white);
   font-family: var(--font-highlight);
-  font-size: clamp(42px, 5vw, 66px);
+  font-size: clamp(48px, 8vw, 74px);
   font-weight: 400;
   letter-spacing: 0;
   line-height: 0;
-  transform: translateY(0.05em);
+  transform: translateY(-0.02em);
   vertical-align: baseline;
 }
 
@@ -70,12 +72,13 @@
   margin: 0;
   grid-column: 3;
   color: var(--color-white);
+  transform: translateX(100px);
 }
 
 .idealizador-maestro-quote__quote-mark {
   display: block;
   height: clamp(44px, 5.6vw, 70px);
-  color: #707070;
+  color: var(--color-white);
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(72px, 6.4vw, 84px);
   font-weight: 700;
