@@ -108,6 +108,11 @@
   color: var(--color-white);
 }
 
+.idealizador-timeline__card--wide {
+  width: 300px;
+  max-width: min(300px, calc(100vw - 96px));
+}
+
 .idealizador-timeline__year {
   display: block;
   color: var(--color-white);
@@ -145,6 +150,11 @@
     width: clamp(145px, 14.4vw, 155px);
     min-height: 116px;
     padding: 16px 15px;
+  }
+
+  .idealizador-timeline__card--wide {
+    width: 260px;
+    max-width: min(260px, calc(100vw - 64px));
   }
 
   .idealizador-timeline__description {
@@ -195,8 +205,10 @@
     justify-content: flex-end;
   }
 
-  .idealizador-timeline__card {
+  .idealizador-timeline__card,
+  .idealizador-timeline__card--wide {
     width: 44%;
+    max-width: none;
     min-height: 118px;
   }
 }
@@ -250,8 +262,10 @@
     height: 18px;
   }
 
-  .idealizador-timeline__card {
+  .idealizador-timeline__card,
+  .idealizador-timeline__card--wide {
     width: 100%;
+    max-width: none;
     min-height: auto;
     padding: 17px 18px;
   }
