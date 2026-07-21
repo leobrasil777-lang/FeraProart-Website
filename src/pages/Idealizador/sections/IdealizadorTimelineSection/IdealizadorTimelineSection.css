@@ -279,3 +279,103 @@
     line-height: 1.15;
   }
 }
+
+.idealizador-timeline {
+  overflow-x: clip;
+}
+
+.idealizador-timeline__line::after {
+  position: absolute;
+  inset: 0;
+  transform: scaleX(var(--timeline-progress, 0));
+  transform-origin: left center;
+  background: var(--color-white);
+  content: '';
+  transition: transform 180ms ease-out;
+}
+
+.idealizador-timeline__item {
+  opacity: 0;
+  transform: translateY(32px) scale(0.96);
+  transition:
+    opacity 700ms ease,
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.idealizador-timeline__item--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.idealizador-timeline__marker {
+  transition:
+    background-color 500ms ease,
+    box-shadow 500ms ease,
+    transform 500ms ease;
+}
+
+.idealizador-timeline__item--visible .idealizador-timeline__marker {
+  background: var(--color-white);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.12);
+}
+
+.idealizador-timeline__card {
+  transition:
+    border-color 500ms ease,
+    box-shadow 500ms ease,
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.idealizador-timeline__item--active .idealizador-timeline__card {
+  border-color: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 22px 54px rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+}
+
+@media (min-width: 62rem) {
+  .idealizador-timeline--pinned {
+    min-height: 300vh;
+    padding-block: 0;
+  }
+
+  .idealizador-timeline--pinned .idealizador-timeline__container {
+    position: sticky;
+    top: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: clamp(32px, 4vh, 52px) clamp(64px, 7vh, 86px);
+  }
+}
+
+@media (max-width: 61.9375rem) {
+  .idealizador-timeline__line::after {
+    transform: scaleY(var(--timeline-progress, 0));
+    transform-origin: top center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .idealizador-timeline {
+    min-height: auto;
+  }
+
+  .idealizador-timeline__container {
+    position: static;
+    min-height: 0;
+  }
+
+  .idealizador-timeline__line::after {
+    transform: none;
+  }
+
+  .idealizador-timeline__item,
+  .idealizador-timeline__card,
+  .idealizador-timeline__marker,
+  .idealizador-timeline__line::after {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
