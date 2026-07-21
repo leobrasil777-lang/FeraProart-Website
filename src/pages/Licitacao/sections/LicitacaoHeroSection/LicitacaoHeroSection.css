@@ -32,6 +32,7 @@
 .licitacao-hero__content {
   width: min(47%, 600px);
   color: var(--color-white);
+  animation: heroContentEnter 3000ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .licitacao-hero__title {

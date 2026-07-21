@@ -21,7 +21,7 @@
   overflow: hidden;
   border: 1px solid rgba(119, 123, 130, 0.36);
   border-radius: 9px;
-  background: #EBE3D9;
+  background: #f9f6f0;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
@@ -85,7 +85,7 @@
   display: block;
   object-fit: contain;
   object-position: left bottom;
-  transform: translate(0, 18px) scale(0.88);
+  transform: translate(1, 18px) scale(1);
 }
 
 .licitacao-contact__form {
