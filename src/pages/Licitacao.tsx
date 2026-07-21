@@ -9,8 +9,8 @@ function Licitacao() {
     <>
       <LicitacaoHeroSection />
       <LicitacaoProcessSection />
-      <LicitacaoProcessComparisonSection />
       <LicitacaoAgilitySection />
+      <LicitacaoProcessComparisonSection />
       <LicitacaoContactSection />
     </>
   )
