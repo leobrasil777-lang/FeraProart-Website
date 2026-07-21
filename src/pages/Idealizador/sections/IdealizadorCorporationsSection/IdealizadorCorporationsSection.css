@@ -1,7 +1,7 @@
 .idealizador-corporations {
   background: #000000;
   color: var(--color-white);
-  padding-block: clamp(36px, 3.1vw, 44px) clamp(120px, 9.7vw, 132px);
+  padding-block: clamp(28px, 2.5vw, 34px) clamp(64px, 5.8vw, 76px);
 }
 
 .idealizador-corporations__container {
@@ -23,60 +23,65 @@
 
 .idealizador-corporations__title-presence {
   display: inline-block;
-  font-size: clamp(84px, 6.7vw, 92px);
+  font-size: clamp(68px, 5.8vw, 78px);
   letter-spacing: 0;
   line-height: 0.85;
   vertical-align: baseline;
 }
 
+.idealizador-corporations__title-em {
+  display: inline-block;
+  margin-left: 10px;
+}
+
 .idealizador-corporations__title-em,
 .idealizador-corporations__title-line--corporations {
-  font-size: clamp(52px, 4.3vw, 58px);
+  font-size: clamp(44px, 3.8vw, 50px);
   line-height: 1;
 }
 
 .idealizador-corporations__description {
-  max-width: 670px;
-  margin: 19px 0 0;
+  max-width: 620px;
+  margin: 14px 0 0;
   color: var(--color-white);
-  font-size: clamp(24px, 1.86vw, 25px);
+  font-size: clamp(20px, 1.65vw, 22px);
   font-weight: 400;
-  line-height: 1.08;
+  line-height: 1.1;
 }
 
 .idealizador-corporations__list {
   display: grid;
-  margin: 45px 0 0;
+  margin: 30px 0 0;
   padding: 0;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 32px clamp(88px, 7vw, 96px);
+  gap: 22px clamp(58px, 5.4vw, 72px);
   list-style: none;
 }
 
 .idealizador-corporations__card {
   display: flex;
-  min-height: 142px;
+  min-height: 112px;
   align-items: center;
   border: 2px solid var(--color-white);
   border-radius: 9px;
-  padding: 24px 26px;
+  padding: 18px 20px;
   background: #1e1e1e;
   color: var(--color-white);
 }
 
 .idealizador-corporations__number {
-  flex: 0 0 45px;
+  flex: 0 0 38px;
   color: var(--color-white);
-  font-size: clamp(82px, 6.6vw, 90px);
+  font-size: clamp(64px, 5.3vw, 74px);
   font-weight: 300;
   line-height: 1;
 }
 
 .idealizador-corporations__divider {
   width: 2px;
-  height: 70px;
+  height: 58px;
   flex: 0 0 2px;
-  margin-inline: 22px;
+  margin-inline: 18px;
   background: var(--color-white);
 }
 
@@ -84,14 +89,14 @@
   min-width: 0;
   margin: 0;
   color: var(--color-white);
-  font-size: clamp(23px, 1.85vw, 25px);
+  font-size: clamp(18px, 1.55vw, 21px);
   font-weight: 700;
   line-height: 1.06;
 }
 
 @media (max-width: 74.9375rem) {
   .idealizador-corporations {
-    padding-block: 40px 112px;
+    padding-block: 32px 66px;
   }
 
   .idealizador-corporations__container {
@@ -99,47 +104,48 @@
   }
 
   .idealizador-corporations__title-presence {
-    font-size: clamp(72px, 7vw, 82px);
+    font-size: clamp(62px, 6.4vw, 72px);
   }
 
   .idealizador-corporations__title-em,
   .idealizador-corporations__title-line--corporations {
-    font-size: clamp(46px, 4.8vw, 54px);
+    font-size: clamp(40px, 4.5vw, 48px);
   }
 
   .idealizador-corporations__description {
-    max-width: 620px;
-    font-size: clamp(20px, 2vw, 22px);
+    max-width: 580px;
+    font-size: clamp(18px, 1.9vw, 20px);
     line-height: 1.12;
   }
 
   .idealizador-corporations__list {
-    gap: 26px clamp(28px, 4vw, 46px);
+    margin-top: 28px;
+    gap: 20px clamp(24px, 3.4vw, 38px);
   }
 
   .idealizador-corporations__card {
-    min-height: 132px;
-    padding: 22px 20px;
+    min-height: 106px;
+    padding: 17px 18px;
   }
 
   .idealizador-corporations__number {
-    flex-basis: 38px;
-    font-size: clamp(68px, 7vw, 78px);
+    flex-basis: 34px;
+    font-size: clamp(58px, 6vw, 68px);
   }
 
   .idealizador-corporations__divider {
-    height: 62px;
-    margin-inline: 17px;
+    height: 54px;
+    margin-inline: 15px;
   }
 
   .idealizador-corporations__name {
-    font-size: clamp(18px, 1.9vw, 21px);
+    font-size: clamp(16px, 1.75vw, 19px);
   }
 }
 
 @media (max-width: 61.9375rem) {
   .idealizador-corporations {
-    padding-block: 44px 84px;
+    padding-block: 38px 70px;
   }
 
   .idealizador-corporations__container {
@@ -148,12 +154,12 @@
 
   .idealizador-corporations__list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+    gap: 20px;
   }
 
   .idealizador-corporations__card {
     width: 100%;
-    min-height: 130px;
+    min-height: 116px;
   }
 }
 
