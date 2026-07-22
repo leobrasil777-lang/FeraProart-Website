@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import Container from '../../../../components/Container/Container'
 import alarmIcon from '../../../../assets/icons/licitacao/alarm.svg'
 import checkIcon from '../../../../assets/icons/licitacao/check.svg'
@@ -26,8 +27,47 @@ const benefits: AgilityBenefit[] = [
 ]
 
 function LicitacaoAgilitySection() {
+  const sectionRef = useRef<HTMLElement | null>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const section = sectionRef.current
+
+    if (!section) {
+      return undefined
+    }
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (prefersReducedMotion) {
+      setIsVisible(true)
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      {
+        threshold: 0.35,
+        rootMargin: '0px 0px -18% 0px',
+      },
+    )
+
+    observer.observe(section)
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section className="licitacao-agility" aria-labelledby="licitacao-agility-title">
+    <section
+      ref={sectionRef}
+      className={`licitacao-agility${isVisible ? ' licitacao-agility--visible' : ''}`}
+      aria-labelledby="licitacao-agility-title"
+    >
       <Container className="licitacao-agility__container">
         <div className="licitacao-agility__grid">
           <div className="licitacao-agility__content">
