@@ -46,7 +46,7 @@
   z-index: 1;
   color: var(--color-white);
   font-size: clamp(56px, 5.2vw, 64px);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.055em;
   line-height: 0.95;
 }
@@ -312,6 +312,6 @@
 /* Notebook com pouca altura */
 @media (max-height: 760px) and (min-width: 56.01rem) {
   .licitacao-agility__title-highlight {
-    font-size: clamp(84px, 9.9vw, 134px);;
+    font-size: clamp(84px, 9.9vw, 134px);  ;
   }
 }

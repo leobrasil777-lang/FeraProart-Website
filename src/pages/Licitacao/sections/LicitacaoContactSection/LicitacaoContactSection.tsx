@@ -52,8 +52,11 @@ function LicitacaoContactSection() {
           <div className="licitacao-contact__copy">
             <h2 id="licitacao-contact-title" className="licitacao-contact__title">
               <span className="licitacao-contact__title-main">Precisando de</span>
-              <span className="licitacao-contact__title-main">apoio para</span>
-              <span className="licitacao-contact__title-script highlight-font">licitação?</span>
+
+              <span className="licitacao-contact__title-line">
+                <span className="licitacao-contact__title-main">apoio para</span>
+                <span className="licitacao-contact__title-script highlight-font">licitação?</span>
+              </span>
             </h2>
 
             <p className="licitacao-contact__description">
@@ -85,13 +88,19 @@ function LicitacaoContactSection() {
                   <label className="licitacao-contact__sr-only" htmlFor={field.id}>
                     {field.label}
                   </label>
-                  <input
-                    id={field.id}
-                    name={field.name}
-                    autoComplete={field.autoComplete}
-                    placeholder={field.placeholder}
-                    required
-                  />
+                <input
+                  id={field.id}
+                  name={field.name}
+                  autoComplete={field.autoComplete}
+                  placeholder={field.placeholder}
+                  required
+                  onInvalid={(event) => {
+                    event.currentTarget.setCustomValidity(`Preencha o campo ${field.label}.`)
+                  }}
+                  onInput={(event) => {
+                    event.currentTarget.setCustomValidity('')
+                  }}
+                />
                 </div>
               ))}
             </div>

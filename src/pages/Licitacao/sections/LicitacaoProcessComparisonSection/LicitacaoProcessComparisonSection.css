@@ -12,14 +12,14 @@
 
 .licitacao-process-comparison__title {
   display: flex;
-  width: min(100%, 430px);
+  width: min(100%, 530px);
   flex-direction: column;
   align-items: center;
   margin: 0;
   color: var(--color-white);
   font-family: var(--font-primary);
-  font-size: clamp(36px, 3.35vw, 46px);
-  font-weight: 700;
+  font-size: clamp(56px, 3.55vw, 56px);
+  font-weight: 520;
   letter-spacing: -0.055em;
   line-height: 0.9;
   text-align: center;
@@ -31,7 +31,7 @@
 
 .licitacao-process-comparison__title-highlight {
   margin-top: -0.12em;
-  font-size: clamp(76px, 8.25vw, 88px);
+  font-size: clamp(88px, 9.25vw, 96px);
   -webkit-text-stroke: 7px #000000;
   paint-order: stroke fill;
   letter-spacing: 0;
@@ -47,7 +47,7 @@
 }
 
 .licitacao-process-comparison__panel {
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
   border: 1px solid #b7b7b7;
   border-radius: 6px;
@@ -141,28 +141,22 @@
   line-height: 1.42;
 }
 
-
 @media (min-width: 62rem) {
   .licitacao-process-comparison__panels {
-    /* altura controlada para o efeito sticky dos cards */
-    --licitacao-process-comparison-sticky-top: clamp(86px, 9vw, 118px);
-    --licitacao-process-comparison-stack-offset: clamp(46px, 6vw, 74px);
     gap: 0;
-    padding-bottom: var(--licitacao-process-comparison-stack-offset);
-  }
-
-  .licitacao-process-comparison__panel {
-    position: sticky;
-    top: var(--licitacao-process-comparison-sticky-top);
+    overflow: visible;
   }
 
   .licitacao-process-comparison__panel--bureaucratic {
+    position: sticky;
+    top: 100px;
     z-index: 1;
   }
 
   .licitacao-process-comparison__panel--fera {
+    position: relative;
     z-index: 2;
-    margin-top: var(--licitacao-process-comparison-stack-offset);
+    margin-top: 120px;
   }
 }
 
@@ -224,3 +218,4 @@
     padding: 26px 20px 34px;
   }
 }
+

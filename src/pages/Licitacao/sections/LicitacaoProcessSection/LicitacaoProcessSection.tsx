@@ -11,19 +11,19 @@ type ProcessStep = {
 const processSteps: ProcessStep[] = [
   {
     number: 1,
-    title: 'Elaboração de Descritivos Técnicos Certificados',
+    title: '1. Elaboração de Descritivos Técnicos Certificados',
     description:
       'Criamos especificações detalhadas, claras e sem direcionamentos, em total conformidade com a Nova Lei de Licitações (Lei n° 14.133/21). Evite impugnações com descritivos precisos de materiais, gramaturas, composições e engenharia do produto.',
   },
   {
     number: 2,
-    title: 'Suporte no Termo de Referência (TR)',
+    title: '2. Suporte no Termo de Referência (TR)',
     description:
       'Auxiliamos na estruturação do TR, fornecendo subsídios técnicos fundamentados, estudos de viabilidade e critérios de aceitabilidade que garantem a qualidade do objeto a ser contratado.',
   },
   {
     number: 3,
-    title: 'Mostruários e Amostras de Alta Qualidade',
+    title: '3. Mostruários e Amostras de Alta Qualidade',
     description:
       'Disponibilizamos mockups, amostras físicas e protótipos detalhados para que a comissão de licitação possa avaliar a conformidade técnica, o acabamento e a durabilidade antes ou durante a fase de julgamento.',
   },
@@ -47,9 +47,6 @@ function ProcessStepCard({ number, title, description, isVisible, direction }: P
     <li className={itemClassName}>
       <article className="licitacao-process__card">
         <div className="licitacao-process__card-heading">
-          <span className="licitacao-process__number highlight-font" aria-hidden="true">
-            {number}.
-          </span>
           <h3 className="licitacao-process__card-title">{title}</h3>
         </div>
 

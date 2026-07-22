@@ -90,13 +90,6 @@
   gap: clamp(16px, 2vw, 28px);
 }
 
-.licitacao-process__number {
-  flex: 0 0 auto;
-  color: var(--color-white);
-  font-size: clamp(58px, 7.2vw, 88px);
-  line-height: 0.72;
-}
-
 .licitacao-process__card-title {
   margin: 0;
   color: var(--color-white);
@@ -195,10 +188,6 @@
 
   .licitacao-process__card-heading {
     gap: clamp(12px, 4vw, 16px);
-  }
-
-  .licitacao-process__number {
-    font-size: clamp(58px, 18vw, 72px);
   }
 
   .licitacao-process__card-title {

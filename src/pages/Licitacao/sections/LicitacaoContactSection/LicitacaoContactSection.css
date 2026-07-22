@@ -34,6 +34,7 @@
 
 .licitacao-contact__title {
   display: flex;
+  max-width: 620px;
   flex-direction: column;
   align-items: flex-start;
   margin: 0;
@@ -42,21 +43,29 @@
   line-height: 0.9;
 }
 
+.licitacao-contact__title-line {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  white-space: nowrap;
+}
+
 .licitacao-contact__title-main {
-  display: block;
-  font-size: clamp(42px, 3.6vw, 45px);
+  display: inline-block;
+  font-size: clamp(56px, 4.6vw, 62px);
   font-weight: 700;
   letter-spacing: -0.055em;
   line-height: 0.95;
 }
 
 .licitacao-contact__title-script {
-  display: block;
-  margin-top: -0.2em;
+  display: inline-block;
   color: #1e1e1e;
-  font-size: clamp(61px, 5.25vw, 68px);
+  font-size: clamp(76px, 6.4vw, 96px);
   letter-spacing: 0;
   line-height: 0.82;
+  transform: translateY(0.01em);
+  white-space: nowrap;
 }
 
 .licitacao-contact__description {
