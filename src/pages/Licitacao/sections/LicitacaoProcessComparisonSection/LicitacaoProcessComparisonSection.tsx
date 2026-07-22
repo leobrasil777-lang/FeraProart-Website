@@ -40,7 +40,7 @@ function LicitacaoProcessComparisonSection() {
         </h2>
 
         <div className="licitacao-process-comparison__panels">
-          <article className="licitacao-process-comparison__panel">
+          <article className="licitacao-process-comparison__panel licitacao-process-comparison__panel--bureaucratic">
             <header className="licitacao-process-comparison__panel-header">
               <h3>PROCESSO BUROCRÁTICO PADRÃO:</h3>
             </header>
@@ -57,7 +57,7 @@ function LicitacaoProcessComparisonSection() {
             </div>
           </article>
 
-          <article className="licitacao-process-comparison__panel">
+          <article className="licitacao-process-comparison__panel licitacao-process-comparison__panel--fera">
             <header className="licitacao-process-comparison__panel-header">
               <h3>PROCESSO FERA PROART:</h3>
             </header>
