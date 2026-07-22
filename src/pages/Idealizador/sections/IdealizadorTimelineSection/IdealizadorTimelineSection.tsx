@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import Container from '../../../../components/Container/Container'
 import './IdealizadorTimelineSection.css'
 
@@ -46,9 +47,78 @@ const timelineMilestones: TimelineMilestone[] = [
   },
 ]
 
+const clamp = (value: number) => Math.min(Math.max(value, 0), 1)
+
 function IdealizadorTimelineSection() {
+  const trackRef = useRef<HTMLDivElement | null>(null)
+  const animationFrameRef = useRef<number | null>(null)
+
+  const [timelineProgress, setTimelineProgress] = useState(0)
+  const [activeIndex, setActiveIndex] = useState(-1)
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+    const updateTimelineProgress = () => {
+      animationFrameRef.current = null
+
+      const track = trackRef.current
+
+      if (!track) {
+        return
+      }
+
+      if (reducedMotion.matches) {
+        setTimelineProgress(1)
+        setActiveIndex(timelineMilestones.length - 1)
+        return
+      }
+
+      const rect = track.getBoundingClientRect()
+
+      const startPoint = window.innerHeight * 1.3
+      const endPoint = window.innerHeight * 0.80
+
+      const totalDistance = rect.height + startPoint - endPoint
+      const progress = clamp((startPoint - rect.top) / totalDistance)
+
+      setTimelineProgress(progress)
+
+      const nextActiveIndex =
+        progress <= 0
+          ? -1
+          : Math.min(timelineMilestones.length - 1, Math.ceil(progress * timelineMilestones.length) - 1)
+
+      setActiveIndex(nextActiveIndex)
+    }
+
+    const requestTimelineUpdate = () => {
+      if (animationFrameRef.current === null) {
+        animationFrameRef.current = window.requestAnimationFrame(updateTimelineProgress)
+      }
+    }
+
+    updateTimelineProgress()
+
+    window.addEventListener('scroll', requestTimelineUpdate, { passive: true })
+    window.addEventListener('resize', requestTimelineUpdate)
+
+    return () => {
+      window.removeEventListener('scroll', requestTimelineUpdate)
+      window.removeEventListener('resize', requestTimelineUpdate)
+
+      if (animationFrameRef.current !== null) {
+        window.cancelAnimationFrame(animationFrameRef.current)
+      }
+    }
+  }, [])
+
   return (
-    <section className="idealizador-timeline" aria-labelledby="idealizador-timeline-title">
+    <section
+      className="idealizador-timeline"
+      aria-labelledby="idealizador-timeline-title"
+      style={{ '--timeline-progress': timelineProgress } as CSSProperties}
+    >
       <Container className="idealizador-timeline__container">
         <header className="idealizador-timeline__header">
           <h2 className="idealizador-timeline__title" id="idealizador-timeline-title">
@@ -58,20 +128,29 @@ function IdealizadorTimelineSection() {
           <p className="idealizador-timeline__subtitle">Os Principais Marcos dessa História</p>
         </header>
 
-        <div className="idealizador-timeline__track" aria-label="Linha do tempo da trajetória de Fernando Rabelo">
+        <div
+          className="idealizador-timeline__track"
+          aria-label="Linha do tempo da trajetória de Fernando Rabelo"
+          ref={trackRef}
+        >
           <div className="idealizador-timeline__line" aria-hidden="true" />
           <ol className="idealizador-timeline__list">
-            {timelineMilestones.map((milestone) => {
+            {timelineMilestones.map((milestone, index) => {
+              const isVisible = index <= activeIndex
+
               const cardClassName = [
                 'idealizador-timeline__card',
                 milestone.isWide ? 'idealizador-timeline__card--wide' : '',
+                isVisible ? 'idealizador-timeline__card--visible' : '',
               ]
                 .filter(Boolean)
                 .join(' ')
 
               return (
                 <li
-                  className={`idealizador-timeline__item idealizador-timeline__item--${milestone.position}`}
+                  className={`idealizador-timeline__item idealizador-timeline__item--${milestone.position}${
+                    isVisible ? ' idealizador-timeline__item--visible' : ''
+                  }`}
                   key={`${milestone.label}-${milestone.description}`}
                 >
                   <article className={cardClassName}>
