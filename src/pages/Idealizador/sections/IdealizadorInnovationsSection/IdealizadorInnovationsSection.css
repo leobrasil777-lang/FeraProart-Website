@@ -18,7 +18,7 @@
   color: var(--color-white);
   font-family: var(--font-primary);
   font-size: clamp(48px, 4vw, 54px);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.045em;
   line-height: 0.95;
 }
@@ -29,7 +29,7 @@
 }
 
 .idealizador-innovations__title-highlight {
-  font-size: clamp(78px, 6.5vw, 88px);
+  font-size: clamp(86px, 6.9vw, 94px);
   font-weight: 400;
   letter-spacing: 0;
   line-height: 0.72;

@@ -23,7 +23,7 @@ function LicitacaoHeroSection() {
           </h1>
 
           <p className="licitacao-hero__description">
-            Especialistas no atendimento a órgãos públicos. Oferecemos suporte técnico completo, da elaboração do Termo de Referência à entrega, com Atas de Registro de Preços vigentes para agilizar sua contratação.
+            Especialistas no atendimento a órgãos públicos, oferecemos suporte técnico completo, da elaboração do Termo de Referência à entrega, com Atas de Registro de Preços vigentes para agilizar sua contratação.
           </p>
         </div>
       </Container>

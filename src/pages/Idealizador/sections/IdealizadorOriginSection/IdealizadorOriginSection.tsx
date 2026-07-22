@@ -66,16 +66,16 @@ function IdealizadorOriginSection() {
 
           <div className="idealizador-origin__copy">
             <p>
-              Foram anos de regência, competições e conquista ao lado de centenas de músicos, balizas e maestros.
+              Foram anos de regência, competições e conquistas ao lado de centenas de músicos, balizas e maestros.
             </p>
             <p>
-              E com essa vivência real do Maestro no mundo da música, bandas e fanfarras, Fernando Rabelo sentiu mais que ninguém as necessidades desse universo,
+              E com essa vivência real do Maestro no mundo da música, Fernando Rabelo entendeu melhor que ninguém a necessidade desse universo.
             </p>
           </div>
 
           <p className="idealizador-origin__conclusion">
             <span>
-              Foi assim que, em 2004, o Maestro dá vida à Fera Proart, a Grife das Bandas e Fanfarras do Brasil.
+              Foi assim que, em 2024, o Maestro dá vida à Fera Proart, a Grife das Bandas e Fanfarras.
             </span>
           </p>
         </div>

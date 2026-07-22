@@ -87,7 +87,7 @@ function IdealizadorInnovationsSection() {
         }
       },
       {
-        threshold: 0.22,
+        threshold: 0.45,
         rootMargin: '0px 0px -12% 0px',
       },
     )

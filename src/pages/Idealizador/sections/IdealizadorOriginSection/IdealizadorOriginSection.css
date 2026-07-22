@@ -67,7 +67,7 @@
   margin: 0;
   color: var(--color-white);
   font-size: clamp(44px, 4.55vw, 60px);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.055em;
   line-height: 0.94;
 }
@@ -82,11 +82,11 @@
   margin-left: 0.08em;
   color: var(--color-white);
   font-family: var(--font-highlight);
-  font-size: clamp(68px, 6.7vw, 88px);
+  font-size: clamp(92px, 8.9vw, 98px);
   font-weight: 400;
   letter-spacing: 0;
   line-height: 0;
-  transform: translateY(0.04em);
+  transform: translateY(0.001em);
   vertical-align: baseline;
 }
 
