@@ -1,5 +1,7 @@
+import CalcadosHeroSection from './sections/CalcadosHeroSection/CalcadosHeroSection'
+
 function Calcados() {
-  return null
+  return <CalcadosHeroSection />
 }
 
 export default Calcados
