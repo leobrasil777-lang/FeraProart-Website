@@ -1,10 +1,47 @@
+import { useEffect, useRef, useState } from 'react'
 import Container from '../../../../components/Container/Container'
 import founderBarretina from '../../../../assets/images/idealizador/founder-barretina.png'
 import './IdealizadorOriginSection.css'
 
 function IdealizadorOriginSection() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const section = sectionRef.current
+
+    if (!section) {
+      return undefined
+    }
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (prefersReducedMotion) {
+      setIsVisible(true)
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.2 },
+    )
+
+    observer.observe(section)
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section className="idealizador-origin" aria-labelledby="idealizador-origin-title">
+    <section
+      ref={sectionRef}
+      className={`idealizador-origin${isVisible ? ' idealizador-origin--visible' : ''}`}
+      aria-labelledby="idealizador-origin-title"
+    >
       <Container className="idealizador-origin__container">
         <figure className="idealizador-origin__figure">
           <img
