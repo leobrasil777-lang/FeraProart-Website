@@ -82,7 +82,7 @@ function LicitacaoProcessSection() {
 
       const listTop = listElement.getBoundingClientRect().top
       const viewportHeight = window.innerHeight
-      const nextVisibleCardsCount = [0.78, 0.58, 0.38].filter(
+      const nextVisibleCardsCount = [0.58, 0.30, 0.10].filter(
         (threshold) => listTop <= viewportHeight * threshold,
       ).length
 
