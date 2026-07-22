@@ -141,6 +141,31 @@
   line-height: 1.42;
 }
 
+
+@media (min-width: 62rem) {
+  .licitacao-process-comparison__panels {
+    /* altura controlada para o efeito sticky dos cards */
+    --licitacao-process-comparison-sticky-top: clamp(86px, 9vw, 118px);
+    --licitacao-process-comparison-stack-offset: clamp(46px, 6vw, 74px);
+    gap: 0;
+    padding-bottom: var(--licitacao-process-comparison-stack-offset);
+  }
+
+  .licitacao-process-comparison__panel {
+    position: sticky;
+    top: var(--licitacao-process-comparison-sticky-top);
+  }
+
+  .licitacao-process-comparison__panel--bureaucratic {
+    z-index: 1;
+  }
+
+  .licitacao-process-comparison__panel--fera {
+    z-index: 2;
+    margin-top: var(--licitacao-process-comparison-stack-offset);
+  }
+}
+
 @media (max-width: 56rem) {
   .licitacao-process-comparison {
     padding-block: clamp(44px, 7vw, 62px) clamp(50px, 8vw, 76px);
