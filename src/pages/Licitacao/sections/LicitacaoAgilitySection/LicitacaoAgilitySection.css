@@ -58,7 +58,7 @@
   color: var(--color-white);
   -webkit-text-stroke: 7px #000000;
   paint-order: stroke fill;
-  font-size: clamp(64px, 5.8vw, 72px);
+  font-size: clamp(84px, 9.9vw, 134px);
   letter-spacing: 0;
   line-height: 0.76;
 }
@@ -284,5 +284,34 @@
     opacity: 1;
     transform: translateX(0);
     transition: none;
+  }
+}
+
+/* Ajuste do destaque "máxima:" */
+
+.licitacao-agility__title-highlight {
+  font-size: clamp(82px, 7.8vw, 108px);
+}
+
+/* Tablet / telas médias */
+@media (max-width: 56rem) {
+  .licitacao-agility__title-highlight {
+    font-size: clamp(82px, 14vw, 116px);
+    -webkit-text-stroke-width: 6px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 43.75rem) {
+  .licitacao-agility__title-highlight {
+    font-size: clamp(78px, 22vw, 104px);
+    -webkit-text-stroke-width: 5px;
+  }
+}
+
+/* Notebook com pouca altura */
+@media (max-height: 760px) and (min-width: 56.01rem) {
+  .licitacao-agility__title-highlight {
+    font-size: clamp(84px, 9.9vw, 134px);;
   }
 }

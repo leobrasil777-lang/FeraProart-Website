@@ -18,18 +18,18 @@ function Header() {
     <header className="site-header">
       <nav className="site-header__nav" data-open={isMenuOpen} aria-label="Navegação principal">
         <NavLink
-          className="site-header__logo"
-          to="/"
-          end
-          onClick={() => setIsMenuOpen(false)}
-          aria-label="Fera Proart - Home"
-        >
-          <img
-            src={logoFeraProart}
-            alt="Fera Proart"
-            className="site-header__logo-image"
-          />
-        </NavLink>
+        className="site-header__logo"
+        to="/"
+        end
+        onClick={() => setIsMenuOpen(false)}
+        aria-label="Fera Proart - Home"
+      >
+        <img
+          src={logoFeraProart}
+          alt="Fera Proart"
+          className="site-header__logo-image"
+        />
+      </NavLink>
         <div className="site-header__links">
           {navigation.map(({ label, to }) => (
             <NavLink key={to} to={to} end={to === '/'} onClick={() => setIsMenuOpen(false)}>
