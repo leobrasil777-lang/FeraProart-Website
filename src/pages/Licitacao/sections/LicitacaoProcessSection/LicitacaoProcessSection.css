@@ -218,3 +218,36 @@
     gap: 8px;
   }
 }
+
+.licitacao-process__item--from-left,
+.licitacao-process__item--from-right {
+  opacity: 0;
+  transition:
+    opacity 1000ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.licitacao-process__item--from-left {
+  transform: translateX(-48px);
+}
+
+.licitacao-process__item--from-right {
+  transform: translateX(48px);
+}
+
+.licitacao-process__item--visible {
+  opacity: 1;
+  transform: translateX(0);
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .licitacao-process__item--from-left,
+  .licitacao-process__item--from-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}

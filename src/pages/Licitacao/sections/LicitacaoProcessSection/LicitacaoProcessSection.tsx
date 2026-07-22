@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import Container from '../../../../components/Container/Container'
 import './LicitacaoProcessSection.css'
 
@@ -28,9 +29,22 @@ const processSteps: ProcessStep[] = [
   },
 ]
 
-function ProcessStepCard({ number, title, description }: ProcessStep) {
+type ProcessStepCardProps = ProcessStep & {
+  isVisible: boolean
+  direction: 'left' | 'right'
+}
+
+function ProcessStepCard({ number, title, description, isVisible, direction }: ProcessStepCardProps) {
+  const itemClassName = [
+    'licitacao-process__item',
+    `licitacao-process__item--from-${direction}`,
+    isVisible ? 'licitacao-process__item--visible' : '',
+  ]
+    .filter(Boolean)
+    .join(' ')
+
   return (
-    <li className="licitacao-process__item">
+    <li className={itemClassName}>
       <article className="licitacao-process__card">
         <div className="licitacao-process__card-heading">
           <span className="licitacao-process__number highlight-font" aria-hidden="true">
@@ -46,6 +60,52 @@ function ProcessStepCard({ number, title, description }: ProcessStep) {
 }
 
 function LicitacaoProcessSection() {
+  const listRef = useRef<HTMLOListElement>(null)
+  const [visibleCardsCount, setVisibleCardsCount] = useState(0)
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (prefersReducedMotion) {
+      setVisibleCardsCount(processSteps.length)
+      return
+    }
+
+    let animationFrameId = 0
+
+    const updateVisibleCards = () => {
+      const listElement = listRef.current
+
+      if (!listElement) {
+        return
+      }
+
+      const listTop = listElement.getBoundingClientRect().top
+      const viewportHeight = window.innerHeight
+      const nextVisibleCardsCount = [0.78, 0.58, 0.38].filter(
+        (threshold) => listTop <= viewportHeight * threshold,
+      ).length
+
+      if (nextVisibleCardsCount > 0) {
+        setVisibleCardsCount((currentCount) => Math.max(currentCount, nextVisibleCardsCount))
+      }
+    }
+
+    const handleScroll = () => {
+      window.cancelAnimationFrame(animationFrameId)
+      animationFrameId = window.requestAnimationFrame(updateVisibleCards)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('resize', handleScroll)
+
+    return () => {
+      window.cancelAnimationFrame(animationFrameId)
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleScroll)
+    }
+  }, [])
+
   return (
     <section className="licitacao-process" aria-labelledby="licitacao-process-title">
       <Container className="licitacao-process__container">
@@ -61,9 +121,14 @@ function LicitacaoProcessSection() {
           Sabemos que a construção de um processo licitatório exige rigor técnico, clareza e segurança jurídica. Nossa equipe de especialistas apoia o poder público em todas as etapas da fase preparatória, garantindo ampla competitividade e a escolha do melhor produto.
         </p>
 
-        <ol className="licitacao-process__list">
-          {processSteps.map((step) => (
-            <ProcessStepCard key={step.number} {...step} />
+        <ol className="licitacao-process__list" ref={listRef}>
+          {processSteps.map((step, index) => (
+            <ProcessStepCard
+              key={step.number}
+              {...step}
+              direction={index === 1 ? 'right' : 'left'}
+              isVisible={index < visibleCardsCount}
+            />
           ))}
         </ol>
       </Container>
