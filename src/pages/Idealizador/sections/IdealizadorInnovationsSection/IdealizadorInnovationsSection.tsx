@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import Container from '../../../../components/Container/Container'
 import './IdealizadorInnovationsSection.css'
 
@@ -68,8 +69,40 @@ function InnovationCard({ innovation }: { innovation: Innovation }) {
 }
 
 function IdealizadorInnovationsSection() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const section = sectionRef.current
+
+    if (!section || isVisible) {
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      {
+        threshold: 0.22,
+        rootMargin: '0px 0px -12% 0px',
+      },
+    )
+
+    observer.observe(section)
+
+    return () => observer.disconnect()
+  }, [isVisible])
+
   return (
-    <section className="idealizador-innovations" aria-labelledby="idealizador-innovations-title">
+    <section
+      ref={sectionRef}
+      className={`idealizador-innovations${isVisible ? ' idealizador-innovations--visible' : ''}`}
+      aria-labelledby="idealizador-innovations-title"
+    >
       <Container className="idealizador-innovations__container">
         <header className="idealizador-innovations__header">
           <h2 className="idealizador-innovations__title" id="idealizador-innovations-title">
