@@ -1,5 +1,11 @@
+import BarretinasQuepesHeroSection from './sections/BarretinasQuepesHeroSection/BarretinasQuepesHeroSection'
+
 function BarretinasQuepes() {
-  return null
+  return (
+    <>
+      <BarretinasQuepesHeroSection />
+    </>
+  )
 }
 
 export default BarretinasQuepes
