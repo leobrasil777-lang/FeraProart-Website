@@ -8,6 +8,10 @@ import mocassinoComCadarco from '../../assets/images/calcados/mocassino-com-cada
 import botaCanoCurtoPretaSemCadarco from '../../assets/images/calcados/bota-canocurto-preta2.png'
 import botaCanoCurtoPreta from '../../assets/images/calcados/bota-canocurto-preta.png'
 import botaCanoCurtoBranca from '../../assets/images/calcados/bota-canocurto-branca.png'
+import sapatilhaBaliza from '../../assets/images/calcados/sapatilha-baliza.png'
+import sapatilhaBipartida from '../../assets/images/calcados/sapatilha-bipartida.png'
+import botilhaBranca from '../../assets/images/calcados/botilha-branca.png'
+import botilhaBranca2 from '../../assets/images/calcados/botilha-branca2.png'
 import botaCanoLongoPreta from '../../assets/images/calcados/bota-canolongo-preta.png'
 import botaCanoLongoBranca from '../../assets/images/calcados/bota-canolongo-branca.png'
 import botaCanoLongoPreta2 from '../../assets/images/calcados/bota-canolongo-preta2.png'
@@ -54,6 +58,25 @@ const botasCanoCurtoImages: ItemCategorySectionImage[] = [
   },
 ]
 
+const calcadosBalizaImages: ItemCategorySectionImage[] = [
+  {
+    src: sapatilhaBaliza,
+    alt: 'Par de sapatilhas pretas para baliza sem cadarço.',
+  },
+  {
+    src: sapatilhaBipartida,
+    alt: 'Par de sapatilhas pretas para baliza visto pelo solado marrom, sem cadarço.',
+  },
+  {
+    src: botilhaBranca,
+    alt: 'Par de botilhas brancas para baliza com cadarço e zíper lateral.',
+  },
+  {
+    src: botilhaBranca2,
+    alt: 'Par de botilhas brancas para baliza com cadarço, visto de frente.',
+  },
+]
+
 const botasCanoLongoImages: ItemCategorySectionImage[] = [
   {
     src: botaCanoLongoPreta,
@@ -87,6 +110,10 @@ const botasCanoLongoImages: ItemCategorySectionImage[] = [
 
 const conteudoTecnicoBotasCanoCurto = (
   <p>Conteúdo técnico de botas de cano curto pendente de aprovação.</p>
+)
+
+const conteudoTecnicoCalcadosBaliza = (
+  <p>Conteúdo técnico de calçados para Baliza pendente de aprovação.</p>
 )
 
 const conteudoTecnicoBotasCanoLongo = (
@@ -137,6 +164,19 @@ function Calcados() {
         ctaHref="/licitacao"
         specificationsLabel="Ver especificações técnicas"
         specifications={conteudoTecnicoBotasCanoCurto}
+      />
+      <ItemCategorySection
+        id="calcados-baliza"
+        theme="light"
+        contentSide="left"
+        title="Calçados"
+        highlight="Baliza"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        images={calcadosBalizaImages}
+        ctaLabel="Quero um orçamento"
+        ctaHref="/licitacao"
+        specificationsLabel="Ver especificações técnicas"
+        specifications={conteudoTecnicoCalcadosBaliza}
       />
       <ItemCategorySection
         id="botas-cano-longo"
