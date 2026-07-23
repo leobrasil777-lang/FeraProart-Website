@@ -112,14 +112,29 @@ function ItemCategorySection({
             </div>
           </div>
 
-          <div className="item-category-section__controls" aria-label="Controles da galeria">
-            <button className="item-category-section__control" type="button" aria-label="Imagem anterior" aria-disabled={!hasPrevious} disabled={!hasPrevious} onClick={() => setCurrentIndex((index) => Math.max(index - 1, 0))}>
-              <span className="item-category-section__arrow item-category-section__arrow--previous" aria-hidden="true" />
-            </button>
-            <button className="item-category-section__control" type="button" aria-label="Próxima imagem" aria-disabled={!hasNext} disabled={!hasNext} onClick={() => setCurrentIndex((index) => Math.min(index + 1, maxIndex))}>
-              <span className="item-category-section__arrow item-category-section__arrow--next" aria-hidden="true" />
-            </button>
+          <div className="item-category-section__gallery-footer">
+            {specifications && (
+              <button id={triggerId} className="item-category-section__specifications-trigger" type="button" aria-expanded={isSpecificationsOpen} aria-controls={panelId} onClick={() => setIsSpecificationsOpen((isOpen) => !isOpen)}>
+                <span className="item-category-section__specifications-symbol" aria-hidden="true">{isSpecificationsOpen ? '−' : '+'}</span>
+                <span>{specificationsLabel}</span>
+              </button>
+            )}
+
+            <div className="item-category-section__controls" aria-label="Controles da galeria">
+              <button className="item-category-section__control" type="button" aria-label="Imagem anterior" aria-disabled={!hasPrevious} disabled={!hasPrevious} onClick={() => setCurrentIndex((index) => Math.max(index - 1, 0))}>
+                <span className="item-category-section__arrow item-category-section__arrow--previous" aria-hidden="true" />
+              </button>
+              <button className="item-category-section__control" type="button" aria-label="Próxima imagem" aria-disabled={!hasNext} disabled={!hasNext} onClick={() => setCurrentIndex((index) => Math.min(index + 1, maxIndex))}>
+                <span className="item-category-section__arrow item-category-section__arrow--next" aria-hidden="true" />
+              </button>
+            </div>
           </div>
+
+          {specifications && (
+            <div id={panelId} className="item-category-section__specifications-panel" role="region" aria-labelledby={triggerId} hidden={!isSpecificationsOpen}>
+              <div className="item-category-section__specifications-content">{specifications}</div>
+            </div>
+          )}
         </div>
 
         <div className="item-category-section__content">
@@ -129,17 +144,6 @@ function ItemCategorySection({
           </h2>
           <p className="item-category-section__description">{description}</p>
           {cta}
-          {specifications && (
-            <div className="item-category-section__specifications">
-              <button id={triggerId} className="item-category-section__specifications-trigger" type="button" aria-expanded={isSpecificationsOpen} aria-controls={panelId} onClick={() => setIsSpecificationsOpen((isOpen) => !isOpen)}>
-                <span className="item-category-section__specifications-symbol" aria-hidden="true">{isSpecificationsOpen ? '−' : '+'}</span>
-                <span>{specificationsLabel}</span>
-              </button>
-              <div id={panelId} className="item-category-section__specifications-panel" role="region" aria-labelledby={triggerId} hidden={!isSpecificationsOpen}>
-                <div className="item-category-section__specifications-content">{specifications}</div>
-              </div>
-            </div>
-          )}
         </div>
       </Container>
     </section>
