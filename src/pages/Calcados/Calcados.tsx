@@ -166,19 +166,6 @@ function Calcados() {
         specifications={conteudoTecnicoBotasCanoCurto}
       />
       <ItemCategorySection
-        id="calcados-baliza"
-        theme="light"
-        contentSide="left"
-        title="Calçados"
-        highlight="Baliza"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        images={calcadosBalizaImages}
-        ctaLabel="Quero um orçamento"
-        ctaHref="/licitacao"
-        specificationsLabel="Ver especificações técnicas"
-        specifications={conteudoTecnicoCalcadosBaliza}
-      />
-      <ItemCategorySection
         id="botas-cano-longo"
         theme="dark"
         contentSide="right"
@@ -190,6 +177,19 @@ function Calcados() {
         ctaHref="/licitacao"
         specificationsLabel="Ver especificações técnicas"
         specifications={conteudoTecnicoBotasCanoLongo}
+      />
+      <ItemCategorySection
+        id="calcados-baliza"
+        theme="light"
+        contentSide="left"
+        title="Calçados"
+        highlight="Baliza"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        images={calcadosBalizaImages}
+        ctaLabel="Quero um orçamento"
+        ctaHref="/licitacao"
+        specificationsLabel="Ver especificações técnicas"
+        specifications={conteudoTecnicoCalcadosBaliza}
       />
     </>
   )
