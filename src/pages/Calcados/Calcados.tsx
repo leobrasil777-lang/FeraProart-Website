@@ -44,7 +44,15 @@ function Calcados() {
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
         specificationsLabel="Ver especificações técnicas"
-        specifications={<p> Sapato Mocassim em cor a definir totalmente forrada internamente, modelo clássico, em couro ecológico, com salto rebaixado na parte traseira específico para marcha (atenuação de impacto ao marchar), solado injetado em TR microporoso antiderrapante, palmilha com tratamento bactericida. Tamanhos: do 33 ao 48. Bag para transporte.</p>}
+        specifications={
+          <p>
+            Sapato Mocassim em cor a definir, totalmente forrado internamente,
+            modelo clássico, em couro ecológico, com salto rebaixado na parte
+            traseira específico para marcha, com atenuação de impacto ao marchar,
+            solado injetado em TR microporoso antiderrapante, palmilha com
+            tratamento bactericida. Tamanhos: do 33 ao 48. Bag para transporte.
+          </p>
+        }
       />
     </>
   )
