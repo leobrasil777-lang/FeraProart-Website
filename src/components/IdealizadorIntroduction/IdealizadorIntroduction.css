@@ -89,8 +89,8 @@
   border-radius: 3px;
   padding-inline: 5px;
   background: var(--color-white);
-  box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .idealizador-introduction__highlight span:first-child {
