@@ -5,6 +5,9 @@ import mocassinoVermelho from '../../assets/images/calcados/mocassino-vermelho.p
 import mocassinoClassico from '../../assets/images/calcados/mocassino-classico.png'
 import mocassinoBrilhante from '../../assets/images/calcados/mocassino-brilhante.png'
 import mocassinoComCadarco from '../../assets/images/calcados/mocassino-com-cadarco.png'
+import botaCanoCurtoPretaSemCadarco from '../../assets/images/calcados/bota-canocurto-preta2.png'
+import botaCanoCurtoPreta from '../../assets/images/calcados/bota-canocurto-preta.png'
+import botaCanoCurtoBranca from '../../assets/images/calcados/bota-canocurto-branca.png'
 
 const mocassinsImages: ItemCategorySectionImage[] = [
   {
@@ -28,6 +31,25 @@ const mocassinsImages: ItemCategorySectionImage[] = [
     alt: 'Par de mocassins pretos com cadarço.',
   },
 ]
+
+const botasCanoCurtoImages: ItemCategorySectionImage[] = [
+  {
+    src: botaCanoCurtoPretaSemCadarco,
+    alt: 'Par de calçados pretos de cano curto sem cadarço.',
+  },
+  {
+    src: botaCanoCurtoPreta,
+    alt: 'Par de botas pretas de cano curto com cadarço.',
+  },
+  {
+    src: botaCanoCurtoBranca,
+    alt: 'Par de botas brancas de cano curto com cadarço.',
+  },
+]
+
+const conteudoTecnicoBotasCanoCurto = (
+  <p>Conteúdo técnico de botas de cano curto pendente de aprovação.</p>
+)
 
 function Calcados() {
   return (
@@ -53,6 +75,19 @@ function Calcados() {
             tratamento bactericida. Tamanhos: do 33 ao 48. Bag para transporte.
           </p>
         }
+      />
+      <ItemCategorySection
+        id="botas-cano-curto"
+        theme="light"
+        contentSide="left"
+        title="Botas"
+        highlight="cano curto"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        images={botasCanoCurtoImages}
+        ctaLabel="Quero um orçamento"
+        ctaHref="/licitacao"
+        specificationsLabel="Ver especificações técnicas"
+        specifications={conteudoTecnicoBotasCanoCurto}
       />
     </>
   )
