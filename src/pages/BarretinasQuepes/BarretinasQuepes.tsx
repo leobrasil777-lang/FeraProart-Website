@@ -20,6 +20,17 @@ import quepeMilitarVeludoAzul2 from '../../assets/images/barretinas-e-quepes/que
 import quepeMilitarVeludoVermelho from '../../assets/images/barretinas-e-quepes/quepes militares/quepe-militar-veludo-vemelho.png'
 import quepeMilitarVeludoVermelho2 from '../../assets/images/barretinas-e-quepes/quepes militares/quepe-militar-veludo-vemelho2.png'
 import BarretinasQuepesHeroSection from './sections/BarretinasQuepesHeroSection/BarretinasQuepesHeroSection'
+import quepesCasqueteAzulBranco from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-azul-branco.png'
+import quepesCasqueteAzulBrancoFrontal from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-azul-branco-frontal.png'
+import quepesCasqueteAzulBranco2 from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-azul-branco2.png'
+import quepesCasquetePretoVerdeFrontal from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-preto-verde-frontal.png'
+import quepesCasqueteVeludo from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-veludo.png'
+import quepesCasqueteVeludo2 from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-veludo2.png'
+import quepesCasqueteVerdePrata from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-verde-prata.png'
+import quepesCasqueteVerdePrata2 from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-verde-prata2.png'
+import quepesCasqueteVerdePrataFrontal from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-verde-prata-frontal.png'
+import quepesCasqueteVerdePreto from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-verde-preto.png'
+import quepesCasqueteVerdePreto2 from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-verde-preto2.png'
 
 const barretinasPadraoAmericanoImages: ItemCategorySectionImage[] = [
   {
@@ -115,6 +126,57 @@ const conteudoTecnicoQuepesMilitares = (
   <p>Conteúdo técnico de quepes militares pendente de aprovação.</p>
 )
 
+const quepesCasquetesImages: ItemCategorySectionImage[] = [
+  {
+    src: quepesCasqueteAzulBranco,
+    alt: 'Quepe casquete azul com aba branca.',
+  },
+  {
+    src: quepesCasqueteAzulBrancoFrontal,
+    alt: 'Quepe casquete azul com aba preta em vista frontal.',
+  },
+  {
+    src: quepesCasqueteAzulBranco2,
+    alt: 'Quepe casquete azul em vista alternativa.',
+  },
+  {
+    src: quepesCasquetePretoVerdeFrontal,
+    alt: 'Quepe casquete preto com detalhes verdes em vista frontal.',
+  },
+  {
+    src: quepesCasqueteVeludo,
+    alt: 'Quepe casquete de veludo azul com amarelo.',
+  },
+  {
+    src: quepesCasqueteVeludo2,
+    alt: 'Quepe casquete de veludo azul em vista alternativa.',
+  },
+  {
+    src: quepesCasqueteVerdePrata,
+    alt: 'Quepe casquete verde com detalhes prata.',
+  },
+  {
+    src: quepesCasqueteVerdePrata2,
+    alt: 'Quepe casquete verde com detalhes prata.',
+  },
+  {
+    src: quepesCasqueteVerdePrataFrontal,
+    alt: 'Quepe casquete verde com detalhes prata com vista frontal.',
+  },
+  {
+    src: quepesCasqueteVerdePreto,
+    alt: 'Quepe casquete preto com detalhes verdes.',
+  },
+  {
+    src: quepesCasqueteVerdePreto2,
+    alt: 'Quepe casquete preto com detalhes verdes em vista alternativa.',
+  },
+]
+
+const conteudoTecnicoQuepesCasquetes = (
+  <p>Conteúdo técnico de quepes casquetes pendente de aprovação.</p>
+)
+
 function BarretinasQuepes() {
   return (
     <>
@@ -144,6 +206,19 @@ function BarretinasQuepes() {
         ctaHref="/licitacao"
         specificationsLabel="Ver especificações técnicas"
         specifications={conteudoTecnicoQuepesMilitares}
+      />
+      <ItemCategorySection
+        id="quepes-casquetes"
+        theme="light"
+        contentSide="left"
+        title="Quepes"
+        highlight="casquetes"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        images={quepesCasquetesImages}
+        ctaLabel="Quero um orçamento"
+        ctaHref="/licitacao"
+        specificationsLabel="Ver especificações técnicas"
+        specifications={conteudoTecnicoQuepesCasquetes}
       />
     </>
   )

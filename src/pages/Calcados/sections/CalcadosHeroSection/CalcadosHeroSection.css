@@ -6,8 +6,10 @@
 
 .calcados-hero__main {
   position: relative;
+  display: flex;
   isolation: isolate;
-  min-height: clamp(560px, 65vw, 780px);
+  min-height: clamp(620px, 86vh, 712px);
+  overflow: hidden;
   background: #f5f4f2;
 }
 
@@ -19,18 +21,24 @@
   height: 100%;
   max-width: none;
   object-fit: cover;
-  object-position: 61% center;
+  object-position: 61% 62%;
 }
 
 .calcados-hero__container {
   display: flex;
+  width: min(
+    calc(100% - clamp(48px, 8vw, 120px)),
+    1172px
+  );
   min-height: inherit;
-  align-items: flex-end;
-  padding-block: clamp(9rem, 18vw, 23rem) clamp(5rem, 10vw, 10.75rem);
+  margin-inline: auto;
+  align-items: center;
+  padding-top: clamp(150px, 17vh, 190px);
+  padding-bottom: clamp(64px, 8vh, 86px);
 }
 
 .calcados-hero__content {
-  width: min(100%, 24rem);
+  width: min(48%, 28rem);
 }
 
 .calcados-hero__title {

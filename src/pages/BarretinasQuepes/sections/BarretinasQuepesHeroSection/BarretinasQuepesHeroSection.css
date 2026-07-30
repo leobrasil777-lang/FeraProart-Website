@@ -11,6 +11,15 @@
   background: #f5f4f2;
 }
 
+.barretinas-hero__main {
+  position: relative;
+  display: flex;
+  isolation: isolate;
+  min-height: clamp(620px, 86vh, 712px);
+  overflow: hidden;
+  background: #f5f4f2;
+}
+
 .barretinas-hero__image {
   position: absolute;
   inset: 0;
@@ -19,18 +28,24 @@
   height: 100%;
   max-width: none;
   object-fit: cover;
-  object-position: 50% center;
+  object-position: 60% 100%;
 }
 
 .barretinas-hero__container {
   display: flex;
+  width: min(
+    calc(100% - clamp(48px, 8vw, 120px)),
+    1172px
+  );
   min-height: inherit;
-  align-items: flex-end;
-  padding-block: clamp(8.75rem, 17vw, 13.5rem) clamp(4.85rem, 8.2vw, 7.85rem);
+  margin-inline: auto;
+  align-items: center;
+  padding-top: clamp(150px, 17vh, 190px);
+  padding-bottom: clamp(64px, 8vh, 86px);
 }
 
 .barretinas-hero__content {
-  width: min(43%, 26rem);
+  width: min(48%, 32rem);
 }
 
 .barretinas-hero__title {
@@ -128,68 +143,26 @@
 
 @media (max-width: 74.9375rem) {
   .barretinas-hero__main {
-    min-height: clamp(520px, 62vw, 680px);
+    min-height: clamp(600px, 82vh, 680px);
   }
 
   .barretinas-hero__image {
-    object-position: 52% center;
+    object-position: 62% center;
   }
 
   .barretinas-hero__container {
-    padding-block-end: clamp(4rem, 7.5vw, 6.5rem);
+    padding-top: clamp(140px, 15vh, 170px);
+    padding-bottom: clamp(56px, 7vh, 72px);
   }
 
   .barretinas-hero__content {
-    width: min(42%, 22rem);
-  }
-
-  .barretinas-hero__title-main {
-    font-size: clamp(3rem, 5.2vw, 3.65rem);
-  }
-
-  .barretinas-hero__title-highlight {
-    font-size: clamp(3.55rem, 6.2vw, 4.25rem);
+    width: min(46%, 28rem);
   }
 }
 
 @media (max-width: 56.1875rem) {
   .barretinas-hero__main {
-    min-height: clamp(500px, 70vw, 630px);
-  }
-
-  .barretinas-hero__image {
-    object-position: 58% center;
-  }
-
-  .barretinas-hero__content {
-    width: min(48%, 20rem);
-  }
-
-  .barretinas-hero__title-main {
-    font-size: clamp(2.55rem, 6vw, 3.1rem);
-  }
-
-  .barretinas-hero__title-highlight {
-    font-size: clamp(3.15rem, 7.5vw, 3.85rem);
-  }
-
-  .barretinas-hero__description {
-    max-width: 18rem;
-    font-size: clamp(0.98rem, 2vw, 1.08rem);
-  }
-
-  .barretinas-hero__actions {
-    gap: 0.875rem;
-  }
-
-  .barretinas-hero__button.cta-button {
-    min-height: 2.85rem;
-  }
-}
-
-@media (max-width: 43.6875rem) {
-  .barretinas-hero__main {
-    min-height: clamp(620px, 142vw, 760px);
+    min-height: clamp(580px, 84vh, 650px);
   }
 
   .barretinas-hero__image {
@@ -197,42 +170,36 @@
   }
 
   .barretinas-hero__container {
-    padding-block: clamp(8.5rem, 31vw, 10rem) clamp(2.25rem, 9vw, 3rem);
+    padding-top: 140px;
+    padding-bottom: 56px;
+  }
+
+  .barretinas-hero__content {
+    width: min(50%, 23rem);
+  }
+}
+
+@media (max-width: 43.6875rem) {
+  .barretinas-hero__main {
+    min-height: clamp(620px, 92vh, 720px);
+    align-items: flex-end;
+  }
+
+  .barretinas-hero__image {
+    object-position: 68% center;
+  }
+
+  .barretinas-hero__container {
+    width: calc(100% - 48px);
+    min-height: inherit;
+    align-items: flex-end;
+    padding-top: 140px;
+    padding-bottom: 40px;
   }
 
   .barretinas-hero__content {
     width: 100%;
     max-width: 23rem;
-    padding-top: clamp(12rem, 54vw, 18rem);
-  }
-
-  .barretinas-hero__title-main {
-    font-size: clamp(2.55rem, 12vw, 3.25rem);
-  }
-
-  .barretinas-hero__title-highlight {
-    font-size: clamp(3.3rem, 15vw, 4.1rem);
-  }
-
-  .barretinas-hero__description {
-    max-width: 18.75rem;
-    font-size: clamp(0.98rem, 4vw, 1.1rem);
-  }
-
-  .barretinas-hero__actions {
-    flex-direction: column;
-    gap: 0.75rem;
-    max-width: 22rem;
-  }
-
-  .barretinas-hero__button.cta-button {
-    width: 100%;
-    min-height: 2.9rem;
-  }
-
-  .barretinas-hero__signature {
-    padding-block: 0.625rem 0.5rem;
-    font-size: clamp(0.74rem, 3.35vw, 0.95rem);
-    letter-spacing: clamp(0.06em, 2.3vw, 0.14em);
+    padding-top: 0;
   }
 }

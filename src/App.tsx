@@ -6,7 +6,7 @@ import Calcados from './pages/Calcados'
 import Home from './pages/Home'
 import Idealizador from './pages/Idealizador'
 import Licitacao from './pages/Licitacao'
-import Uniformes from './pages/Uniformes'
+import Uniformes from './pages/Uniformes' 
 
 function App() {
   return (
