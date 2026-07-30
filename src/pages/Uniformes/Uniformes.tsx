@@ -1,5 +1,7 @@
+import UniformesHeroSection from './sections/UniformesHeroSection/UniformesHeroSection'
+
 function Uniformes() {
-  return null
+  return <UniformesHeroSection />
 }
 
 export default Uniformes

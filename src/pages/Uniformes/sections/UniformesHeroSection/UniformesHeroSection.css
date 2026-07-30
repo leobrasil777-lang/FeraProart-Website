@@ -1,0 +1,187 @@
+.uniformes-hero {
+  overflow-x: clip;
+  background: #f4f3f1;
+  color: #1b1b1b;
+}
+
+.uniformes-hero__main {
+  display: flex;
+  min-height: clamp(560px, 61.45vw, 760px);
+  isolation: isolate;
+  background: #f4f3f1;
+}
+
+.uniformes-hero__container {
+  display: flex;
+  min-height: inherit;
+  align-items: flex-end;
+  padding-block: clamp(8.75rem, 17vw, 13.5rem) clamp(4.85rem, 8.2vw, 7.85rem);
+}
+
+.uniformes-hero__content {
+  width: min(43%, 26rem);
+}
+
+.uniformes-hero__title {
+  margin: 0;
+  color: #1b1b1b;
+  font-family: var(--font-primary);
+  font-size: clamp(3.625rem, 5vw, 4.25rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+  white-space: nowrap;
+}
+
+.uniformes-hero__description {
+  max-width: 22rem;
+  margin: clamp(0.65rem, 1.15vw, 0.9rem) 0 0;
+  color: #1b1b1b;
+  font-family: var(--font-primary);
+  font-size: clamp(1.25rem, 1.65vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+
+.uniformes-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.25rem, 2.2vw, 2rem);
+  margin-top: clamp(1.65rem, 2.5vw, 2.1rem);
+}
+
+.uniformes-hero__button.cta-button {
+  min-height: clamp(3rem, 4vw, 3.375rem);
+  border-radius: 0.5rem;
+  padding: 0.8rem clamp(1.45rem, 2vw, 1.9rem) 0.7rem;
+  font-family: var(--font-primary);
+  font-size: clamp(0.875rem, 1.05vw, 1rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  transform: none;
+}
+
+.uniformes-hero__button--primary.cta-button {
+  min-width: 13.25rem;
+  background: #171717;
+  color: #ffffff;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.22);
+}
+
+.uniformes-hero__button--secondary.cta-button {
+  min-width: 10rem;
+  background: #929292;
+  color: #ffffff;
+}
+
+.uniformes-hero__button--primary.cta-button:hover {
+  background: #2a2a2a;
+}
+
+.uniformes-hero__button--secondary.cta-button:hover {
+  background: #7f7f7f;
+}
+
+.uniformes-hero__button.cta-button:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 4px;
+}
+
+.uniformes-hero__signature {
+  padding: clamp(0.42rem, 0.78vw, 0.55rem) var(--container-padding) clamp(0.32rem, 0.58vw, 0.43rem);
+  background: #171717;
+  color: #ffffff;
+  font-family: var(--font-primary);
+  font-size: clamp(0.95rem, 1.35vw, 1.2rem);
+  font-weight: 700;
+  letter-spacing: clamp(0.14em, 1.75vw, 0.36em);
+  line-height: 1.15;
+  text-align: center;
+}
+
+@media (max-width: 74.9375rem) {
+  .uniformes-hero__main {
+    min-height: clamp(520px, 62vw, 680px);
+  }
+
+  .uniformes-hero__container {
+    padding-block-end: clamp(4rem, 7.5vw, 6.5rem);
+  }
+
+  .uniformes-hero__content {
+    width: min(42%, 22rem);
+  }
+
+  .uniformes-hero__title {
+    font-size: clamp(3rem, 5.2vw, 3.65rem);
+  }
+}
+
+@media (max-width: 56.1875rem) {
+  .uniformes-hero__main {
+    min-height: clamp(500px, 70vw, 630px);
+  }
+
+  .uniformes-hero__content {
+    width: min(48%, 20rem);
+  }
+
+  .uniformes-hero__title {
+    font-size: clamp(2.55rem, 6vw, 3.1rem);
+  }
+
+  .uniformes-hero__description {
+    font-size: clamp(1.05rem, 2.25vw, 1.25rem);
+  }
+
+  .uniformes-hero__actions {
+    gap: 0.875rem;
+  }
+
+  .uniformes-hero__button.cta-button {
+    min-height: 2.85rem;
+  }
+}
+
+@media (max-width: 43.6875rem) {
+  .uniformes-hero__main {
+    min-height: clamp(620px, 142vw, 760px);
+  }
+
+  .uniformes-hero__container {
+    padding-block: clamp(8.5rem, 31vw, 10rem) clamp(2.25rem, 9vw, 3rem);
+  }
+
+  .uniformes-hero__content {
+    width: 100%;
+    max-width: 23rem;
+    padding-top: clamp(12rem, 54vw, 18rem);
+  }
+
+  .uniformes-hero__title {
+    font-size: clamp(2.55rem, 12vw, 3.25rem);
+  }
+
+  .uniformes-hero__description {
+    max-width: 18.75rem;
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
+  }
+
+  .uniformes-hero__actions {
+    max-width: 22rem;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .uniformes-hero__button.cta-button {
+    width: 100%;
+    min-height: 2.9rem;
+  }
+
+  .uniformes-hero__signature {
+    padding-block: 0.625rem 0.5rem;
+    font-size: clamp(0.74rem, 3.35vw, 0.95rem);
+    letter-spacing: clamp(0.06em, 2.3vw, 0.14em);
+  }
+}
