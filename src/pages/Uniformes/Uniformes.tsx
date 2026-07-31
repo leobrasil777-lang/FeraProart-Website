@@ -42,6 +42,33 @@ import uniformeCorpoVinho8 from '../../assets/images/uniformes/corpo-coreografic
 import uniformeCorpoVinho9 from '../../assets/images/uniformes/corpo-coreografico/uniforme-corpo-vinho9.png'
 import uniformePretoAmarelo from '../../assets/images/uniformes/corpo-coreografico/uniforme-preto-amarelo.png'
 import uniformePretoAmarelo2 from '../../assets/images/uniformes/corpo-coreografico/uniforme-preto-amarelo2.png'
+import uniformeLinhaDeFrenteAzulMarinho from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-azulmarinho.png'
+import uniformeLinhaDeFrenteAzulMarinho2 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-azulmarinho2.png'
+import uniformeLinhaDeFrenteAzulMarinho3 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-azulmarinho3.png'
+import uniformeLinhaDeFrenteBranco from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-branco.png'
+import uniformeLinhaDeFrenteCinzaMasculino from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-cinza-masculino.png'
+import uniformeLinhaDeFrenteCinzaMasculino2 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-cinza-masculino2.png'
+import uniformeLinhaDeFrenteCinzaMasculino3 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-cinza-masculino3.png'
+import uniformeLinhaDeFrenteCinzaMasculino4 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-cinza-masculino4.png'
+import uniformeLinhaDeFrentePreto from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-preto.png'
+import uniformeLinhaDeFrentePreto2 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-preto2.png'
+import uniformeLinhaDeFrentePreto3 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-preto3.png'
+import uniformeLinhaDeFrentePreto4 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-preto4.png'
+import uniformeLinhaDeFrentePreto5 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-preto5.png'
+import uniformeLinhaDeFrentePreto6 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-preto6.png'
+import uniformeLinhaDeFrentePreto7 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-preto7.png'
+import uniformeLinhaDeFrentePreto8 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-preto8.png'
+import uniformeLinhaDeFrentePretoCapa from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-preto-capa.png'
+import uniformeLinhaDeFrentePretoCapa2 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-preto-capa2.png'
+import uniformeLinhaDeFrentePretoMasculino from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-preto-masculino.png'
+import uniformeLinhaDeFrentePretoMasculino2 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-preto-masculino2.png'
+import uniformeLinhaDeFrentePretoMasculino3 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-preto-masculino3.png'
+import uniformeLinhaDeFrenteVinho from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-vinho.png'
+import uniformeLinhaDeFrenteVinho2 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-vinho2.png'
+import uniformeLinhaDeFrenteVinho3 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-vinho3.png'
+import uniformeLinhaDeFrenteVinho4 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-vinho4.png'
+import uniformeLinhaDeFrenteVinho5 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-vinho5.png'
+import uniformeLinhaDeFrenteVinho6 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-vinho6.png'
 import UniformesHeroSection from './sections/UniformesHeroSection/UniformesHeroSection'
 
 const corpoCoreograficoImages: ItemCategorySectionImage[] = [
@@ -90,6 +117,36 @@ const corpoCoreograficoImages: ItemCategorySectionImage[] = [
   { src: uniformePretoAmarelo2, alt: 'Uniforme de Corpo Coreográfico preto e amarelo, modelo 2.' },
 ]
 
+const linhaDeFrenteImages: ItemCategorySectionImage[] = [
+  { src: uniformeLinhaDeFrenteAzulMarinho, alt: 'Uniforme de Linha de Frente azul-marinho.' },
+  { src: uniformeLinhaDeFrenteAzulMarinho2, alt: 'Uniforme de Linha de Frente azul-marinho, modelo 2.' },
+  { src: uniformeLinhaDeFrenteAzulMarinho3, alt: 'Uniforme de Linha de Frente azul-marinho, modelo 3.' },
+  { src: uniformeLinhaDeFrenteBranco, alt: 'Uniforme de Linha de Frente branco.' },
+  { src: uniformeLinhaDeFrenteCinzaMasculino, alt: 'Uniforme masculino de Linha de Frente cinza.' },
+  { src: uniformeLinhaDeFrenteCinzaMasculino2, alt: 'Uniforme masculino de Linha de Frente cinza, modelo 2.' },
+  { src: uniformeLinhaDeFrenteCinzaMasculino3, alt: 'Uniforme masculino de Linha de Frente cinza, modelo 3.' },
+  { src: uniformeLinhaDeFrenteCinzaMasculino4, alt: 'Uniforme masculino de Linha de Frente cinza, modelo 4.' },
+  { src: uniformeLinhaDeFrentePreto, alt: 'Uniforme de Linha de Frente preto.' },
+  { src: uniformeLinhaDeFrentePreto2, alt: 'Uniforme de Linha de Frente preto, modelo 2.' },
+  { src: uniformeLinhaDeFrentePreto3, alt: 'Uniforme de Linha de Frente preto, modelo 3.' },
+  { src: uniformeLinhaDeFrentePreto4, alt: 'Uniforme de Linha de Frente preto, modelo 4.' },
+  { src: uniformeLinhaDeFrentePreto5, alt: 'Uniforme de Linha de Frente preto, modelo 5.' },
+  { src: uniformeLinhaDeFrentePreto6, alt: 'Uniforme de Linha de Frente preto, modelo 6.' },
+  { src: uniformeLinhaDeFrentePreto7, alt: 'Uniforme de Linha de Frente preto, modelo 7.' },
+  { src: uniformeLinhaDeFrentePreto8, alt: 'Uniforme de Linha de Frente preto, modelo 8.' },
+  { src: uniformeLinhaDeFrentePretoCapa, alt: 'Uniforme de Linha de Frente preto com capa.' },
+  { src: uniformeLinhaDeFrentePretoCapa2, alt: 'Uniforme de Linha de Frente preto com capa, modelo 2.' },
+  { src: uniformeLinhaDeFrentePretoMasculino, alt: 'Uniforme masculino de Linha de Frente preto.' },
+  { src: uniformeLinhaDeFrentePretoMasculino2, alt: 'Uniforme masculino de Linha de Frente preto, modelo 2.' },
+  { src: uniformeLinhaDeFrentePretoMasculino3, alt: 'Uniforme masculino de Linha de Frente preto, modelo 3.' },
+  { src: uniformeLinhaDeFrenteVinho, alt: 'Uniforme de Linha de Frente vinho.' },
+  { src: uniformeLinhaDeFrenteVinho2, alt: 'Uniforme de Linha de Frente vinho, modelo 2.' },
+  { src: uniformeLinhaDeFrenteVinho3, alt: 'Uniforme de Linha de Frente vinho, modelo 3.' },
+  { src: uniformeLinhaDeFrenteVinho4, alt: 'Uniforme de Linha de Frente vinho, modelo 4.' },
+  { src: uniformeLinhaDeFrenteVinho5, alt: 'Uniforme de Linha de Frente vinho, modelo 5.' },
+  { src: uniformeLinhaDeFrenteVinho6, alt: 'Uniforme de Linha de Frente vinho, modelo 6.' },
+]
+
 function Uniformes() {
   return (
     <>
@@ -108,6 +165,23 @@ function Uniformes() {
         specifications={
           <p>
             Conteúdo técnico de uniformes para Corpo Coreográfico pendente de aprovação.
+          </p>
+        }
+      />
+      <ItemCategorySection
+        id="uniformes-linha-de-frente"
+        theme="dark"
+        contentSide="right"
+        title="Linha de"
+        highlight="Frente"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        images={linhaDeFrenteImages}
+        ctaLabel="Quero um orçamento"
+        ctaHref="/licitacao"
+        specificationsLabel="Ver especificações técnicas"
+        specifications={
+          <p>
+            Conteúdo técnico de uniformes para Linha de Frente pendente de aprovação.
           </p>
         }
       />
