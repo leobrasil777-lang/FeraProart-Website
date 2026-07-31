@@ -2,7 +2,7 @@
   position: relative;
   display: grid;
   width: 100%;
-  aspect-ratio: 847 / 411;
+  aspect-ratio: 1200 / 400;
   margin: 0;
   background: var(--color-black);
   isolation: isolate;
