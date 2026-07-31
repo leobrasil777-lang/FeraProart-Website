@@ -1,4 +1,5 @@
 import ItemCategorySection, { type ItemCategorySectionImage } from '../../components/ItemCategorySection'
+import FinalItemCTA from '../../components/FinalItemCTA'
 import barretinaBrancaLisa from '../../assets/images/barretinas-e-quepes/barretinas/barretina-branca-lisa.png'
 import barretinaAzulDourado from '../../assets/images/barretinas-e-quepes/barretinas/barretina-azul-dourado.png'
 import barretinaPretaDourada from '../../assets/images/barretinas-e-quepes/barretinas/barretina-preta-dourada.png'
@@ -31,6 +32,8 @@ import quepesCasqueteVerdePrata2 from '../../assets/images/barretinas-e-quepes/q
 import quepesCasqueteVerdePrataFrontal from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-verde-prata-frontal.png'
 import quepesCasqueteVerdePreto from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-verde-preto.png'
 import quepesCasqueteVerdePreto2 from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-verde-preto2.png'
+
+const ctaBarretinas = '/src/assets/images/barretinas-e-quepes/cta-barretinas.png'
 
 const barretinasPadraoAmericanoImages: ItemCategorySectionImage[] = [
   {
@@ -229,6 +232,16 @@ function BarretinasQuepes() {
         ctaHref="/licitacao"
         specificationsLabel="Ver especificações técnicas"
         specifications={conteudoTecnicoQuepesCasquetes}
+      />
+      <FinalItemCTA
+        id="cta-final-barretinas"
+        image={ctaBarretinas}
+        imageAlt="Barretinas e quepes apresentados sobre fundo cinza."
+        title="Confie na"
+        highlight="tradição"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        ctaLabel="Quero um orçamento"
+        ctaHref="/licitacao"
       />
     </>
   )
