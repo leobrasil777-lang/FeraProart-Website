@@ -1,4 +1,8 @@
 import ItemCategorySection, { type ItemCategorySectionImage } from '../../components/ItemCategorySection'
+import uniformeBaliza1 from '../../assets/images/uniformes/baliza/uniforme-baliza1.png'
+import uniformeBaliza2 from '../../assets/images/uniformes/baliza/uniforme-baliza2.png'
+import uniformeBaliza3 from '../../assets/images/uniformes/baliza/uniforme-baliza3.png'
+import uniformeBaliza4 from '../../assets/images/uniformes/baliza/uniforme-baliza4.png'
 import uniformeCorpoAzul1 from '../../assets/images/uniformes/corpo-coreografico/uniforme-corpo-azul1.png'
 import uniformeCorpoAzul2 from '../../assets/images/uniformes/corpo-coreografico/uniforme-corpo-azul2.png'
 import uniformeCorpoAzul3 from '../../assets/images/uniformes/corpo-coreografico/uniforme-corpo-azul3.png'
@@ -147,6 +151,13 @@ const linhaDeFrenteImages: ItemCategorySectionImage[] = [
   { src: uniformeLinhaDeFrenteVinho6, alt: 'Uniforme de Linha de Frente vinho, modelo 6.' },
 ]
 
+const uniformesBalizaImages: ItemCategorySectionImage[] = [
+  { src: uniformeBaliza1, alt: 'Uniforme de Baliza azul-marinho e turquesa com calça, em vista frontal.' },
+  { src: uniformeBaliza2, alt: 'Uniforme de Baliza azul-marinho e turquesa com saia, em vista frontal.' },
+  { src: uniformeBaliza3, alt: 'Uniforme de Baliza azul-marinho e turquesa com saia de duas camadas, em vista frontal.' },
+  { src: uniformeBaliza4, alt: 'Uniforme de Baliza azul-marinho e turquesa de mangas longas, em vista frontal.' },
+]
+
 function Uniformes() {
   return (
     <>
@@ -182,6 +193,23 @@ function Uniformes() {
         specifications={
           <p>
             Conteúdo técnico de uniformes para Linha de Frente pendente de aprovação.
+          </p>
+        }
+      />
+      <ItemCategorySection
+        id="uniformes-baliza"
+        theme="light"
+        contentSide="left"
+        title="Uniformes"
+        highlight="Baliza"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        images={uniformesBalizaImages}
+        ctaLabel="Quero um orçamento"
+        ctaHref="/licitacao"
+        specificationsLabel="Ver especificações técnicas"
+        specifications={
+          <p>
+            Conteúdo técnico de uniformes para Baliza pendente de aprovação.
           </p>
         }
       />
