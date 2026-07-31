@@ -25,7 +25,7 @@ function BarretinasQuepesHeroSection() {
               <span className="barretinas-hero__title-highlight">Barretinas</span>
             </h1>
             <p className="barretinas-hero__description">
-              Barretinas padrão americano (Marching Band), Quepes Militares e tipo casquete.
+              Barretinas padrão americano (Marching Band), Quepes Militares e tipo Casquete.
             </p>
             <div className="barretinas-hero__actions" aria-label="Ações de Barretinas e Quepes">
               <CTAButton href="/licitacao" className="barretinas-hero__button barretinas-hero__button--primary">

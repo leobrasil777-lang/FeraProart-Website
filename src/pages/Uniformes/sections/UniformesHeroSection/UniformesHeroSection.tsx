@@ -12,8 +12,8 @@ function UniformesHeroSection() {
               Uniformes
             </h1>
             <p className="uniformes-hero__description">
-              Linha de frente, corpo<br />
-              musical e baliza
+              Corpo Musical, Linha<br />
+              de Frente e Baliza
             </p>
             <div className="uniformes-hero__actions" aria-label="Ações de Uniformes">
               <CTAButton
