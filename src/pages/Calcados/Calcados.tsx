@@ -109,11 +109,11 @@ const botasCanoLongoImages: ItemCategorySectionImage[] = [
 ]
 
 const conteudoTecnicoBotasCanoCurto = (
-  <p>Conteúdo técnico de botas de cano curto pendente de aprovação.</p>
+  <p>Bota em cor a ser definida, com zíper lateral, cano curto, totalmente forrada internamente, modelo clássico, em couro ecológico, com salto rebaixado na parte traseira específico para marcha (atenuação de impacto ao marchar), solado injetado em TR microporoso antiderrapante, palmilha com tratamento bactericida. Tamanhos: do 33 ao 48. Bag para transporte.</p>
 )
 
 const conteudoTecnicoCalcadosBaliza = (
-  <p>Conteúdo técnico de calçados para Baliza pendente de aprovação.</p>
+  <p>Sapatilha de jazz, cano longo, confeccionada em couro ecológico na cor preta, solado bipartido e bag para transporte.</p>
 )
 
 const conteudoTecnicoBotasCanoLongo = (
@@ -137,7 +137,7 @@ function Calcados() {
         contentSide="right"
         title="Calçados"
         highlight="mocassins"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Modelo clássico, confortável e discreto. Uma opção resistente para cerimônias, apresentações e atividades institucionais."
         images={mocassinsImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
@@ -158,7 +158,7 @@ function Calcados() {
         contentSide="left"
         title="Botas"
         highlight="cano curto"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Conforto, firmeza e facilidade de movimento. Produzidas para o uso frequente, com acabamento que mantém o padrão do uniforme."
         images={botasCanoCurtoImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
@@ -171,7 +171,7 @@ function Calcados() {
         contentSide="right"
         title="Botas"
         highlight="cano longo"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+        description="Modelo tradicional, estrutura firme e presença visual. Indicado para desfiles e apresentações que exigem elegância e padronização."
         images={botasCanoLongoImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
@@ -184,7 +184,7 @@ function Calcados() {
         contentSide="left"
         title="Calçados"
         highlight="Baliza"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Sapatilhas bipartidas e botilhas desenvolvidas para acompanhar os movimentos da baliza. Leves, firmes e resistentes para ensaios e apresentações."
         images={calcadosBalizaImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"

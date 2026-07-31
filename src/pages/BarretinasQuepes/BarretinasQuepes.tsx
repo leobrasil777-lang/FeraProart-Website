@@ -52,7 +52,15 @@ const barretinasPadraoAmericanoImages: ItemCategorySectionImage[] = [
 ]
 
 const conteudoTecnicoBarretinasPadraoAmericano = (
-  <p>Conteúdo técnico de barretinas padrão americano pendente de aprovação.</p>
+  <p>Barretina montada em estrutura inteiriça de polipropileno de alta densidade injetado (sem emendas e com copa - não é com estrutura em fibra de vidro)
+
+13,5 cm de altura revestida com verniz molhado em até 3 cores
+
+Aba termoformada, moldada em polipropileno de alta densidade injetado de alto brilho com debrum em cor a determinar.
+
+Porta penacho termoformado moldado em ABS injetado de alto brilho em cor a escolher colocado na parte superior da barretina (copa) fixado com bailarina dourada escondida  jugular frontal da barretina em cor a escolher revestimento interno da barretina com auto-regulagem do 52 ao 62 feito do mesmo material do revestimento da barretina com ilhoses.
+
+Penacho com encaixe em forma de clipe com 300 mm de altura revestido com marabu de até duas cores, estrutura do penacho em arame galvanizado de 1,18 mm retorcido encapado com tubo de plástico de 7 mm, acabamento do penacho em plástico ABS injetado de alto brilho. Aplique frontal com arte a ser fornecida em alto relevo com tratamento UV</p>
 )
 
 const quepesMilitaresImages: ItemCategorySectionImage[] = [
@@ -123,7 +131,8 @@ const quepesMilitaresImages: ItemCategorySectionImage[] = [
 ]
 
 const conteudoTecnicoQuepesMilitares = (
-  <p>Conteúdo técnico de quepes militares pendente de aprovação.</p>
+  <p>Quepe estilo Militar montado em estrutura inteiriça de polipropileno de alta densidade injetado (sem emendas e com copa), 14,5 cm de altura, revestido com courvim LB York modelos a serem feitos com até 4 cores a escolher,  aba termoformada, moldada em polipropileno de alta densidade injetado de alto brilho com debrum em cor a escolher, porta estola termoformado moldado em ABS injetado de alto brilho na cor a escolher colocado na parte superior do quepe (copa) fixado com bailarina escondida, jugular frontal do quepe em cor a escolher, revestimento interno do quepe com auto-regulagem do 52 ao 62 feito do mesmo material do revestimento do quepe com ilhoses. Tamanhos: do 54 ao 60. Bag em tnt para transporte.
+</p>
 )
 
 const quepesCasquetesImages: ItemCategorySectionImage[] = [
@@ -174,7 +183,8 @@ const quepesCasquetesImages: ItemCategorySectionImage[] = [
 ]
 
 const conteudoTecnicoQuepesCasquetes = (
-  <p>Conteúdo técnico de quepes casquetes pendente de aprovação.</p>
+  <p>Quepe tipo Casquete montado em estrutura inteiriça de plástico injetado de alto brilho em cores a combinar (sem emendas). Faixa lateral com 3cm de largura ornamentada com galões dourados (ou prateados); Aba moldada em plástico injetado de alto brilho com debrum em cor a combinar, jugular frontal  na  cor dourada (ou prateada). Revestimento interno com auto regulagem do 52 ao 62 feito do mesmo material do revestimento do Quepe com ilhoses. Sacola em TNT para transporte.
+</p>
 )
 
 function BarretinasQuepes() {
@@ -187,7 +197,7 @@ function BarretinasQuepes() {
         contentSide="left"
         title="Barretinas padrão"
         highlight="americano"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Visual marcante, construção firme e acabamento durável. Feitas para corporações que valorizam tradição, identidade e resistência no uso frequente."
         images={barretinasPadraoAmericanoImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
@@ -200,7 +210,7 @@ function BarretinasQuepes() {
         contentSide="right"
         title="Quepes"
         highlight="militares"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Modelo tradicional, acabamento alinhado e estrutura resistente. Mantém a boa apresentação em solenidades, desfiles e cerimônias."
         images={quepesMilitaresImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
@@ -213,7 +223,7 @@ function BarretinasQuepes() {
         contentSide="left"
         title="Quepes"
         highlight="casquetes"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Modelo leve e elegante, com visual mais atual sem perder o padrão institucional. Mantém sua forma e acabamento mesmo com o uso contínuo."
         images={quepesCasquetesImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"

@@ -163,19 +163,21 @@ function Uniformes() {
     <>
       <UniformesHeroSection />
       <ItemCategorySection
-        id="uniformes-corpo-coreografico"
+        id="uniformes-corpo-musical"
         theme="light"
         contentSide="left"
         title="Corpo"
-        highlight="Coreográfico"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        highlight="Musical"
+        description="Conforto, boa apresentação e unidade visual para toda a corporação. Uniformes preparados para longos períodos de uso em ensaios e apresentações."
         images={corpoCoreograficoImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
         specificationsLabel="Ver especificações técnicas"
         specifications={
           <p>
-            Conteúdo técnico de uniformes para Corpo Coreográfico pendente de aprovação.
+            Modelo Spencer (Drum Corp) ou dolman militar a escolher,  em tecido OXFORD 100% poliéster estruturado por dublagem por adesão térmica com gramatura final mínima de 290 g/M2 (obrigatório apresentação de laudo emitido por laboratório acreditado pelo INMETRO), com corte slim realizado em máquina a laser para bloqueio do desfio do tecido, com a frente forrada com o mesmo tecido da túnica, ornamentada por fitas de cores diversas (incluindo cores brilhantes, douradas e prateadas) com estruturação cortadas a laser, recortes opcionais (em formas tribais, geométricos, abstratos, etc.) frontais, nas mangas, laterais e punhos feitos em tecido OXFORD cortados a laser. Aplicação de tecido sobre tecido (OXFORD estruturado) dos recortes em dublagem pespontados. Opcional de aplicação de estampa em DTF com arte a ser fornecida. Aplicação opcional de galões metalizados ou personalizados, botões frontais e cordões em cores a serem definidas. Ombreiras sobre mangas com estruturação em E.V.A. de alta densidade de 2 mm com dublagem por adesão térmica em ambos os lados e acabamento em debrum de 20 mm em cor a ser definida. Ombreira interna fixa de espuma de 20 mm revestida de tecido. Punhos removíveis com aplicação opcional de estampas em DTF, com estruturação em E.V.A. de alta densidade de 2 mm com dublagem por adesão térmica em ambos os lados e acabamento em debrum de 20 mm em cor a ser definida. Gola tipo “padre” com opção de aplicação de estampas em DTF, com estruturação em E.V.A. de alta densidade de 2 mm com dublagem por adesão térmica em ambos os lados e acabamento em debrum de 20 mm em cor a ser definida. Fechamento nas costas com zíper invisível. Tamanhos: PP, P, M, G, GG, EXG1, EXG2, EXG3, EXG4, EXG5, EXG6 e EXG7. Capa porta terno confeccionada em P.V.C.
+
+Macacão: estilo jardineira confeccionado em tecido Oxford 100% poliéster com corte slim realizado em máquina laser para bloqueio do desfio do tecido, com alças reguláveis de metal, barra overlocada e vinco permanente pespontado. Tamanhos: PP, P, M, G, GG, EXG1, EXG2, EXG3, EXG4, EXG5, EXG6 e EXG7.
           </p>
         }
       />
@@ -185,14 +187,17 @@ function Uniformes() {
         contentSide="right"
         title="Linha de"
         highlight="Frente"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Uniformes com bom caimento, presença visual e padronização do grupo. Resistentes para acompanhar apresentações, desfiles e eventos oficiais."
         images={linhaDeFrenteImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
         specificationsLabel="Ver especificações técnicas"
         specifications={
           <p>
-            Conteúdo técnico de uniformes para Linha de Frente pendente de aprovação.
+            Uniforme para Corpo Coreográfico - Túnica, Short/Short-Saia (com opcional de Calça Legging) e Collant.
+            Túnica: modelo Spencer (drum corp) ou dolman militar a escolher,  em tecido Oxford 100% poliéster estruturado por dublagem por adesão térmica com gramatura final de 280 g/M2com corte slim realizado em máquina a laser para bloqueio do desfio do tecido, com a frente forrada com o mesmo tecido da túnica, ornamentada por fitas de cores diversas (incluindo cores brilhantes, douradas e prateadas) com estruturação  cortadas a laser, recortes opcionais (em formas tribais, geométricos, abstratos, etc.) frontais, nas mangas, laterais e punhos feitos em tecido  oxford cortados  a laser.  Aplicação de tecido sobre tecido (oxford) dos recortes em dublagem pespontados. Opcional de aplicação de estampa em DTF com arte a ser fornecida. Aplicação opcional de galões metalizados, botões frontais e cordões em cores a serem definidas. Ombreiras sobre mangas com estruturação em E.V.A. de alta densidade de 2 mm com dublagem em ambos os lados e acabamento em debrum de 20 mm em cor a ser definida. Ombreira interna fixa de espuma de 20 mm revestida de tecido. Punhos removíveis com aplicação opcional de estampas em DTF, com estruturação em E.V.A. de alta densidade de 2 mm com dublagem em ambos os lados e acabamento em debrum de 20 mm em cor a ser definida. Gola tipo “padre” com opção de aplicação de estampas em DTF, com estruturação em E.V.A. de alta densidade de 2 mm com dublagem em ambos os lados e acabamento em debrum de 20 mm em cor a ser definida. Fechamento nas costas com zíper invisível. PP, P, M, G, GG, EXG1, EXG2, EXG3, EXG4, EXG5, EXG6 e EXG7. Capa porta terno confeccionada em P.V.C.
+            Short/short-saia: Em tecido Oxford composto de 100% poliéster, cores a combinar, com elástico no cós traseiro, barra com pesponto duplo. Opcional: Calça Legging em tecido two way, em cores a escolher não transparente. PP, P, M, G, GG, EXG1, EXG2, EXG3, EXG4, EXG5, EXG6 e EXG7.
+            Collant: em suplex, cavado, Cor nude. Tamanhos PP, P, M, G, GG, EXG1, EXG2, EXG3, EXG4, EXG5, EXG6 e EXG7.
           </p>
         }
       />
@@ -202,14 +207,14 @@ function Uniformes() {
         contentSide="left"
         title="Uniformes"
         highlight="Baliza"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Modelagens que valorizam a apresentação e permitem liberdade de movimento. Produzidos para suportar a rotina de ensaios, desfiles e competições."
         images={uniformesBalizaImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
         specificationsLabel="Ver especificações técnicas"
         specifications={
           <p>
-            Conteúdo técnico de uniformes para Baliza pendente de aprovação.
+            Macacão ou macaquinho confeccionados em tecido suplex composto por 86% de poliamida e 14% de elastano em até 4 cores, modelagem com corte em máquina laser. Recortes (em formas tribais, geométricos, abstratos, etc.) frontais, nas mangas, laterais e pernas feitos em tecido suplex com brilho cortados a laser. Aplicação de tecido sobre tecido (suplex) dos recortes em dublagem SEM ARREMATE de costura. Punhos das mangas com dedeiras de polegar. Segunda pele em toda a peça em tom nude. Gola tipo olímpica e abertura nas costas. Meia saia ou saia inteira opcional confeccionada em tecido suplex..
           </p>
         }
       />
