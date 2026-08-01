@@ -11,6 +11,7 @@ type ServiceCategory = {
   description: string
   to: string
   image: string
+  imageClass: string
 }
 
 const DEFAULT_ACTIVE_CATEGORY = 'Quepes e Barretinas'
@@ -21,24 +22,28 @@ const serviceCategories: ServiceCategory[] = [
     description: 'Fardamentos sob medida para bandas, fanfarras, escolas e equipes institucionais.',
     to: '/uniformes',
     image: uniformeHome,
+    imageClass: 'home-services-section__image--uniformes',
   },
   {
     title: 'Calçados',
     description: 'Botas, sapatos e modelos de apoio para apresentações, desfiles e rotinas oficiais.',
     to: '/calcados',
     image: calcadosHome,
+    imageClass: 'home-services-section__image--calcados',
   },
   {
     title: 'Quepes e Barretinas',
     description: 'Peças de impacto para cerimônias, regências, balizas e apresentações formais.',
     to: '/barretinas-e-quepes',
     image: barretinaHome,
+    imageClass: 'home-services-section__image--barretinas',
   },
   {
     title: 'Acessórios em geral',
     description: 'Complementos que padronizam a composição visual com acabamento elegante.',
     to: '/acessorios',
     image: airbladeHome,
+    imageClass: 'home-services-section__image--acessorios',
   },
 ]
 
@@ -98,14 +103,7 @@ function HomeServicesSection() {
 
         <div className="home-services-section__visual" aria-hidden="true">
           <img
-            className={[
-              'home-services-section__image',
-              activeService.to === '/acessorios'
-                ? 'home-services-section__image--acessorios'
-                : '',
-            ]
-              .filter(Boolean)
-              .join(' ')}
+            className={`home-services-section__image ${activeService.imageClass}`}
             src={activeService.image}
             alt=""
           />

@@ -107,17 +107,29 @@
   pointer-events: none;
 }
 
-.home-services-section__visual img {
+.home-services-section__image {
   display: block;
   width: 100%;
   max-height: inherit;
   object-fit: contain;
   object-position: center bottom;
+  transition: transform 500ms ease;
+}
+
+.home-services-section__image--uniformes {
+  transform: scale(1);
+}
+
+.home-services-section__image--calcados {
+  transform: translateX(-20px) scale(1.5);
+}
+
+.home-services-section__image--barretinas {
+  transform: translateY(20px) scale(1.25);
 }
 
 .home-services-section__image--acessorios {
-  transform: scale(1.6);
-  transform-origin: center;
+  transform: translateX(-20px) scale(1.6);
 }
 
 @media (max-width: 64rem) {
