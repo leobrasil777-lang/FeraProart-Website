@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './HomeServicesSection.css'
-import barretinaImage from '../../../../assets/images/home/services-barretina.png'
-import botaImage from '../../../../assets/images/home/services-bota.png'
+import uniformeHome from "../../../assets/images/home/uniforme-home.png";
+import barretinaHome from "../../../assets/images/home/barretinas-home.png";
+import airbladeHome from "../../../assets/images/home/airblade-home.png";
+import calcadosHome from "../../../assets/images/home/calcados-home.png";
 
 type ServiceCategory = {
   title: string
@@ -18,25 +20,25 @@ const serviceCategories: ServiceCategory[] = [
     title: 'Uniformes',
     description: 'Fardamentos sob medida para bandas, fanfarras, escolas e equipes institucionais.',
     to: '/uniformes',
-    image: barretinaImage,
+    image: uniformeHome,
   },
   {
     title: 'Calçados',
     description: 'Botas, sapatos e modelos de apoio para apresentações, desfiles e rotinas oficiais.',
     to: '/calcados',
-    image: botaImage,
+    image: calcadosHome,
   },
   {
     title: 'Quepes e Barretinas',
     description: 'Peças de impacto para cerimônias, regências, balizas e apresentações formais.',
     to: '/barretinas-e-quepes',
-    image: barretinaImage,
+    image: barretinaHome,
   },
   {
     title: 'Acessórios em geral',
     description: 'Complementos que padronizam a composição visual com acabamento elegante.',
     to: '/acessorios',
-    image: botaImage,
+    image: airbladeHome,
   },
 ]
 

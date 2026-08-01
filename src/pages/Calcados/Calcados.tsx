@@ -1,3 +1,4 @@
+import FinalItemCTA from '../../components/FinalItemCTA'
 import ItemCategorySection, { type ItemCategorySectionImage } from '../../components/ItemCategorySection'
 import CalcadosHeroSection from './sections/CalcadosHeroSection/CalcadosHeroSection'
 import mocassinoBranco from '../../assets/images/calcados/mocassino-branco.png'
@@ -19,6 +20,8 @@ import botaCanoLongoBranca2 from '../../assets/images/calcados/bota-canolongo-br
 import botaCanoLongoPreta3 from '../../assets/images/calcados/bota-canolongo-preta3.png'
 import botaCanoLongoBranca3 from '../../assets/images/calcados/bota-canolongo-branca3.png'
 import botaCanoLongoPreta4 from '../../assets/images/calcados/bota-canolongo-preta4.png'
+
+const ctaCalcados = '/src/assets/images/calcados/cta-calcados.jpg'
 
 const mocassinsImages: ItemCategorySectionImage[] = [
   {
@@ -191,6 +194,16 @@ function Calcados() {
         specificationsLabel="Ver especificações técnicas"
         specifications={conteudoTecnicoCalcadosBaliza}
       />
+      <FinalItemCTA
+        id="cta-final-calcados"
+        image={ctaCalcados}
+        imageAlt="Calçados apresentados sobre fundo cinza."
+        title="Confie na"
+        highlight="tradição"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        ctaLabel="Quero um orçamento"
+        ctaHref="/licitacao"
+        />
     </>
   )
 }

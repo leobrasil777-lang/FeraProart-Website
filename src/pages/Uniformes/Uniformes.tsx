@@ -1,3 +1,4 @@
+import FinalItemCTA from '../../components/FinalItemCTA'
 import ItemCategorySection, { type ItemCategorySectionImage } from '../../components/ItemCategorySection'
 import uniformeBaliza1 from '../../assets/images/uniformes/baliza/uniforme-baliza1.png'
 import uniformeBaliza2 from '../../assets/images/uniformes/baliza/uniforme-baliza2.png'
@@ -74,6 +75,8 @@ import uniformeLinhaDeFrenteVinho4 from '../../assets/images/uniformes/linha-de-
 import uniformeLinhaDeFrenteVinho5 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-vinho5.png'
 import uniformeLinhaDeFrenteVinho6 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-vinho6.png'
 import UniformesHeroSection from './sections/UniformesHeroSection/UniformesHeroSection'
+
+const ctaUniformes = '/src/assets/images/uniformes/cta-uniformes.jpg'
 
 const corpoCoreograficoImages: ItemCategorySectionImage[] = [
   { src: uniformeCorpoAzul1, alt: 'Uniforme de Corpo Coreográfico azul, modelo 1.' },
@@ -217,6 +220,16 @@ Macacão: estilo jardineira confeccionado em tecido Oxford 100% poliéster com c
             Macacão ou macaquinho confeccionados em tecido suplex composto por 86% de poliamida e 14% de elastano em até 4 cores, modelagem com corte em máquina laser. Recortes (em formas tribais, geométricos, abstratos, etc.) frontais, nas mangas, laterais e pernas feitos em tecido suplex com brilho cortados a laser. Aplicação de tecido sobre tecido (suplex) dos recortes em dublagem SEM ARREMATE de costura. Punhos das mangas com dedeiras de polegar. Segunda pele em toda a peça em tom nude. Gola tipo olímpica e abertura nas costas. Meia saia ou saia inteira opcional confeccionada em tecido suplex..
           </p>
         }
+      />
+      <FinalItemCTA
+        id="cta-final-uniformes"
+        image={ctaUniformes}
+        imageAlt="Uniformes apresentados sobre fundo cinza."
+        title="Confie na"
+        highlight="tradição"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        ctaLabel="Quero um orçamento"
+        ctaHref="/licitacao"
       />
     </>
   )
