@@ -1,5 +1,5 @@
 import CTAButton from '../../../../components/CTAButton/CTAButton'
-import bannerBarretinas from '../../../../assets/images/barretinas-e-quepes/barretinas/banner-quepesbarretinas.png'
+import bannerBarretinas from "../../../../assets/images/barretinas-e-quepes/barretinas/banner-quepesbarretinas.png";
 import './BarretinasQuepesHeroSection.css'
 
 function BarretinasQuepesHeroSection() {
