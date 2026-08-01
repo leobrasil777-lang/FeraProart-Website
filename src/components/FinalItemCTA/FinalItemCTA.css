@@ -35,12 +35,16 @@
 
 .final-item-cta__title {
   display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: clamp(0.5rem, 1vw, 1rem);
+
   margin: 0 0 clamp(0.75rem, 1.3vw, 1.25rem);
-  flex-direction: column;
   font-family: var(--font-primary);
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: -0.045em;
   line-height: 0.86;
+  white-space: nowrap;
 }
 
 .final-item-cta__title-main {
@@ -48,11 +52,12 @@
 }
 
 .final-item-cta__title-highlight {
-  margin-top: -0.05em;
+  margin-top: 0;
   font-family: var(--font-highlight);
-  font-size: clamp(3.5rem, 5.25vw, 5.25rem);
+  font-size: clamp(5rem, 8vw, 8.5rem);
   font-weight: 400;
   letter-spacing: -0.025em;
+  line-height: 0.7;
 }
 
 .final-item-cta__description {
@@ -101,38 +106,16 @@
 }
 
 @media (max-width: 640px) {
-  .final-item-cta {
-    min-height: 36rem;
-    aspect-ratio: auto;
-  }
-
-  .final-item-cta__image {
-    object-fit: cover;
-  }
-
-  .final-item-cta__container {
-    align-items: start;
-    padding-block: 7rem 5rem;
-  }
-
-  .final-item-cta__content {
-    width: min(82%, 20rem);
-    border-radius: var(--radius-md);
-    padding: 1rem;
-    background: rgba(217, 219, 222, 0.82);
-    backdrop-filter: blur(2px);
-  }
-
-  .final-item-cta__title-main {
-    font-size: clamp(2rem, 10vw, 2.75rem);
+  .final-item-cta__title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    white-space: normal;
   }
 
   .final-item-cta__title-highlight {
-    font-size: clamp(3.25rem, 16vw, 4.25rem);
-  }
-
-  .final-item-cta__description {
-    font-size: 0.875rem;
+    margin-top: -0.08em;
+    font-size: clamp(3.75rem, 17vw, 4.75rem);
   }
 }
 
