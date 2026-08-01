@@ -12,7 +12,7 @@ function Acessorios() {
         imageAlt="Acessórios para bandas e fanfarras apresentados sobre fundo cinza."
         title="Confie na"
         highlight="tradição"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Conte com quem entende de uniformes, acessórios e soluções personalizadas para bandas, fanfarras e instituições."
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
       />
