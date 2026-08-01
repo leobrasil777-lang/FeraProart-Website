@@ -1,5 +1,7 @@
+import AcessoriosHeroSection from './sections/AcessoriosHeroSection'
+
 function Acessorios() {
-  return null
+  return <AcessoriosHeroSection />
 }
 
 export default Acessorios
