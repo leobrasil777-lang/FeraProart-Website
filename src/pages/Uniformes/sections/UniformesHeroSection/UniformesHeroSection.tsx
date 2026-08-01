@@ -1,11 +1,18 @@
 import CTAButton from '../../../../components/CTAButton/CTAButton'
 import Container from '../../../../components/Container/Container'
+import bannerUniformes from '../../../../assets/images/uniformes/banner-uniformes.png'
 import './UniformesHeroSection.css'
 
 function UniformesHeroSection() {
   return (
     <section className="uniformes-hero" aria-labelledby="uniformes-hero-title">
       <div className="uniformes-hero__main">
+        <img
+          className="uniformes-hero__image"
+          src={bannerUniformes}
+          alt=""
+          aria-hidden="true"
+        />
         <Container className="uniformes-hero__container">
           <div className="uniformes-hero__content">
             <h1 className="uniformes-hero__title" id="uniformes-hero-title">

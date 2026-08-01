@@ -6,9 +6,26 @@
 
 .uniformes-hero__main {
   display: flex;
-  min-height: clamp(560px, 61.45vw, 760px);
+  min-height: clamp(500px, 655vw, 600px);
   isolation: isolate;
   background: #f4f3f1;
+}
+
+.uniformes-hero__main {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.uniformes-hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
 }
 
 .uniformes-hero__container {
@@ -20,6 +37,7 @@
 
 .uniformes-hero__content {
   width: min(43%, 26rem);
+  animation: heroContentEnter 3000ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .uniformes-hero__title {

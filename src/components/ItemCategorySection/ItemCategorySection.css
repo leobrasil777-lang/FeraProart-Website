@@ -6,7 +6,7 @@
   --item-section-cta: #128d07;
   --item-card-gap: clamp(0.75rem, 1.35vw, 1.125rem);
   --item-card-width: calc((100% - (var(--item-card-gap) * 2)) / 3);
-  background: #f5f2ea;
+  background: #FFFFFF;
   color: var(--item-section-text);
   overflow-x: clip;
   padding-block: clamp(4.75rem, 6.9vw, 5.75rem) clamp(2.4rem, 4.5vw, 4rem);

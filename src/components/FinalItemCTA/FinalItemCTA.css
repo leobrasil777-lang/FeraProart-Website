@@ -1,27 +1,28 @@
 .final-item-cta {
   position: relative;
-  display: grid;
   width: 100%;
-  aspect-ratio: 1200 / 400;
   margin: 0;
+  overflow: hidden;
   background: var(--color-black);
   isolation: isolate;
 }
 
 .final-item-cta__image {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   max-width: none;
-  object-fit: contain;
 }
 
 .final-item-cta__container {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+
   display: grid;
   align-items: center;
-  padding-block: clamp(4rem, 10vw, 9rem) clamp(3.5rem, 8vw, 7rem);
+
+  padding-block: clamp(3rem, 6vw, 6rem);
 }
 
 .final-item-cta__content {

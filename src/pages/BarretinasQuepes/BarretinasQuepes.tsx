@@ -1,5 +1,5 @@
-import ItemCategorySection, { type ItemCategorySectionImage } from '../../components/ItemCategorySection'
 import FinalItemCTA from '../../components/FinalItemCTA'
+import ItemCategorySection, { type ItemCategorySectionImage } from '../../components/ItemCategorySection'
 import barretinaBrancaLisa from '../../assets/images/barretinas-e-quepes/barretinas/barretina-branca-lisa.png'
 import barretinaAzulDourado from '../../assets/images/barretinas-e-quepes/barretinas/barretina-azul-dourado.png'
 import barretinaPretaDourada from '../../assets/images/barretinas-e-quepes/barretinas/barretina-preta-dourada.png'
