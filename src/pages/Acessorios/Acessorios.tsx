@@ -1,5 +1,6 @@
 import ctaAcessorios from '../../assets/images/acessorios/cta-acessorios.png'
 import FinalItemCTA from '../../components/FinalItemCTA'
+import AcessoriosBalizaSection from './sections/AcessoriosBalizaSection'
 import AcessoriosHeroSection from './sections/AcessoriosHeroSection'
 import CorpoCoreograficoSection from './sections/CorpoCoreograficoSection'
 
@@ -8,6 +9,7 @@ function Acessorios() {
     <>
       <AcessoriosHeroSection />
       <CorpoCoreograficoSection />
+      <AcessoriosBalizaSection />
       <FinalItemCTA
         id="cta-final-acessorios"
         image={ctaAcessorios}

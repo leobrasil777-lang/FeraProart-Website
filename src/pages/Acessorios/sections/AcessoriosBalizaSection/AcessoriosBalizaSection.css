@@ -1,0 +1,216 @@
+.acessorios-baliza-section {
+  overflow-x: clip;
+  padding-block: var(--section-spacing);
+  background: var(--color-background-dark);
+  color: var(--color-text-on-dark);
+}
+
+.acessorios-baliza-section__layout {
+  display: grid;
+  grid-template-areas: 'viewer content';
+  grid-template-columns: minmax(30rem, 1.25fr) minmax(17rem, 0.8fr);
+  align-items: center;
+  gap: clamp(3rem, 6vw, 6rem);
+}
+
+.acessorios-baliza-section__content {
+  grid-area: content;
+  min-width: 0;
+}
+
+.acessorios-baliza-section__header {
+  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+}
+
+.acessorios-baliza-section__title {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-white);
+  line-height: 0.8;
+}
+
+.acessorios-baliza-section__title-main {
+  font-family: var(--font-primary);
+  font-size: clamp(4rem, 5.15vw, 5.25rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+  white-space: nowrap;
+}
+
+.acessorios-baliza-section__title-highlight {
+  margin-top: -0.02em;
+  font-family: var(--font-highlight);
+  font-size: clamp(5rem, 6.4vw, 6.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.72;
+}
+
+.acessorios-baliza-section__tabs {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.625rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: clamp(0.6rem, 1vw, 0.8rem);
+  background: var(--color-off-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.acessorios-baliza-section__tab {
+  width: 100%;
+  min-height: 3.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem clamp(1rem, 1.8vw, 1.4rem);
+  background: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--font-primary);
+  font-size: clamp(0.72rem, 0.86vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.075em;
+  line-height: 1.35;
+  text-align: left;
+  text-transform: uppercase;
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.acessorios-baliza-section__tab:hover:not(.acessorios-baliza-section__tab--active) {
+  border-color: var(--color-silver-dark);
+  background: #faf9f6;
+}
+
+.acessorios-baliza-section__tab:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid var(--color-black);
+  outline-offset: 2px;
+}
+
+.acessorios-baliza-section__tab--active {
+  border-color: var(--color-black);
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.acessorios-baliza-section__viewer {
+  display: grid;
+  grid-area: viewer;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 1.15 / 1;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+}
+
+.acessorios-baliza-section__placeholder {
+  display: flex;
+  max-width: 23rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  color: var(--color-text-muted);
+  font-family: var(--font-primary);
+  text-align: center;
+}
+
+.acessorios-baliza-section__placeholder-label {
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.acessorios-baliza-section__placeholder-text {
+  font-size: clamp(0.72rem, 1vw, 0.85rem);
+  line-height: 1.5;
+}
+
+.acessorios-baliza-section__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+@media (max-width: 68.75rem) {
+  .acessorios-baliza-section__layout {
+    grid-template-columns: minmax(25rem, 1.15fr) minmax(17rem, 0.85fr);
+    gap: clamp(2.25rem, 5vw, 4rem);
+  }
+
+  .acessorios-baliza-section__title-main {
+    font-size: clamp(3.25rem, 5.3vw, 4.25rem);
+  }
+
+  .acessorios-baliza-section__title-highlight {
+    font-size: clamp(4.5rem, 7vw, 5.75rem);
+  }
+}
+
+@media (max-width: 56.25rem) {
+  .acessorios-baliza-section__layout {
+    grid-template-areas:
+      'content'
+      'viewer';
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(2.5rem, 7vw, 4rem);
+  }
+
+  .acessorios-baliza-section__content {
+    width: 100%;
+  }
+
+  .acessorios-baliza-section__tabs {
+    max-width: 36rem;
+  }
+
+  .acessorios-baliza-section__viewer {
+    aspect-ratio: 1.25 / 1;
+  }
+}
+
+@media (max-width: 40rem) {
+  .acessorios-baliza-section {
+    padding-block: var(--section-spacing-small);
+  }
+
+  .acessorios-baliza-section__header {
+    margin-bottom: 2rem;
+  }
+
+  .acessorios-baliza-section__title-main {
+    max-width: 100%;
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .acessorios-baliza-section__title-highlight {
+    font-size: clamp(4rem, 20vw, 5.75rem);
+  }
+
+  .acessorios-baliza-section__tabs {
+    max-width: none;
+  }
+
+  .acessorios-baliza-section__tab {
+    min-height: 3.5rem;
+  }
+
+  .acessorios-baliza-section__viewer {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .acessorios-baliza-section__tab {
+    transition: none;
+  }
+}
