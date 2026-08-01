@@ -144,6 +144,7 @@ function Calcados() {
         images={mocassinsImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
+        whatsappMessage="Olá, vim pela página de Calçados da Fera Proart e gostaria de solicitar um orçamento para mocassins."
         specificationsLabel="Ver especificações técnicas"
         specifications={
           <p>
@@ -165,6 +166,7 @@ function Calcados() {
         images={botasCanoCurtoImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
+        whatsappMessage="Olá, vim pela página de Calçados da Fera Proart e gostaria de solicitar um orçamento para botas de cano curto."
         specificationsLabel="Ver especificações técnicas"
         specifications={conteudoTecnicoBotasCanoCurto}
       />
@@ -178,6 +180,7 @@ function Calcados() {
         images={botasCanoLongoImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
+        whatsappMessage="Olá, vim pela página de Calçados da Fera Proart e gostaria de solicitar um orçamento para botas de cano longo."
         specificationsLabel="Ver especificações técnicas"
         specifications={conteudoTecnicoBotasCanoLongo}
       />
@@ -191,6 +194,7 @@ function Calcados() {
         images={calcadosBalizaImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
+        whatsappMessage="Olá, vim pela página de Calçados da Fera Proart e gostaria de solicitar um orçamento para calçados de baliza."
         specificationsLabel="Ver especificações técnicas"
         specifications={conteudoTecnicoCalcadosBaliza}
       />
@@ -203,6 +207,7 @@ function Calcados() {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
+        whatsappMessage="Olá, vim pela página de Calçados da Fera Proart e gostaria de solicitar um orçamento."
         />
     </>
   )

@@ -28,7 +28,7 @@ function BarretinasQuepesHeroSection() {
               Barretinas padrão americano (Marching Band), Quepes Militares e tipo Casquete.
             </p>
             <div className="barretinas-hero__actions" aria-label="Ações de Barretinas e Quepes">
-              <CTAButton href="/licitacao" className="barretinas-hero__button barretinas-hero__button--primary">
+              <CTAButton whatsappMessage="Olá, vim pela página de Quepes e Barretinas da Fera Proart e gostaria de solicitar um orçamento." className="barretinas-hero__button barretinas-hero__button--primary">
                 Solicitar orçamento
               </CTAButton>
               <CTAButton

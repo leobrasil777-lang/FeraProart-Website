@@ -1,6 +1,6 @@
 import type { FormEvent } from 'react'
-import { useState } from 'react'
 import Container from '../../../../components/Container/Container'
+import { openWhatsApp } from '../../../../utils/whatsapp'
 import licitacaoCtaImage from '../../../../assets/images/licitacao/licitacao-cta.png'
 import './LicitacaoContactSection.css'
 
@@ -36,13 +36,9 @@ const contactFields = [
 ]
 
 function LicitacaoContactSection() {
-  const [formNotice, setFormNotice] = useState('')
-
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    setFormNotice(
-      'Destino do formulário pendente de integração. Os dados não foram enviados.',
-    )
+    openWhatsApp('Olá, vim pela página de Licitações da Fera Proart e gostaria de conversar sobre um processo de compra ou licitação.')
   }
 
   return (
@@ -109,9 +105,6 @@ function LicitacaoContactSection() {
               Falar com um especialista
             </button>
 
-            <p className="licitacao-contact__notice" aria-live="polite">
-              {formNotice}
-            </p>
           </form>
         </div>
       </Container>

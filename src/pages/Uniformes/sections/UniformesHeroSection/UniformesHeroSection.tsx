@@ -25,6 +25,7 @@ function UniformesHeroSection() {
             <div className="uniformes-hero__actions" aria-label="Ações de Uniformes">
               <CTAButton
                 href="/licitacao"
+                whatsappMessage="Olá, vim pela página de Uniformes da Fera Proart e gostaria de solicitar um orçamento."
                 className="uniformes-hero__button uniformes-hero__button--primary"
               >
                 Solicitar orçamento

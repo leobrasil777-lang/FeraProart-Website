@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
+import { openWhatsApp } from '../../utils/whatsapp'
 import './CTAButton.css'
 
 interface CTAButtonProps {
@@ -8,6 +9,7 @@ interface CTAButtonProps {
   variant?: 'primary' | 'secondary' | 'outline'
   className?: string
   icon?: ReactNode
+  whatsappMessage?: string
 }
 
 function CTAButton({
@@ -16,6 +18,7 @@ function CTAButton({
   variant = 'primary',
   className = '',
   icon,
+  whatsappMessage,
 }: CTAButtonProps) {
   const classes = ['cta-button', `cta-button--${variant}`, className]
     .filter(Boolean)
@@ -27,6 +30,14 @@ function CTAButton({
       {icon}
     </>
   )
+
+  if (whatsappMessage) {
+    return (
+      <button className={classes} type="button" onClick={() => openWhatsApp(whatsappMessage)}>
+        {content}
+      </button>
+    )
+  }
 
   if (href) {
     if (href.startsWith('/')) {

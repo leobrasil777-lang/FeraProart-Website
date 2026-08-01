@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../Container/Container'
+import { openWhatsApp } from '../../utils/whatsapp'
 import './ItemCategorySection.css'
 
 export type ItemCategorySectionTheme = 'light' | 'dark'
@@ -21,6 +22,7 @@ export interface ItemCategorySectionProps {
   images: ItemCategorySectionImage[]
   ctaLabel?: string
   ctaHref?: string
+  whatsappMessage?: string
   specificationsLabel?: string
   specifications?: ReactNode
   className?: string
@@ -42,6 +44,7 @@ function ItemCategorySection({
   images,
   ctaLabel,
   ctaHref,
+  whatsappMessage,
   specificationsLabel = 'Ver especificações técnicas',
   specifications,
   className = '',
@@ -85,15 +88,19 @@ function ItemCategorySection({
     .filter(Boolean)
     .join(' ')
 
-  const cta = ctaLabel && ctaHref && (ctaHref.startsWith('/') ? (
+  const cta = ctaLabel && (whatsappMessage ? (
+    <button className="item-category-section__cta" type="button" onClick={() => openWhatsApp(whatsappMessage)}>
+      {ctaLabel}
+    </button>
+  ) : ctaHref?.startsWith('/') ? (
     <Link className="item-category-section__cta" to={ctaHref}>
       {ctaLabel}
     </Link>
-  ) : (
+  ) : ctaHref ? (
     <a className="item-category-section__cta" href={ctaHref}>
       {ctaLabel}
     </a>
-  ))
+  ) : null)
 
   return (
     <section className={classes} id={id} aria-labelledby={`${id}-title`}>

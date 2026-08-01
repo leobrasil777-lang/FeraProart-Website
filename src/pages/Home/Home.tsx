@@ -29,6 +29,7 @@ function Home() {
           )}
           primaryButtonLabel="Solicitar orçamento"
           primaryButtonHref="/licitacao"
+          primaryButtonWhatsappMessage="Olá, vim pelo site da Fera Proart e gostaria de solicitar um orçamento."
           primaryButtonClassName="hero-section__button hero-section__button--primary"
           secondaryButtonLabel="Ver catálogo"
           secondaryButtonHref="/uniformes"

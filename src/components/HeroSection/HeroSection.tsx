@@ -17,6 +17,8 @@ interface HeroSectionProps {
   titleContent?: ReactNode
   primaryButtonClassName?: string
   secondaryButtonClassName?: string
+  primaryButtonWhatsappMessage?: string
+  secondaryButtonWhatsappMessage?: string
 }
 
 function HeroSection({
@@ -33,6 +35,8 @@ function HeroSection({
   titleContent,
   primaryButtonClassName = '',
   secondaryButtonClassName = '',
+  primaryButtonWhatsappMessage,
+  secondaryButtonWhatsappMessage,
 }: HeroSectionProps) {
   const background = backgroundImage
     ? `linear-gradient(rgba(10, 10, 10, 0.72), rgba(10, 10, 10, 0.82)), url("${backgroundImage}")`
@@ -51,10 +55,10 @@ function HeroSection({
           {(primaryButtonLabel || secondaryButtonLabel) && (
             <div className="hero-section__actions">
               {primaryButtonLabel && (
-                <CTAButton href={primaryButtonHref} className={primaryButtonClassName}>{primaryButtonLabel}</CTAButton>
+                <CTAButton href={primaryButtonHref} className={primaryButtonClassName} whatsappMessage={primaryButtonWhatsappMessage}>{primaryButtonLabel}</CTAButton>
               )}
               {secondaryButtonLabel && (
-                <CTAButton href={secondaryButtonHref} variant="outline" className={secondaryButtonClassName}>
+                <CTAButton href={secondaryButtonHref} variant="outline" className={secondaryButtonClassName} whatsappMessage={secondaryButtonWhatsappMessage}>
                   {secondaryButtonLabel}
                 </CTAButton>
               )}
