@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './HomeServicesSection.css'
-import uniformeHome from "../../../assets/images/home/uniforme-home.png";
-import barretinaHome from "../../../assets/images/home/barretinas-home.png";
-import airbladeHome from "../../../assets/images/home/airblade-home.png";
-import calcadosHome from "../../../assets/images/home/calcados-home.png";
+import uniformeHome from "../../../../assets/images/home/uniforme-home.png";
+import barretinaHome from "../../../../assets/images/home/barretinas-home.png";
+import airbladeHome from "../../../../assets/images/home/airblade-home.png";
+import calcadosHome from "../../../../assets/images/home/calcados-home.png";
 
 type ServiceCategory = {
   title: string
