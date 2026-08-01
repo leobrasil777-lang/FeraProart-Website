@@ -25,7 +25,7 @@ function AcessoriosHeroSection() {
               Acessórios
             </h1>
             <p className="acessorios-hero__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              Acessórios para Balizas, Corpo Coreográfico, Comandante Mór e Pavilhão.
             </p>
             <div className="acessorios-hero__actions" aria-label="Ações de Acessórios">
               <CTAButton

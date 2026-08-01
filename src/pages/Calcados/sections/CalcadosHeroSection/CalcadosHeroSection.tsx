@@ -23,7 +23,7 @@ function CalcadosHeroSection() {
               Calçados
             </h1>
             <p className="calcados-hero__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              Mocassins, Sapatilhas, Botilhas, Botas Cano Curto e Botas Cano Alto.
             </p>
             <div className="calcados-hero__actions" aria-label="Ações de Calçados">
               <CTAButton href="/licitacao"

@@ -57,7 +57,7 @@
   color: #1b1b1b;
   font-family: var(--font-primary);
   font-size: clamp(1.25rem, 1.65vw, 1.5rem);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1.02;
 }
