@@ -33,7 +33,7 @@ import quepesCasqueteVerdePrataFrontal from '../../assets/images/barretinas-e-qu
 import quepesCasqueteVerdePreto from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-verde-preto.png'
 import quepesCasqueteVerdePreto2 from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-verde-preto2.png'
 
-const ctaBarretinas = '/src/assets/images/barretinas-e-quepes/cta-barretinas.jgp'
+const ctaBarretinas = '/src/assets/images/barretinas-e-quepes/cta-barretinas.jpg'
 
 const barretinasPadraoAmericanoImages: ItemCategorySectionImage[] = [
   {
