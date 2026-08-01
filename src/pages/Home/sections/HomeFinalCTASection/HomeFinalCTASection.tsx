@@ -4,8 +4,6 @@ import Container from '../../../../components/Container/Container'
 import homeNotebookImage from '../../../../assets/images/home/home-notebook.png'
 import './HomeFinalCTASection.css'
 
-const finalCtaHref = '/licitacao'
-
 function HomeFinalCTASection() {
   const sectionRef = useRef<HTMLElement>(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -55,7 +53,7 @@ function HomeFinalCTASection() {
           <p className="home-final-cta-section__description">
             Nossa equipe te aguarda para entender sua situação e facilitar seu processo de compra e licitação
           </p>
-          <CTAButton href={finalCtaHref} className="home-final-cta-section__button">
+          <CTAButton className="home-final-cta-section__button" whatsappMessage="Olá, vim pelo site da Fera Proart e gostaria de conversar sobre um processo de compra ou licitação.">
             Quero saber mais
           </CTAButton>
         </div>

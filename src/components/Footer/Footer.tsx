@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import whatsappIcon from '../../assets/icons/home/whatsapp.svg'
+import { openWhatsApp } from '../../utils/whatsapp'
 import './Footer.css'
 
 const quickLinks = [
@@ -13,7 +14,7 @@ const quickLinks = [
 ]
 
 const contactLinks = [
-  { label: '+55 15 99799-2549', href: 'tel:+5515997992549', icon: 'whatsapp' },
+  { label: '+55 15 99799-2549', href: 'whatsapp', icon: 'whatsapp' },
   { label: '+55 15 99842-3339', href: 'tel:+5515998423339', icon: 'phone' },
   { label: 'contato@feraproart.com', href: 'mailto:contato@feraproart.com', icon: 'mail' },
 ]
@@ -51,7 +52,13 @@ function Footer() {
             <ul className="site-footer__list">
               {quickLinks.map((link) => (
                 <li key={`${link.label}-${link.to}`}>
-                  <Link className="site-footer__link" to={link.to}>{link.label}</Link>
+                  {link.label === 'Orçamento' ? (
+                    <button className="site-footer__link" type="button" onClick={() => openWhatsApp('Olá, vim pelo site da Fera Proart e gostaria de solicitar um orçamento.')}>
+                      {link.label}
+                    </button>
+                  ) : (
+                    <Link className="site-footer__link" to={link.to}>{link.label}</Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -62,14 +69,22 @@ function Footer() {
             <ul className="site-footer__list site-footer__contact-list">
               {contactLinks.map((link) => (
                 <li key={link.href}>
+                  {link.icon === 'whatsapp' ? (
+                    <button className="site-footer__link site-footer__contact-link" type="button" onClick={() => openWhatsApp('Olá, vim pelo site da Fera Proart e gostaria de mais informações.')}>
+                      <span className="site-footer__contact-icon" aria-hidden="true">
+                        <img src={whatsappIcon} alt="" />
+                      </span>
+                      <span>{link.label}</span>
+                    </button>
+                  ) : (
                   <a className="site-footer__link site-footer__contact-link" href={link.href}>
                     <span className="site-footer__contact-icon" aria-hidden="true">
-                      {link.icon === 'whatsapp' && <img src={whatsappIcon} alt="" />}
                       {link.icon === 'phone' && <PhoneIcon />}
                       {link.icon === 'mail' && <MailIcon />}
                     </span>
                     <span>{link.label}</span>
                   </a>
+                  )}
                 </li>
               ))}
             </ul>

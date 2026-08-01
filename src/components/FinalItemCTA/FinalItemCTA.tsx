@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Container from '../Container/Container'
+import { openWhatsApp } from '../../utils/whatsapp'
 import './FinalItemCTA.css'
 
 export interface FinalItemCTAProps {
@@ -11,6 +12,7 @@ export interface FinalItemCTAProps {
   description: string
   ctaLabel?: string
   ctaHref: string
+  whatsappMessage?: string
   imagePosition?: string
   className?: string
 }
@@ -24,6 +26,7 @@ function FinalItemCTA({
   description,
   ctaLabel = 'Saiba mais',
   ctaHref,
+  whatsappMessage,
   imagePosition = 'center center',
   className = '',
 }: FinalItemCTAProps) {
@@ -47,9 +50,15 @@ function FinalItemCTA({
 
           <p className="final-item-cta__description">{description}</p>
 
-          <Link className="final-item-cta__link" to={ctaHref}>
-            {ctaLabel}
-          </Link>
+          {whatsappMessage ? (
+            <button className="final-item-cta__link" type="button" onClick={() => openWhatsApp(whatsappMessage)}>
+              {ctaLabel}
+            </button>
+          ) : (
+            <Link className="final-item-cta__link" to={ctaHref}>
+              {ctaLabel}
+            </Link>
+          )}
         </div>
       </Container>
     </section>

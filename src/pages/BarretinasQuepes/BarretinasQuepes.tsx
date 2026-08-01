@@ -204,6 +204,7 @@ function BarretinasQuepes() {
         images={barretinasPadraoAmericanoImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
+        whatsappMessage="Olá, vim pela página de Quepes e Barretinas da Fera Proart e gostaria de solicitar um orçamento para barretinas padrão americano."
         specificationsLabel="Ver especificações técnicas"
         specifications={conteudoTecnicoBarretinasPadraoAmericano}
       />
@@ -217,6 +218,7 @@ function BarretinasQuepes() {
         images={quepesMilitaresImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
+        whatsappMessage="Olá, vim pela página de Quepes e Barretinas da Fera Proart e gostaria de solicitar um orçamento para quepes militares."
         specificationsLabel="Ver especificações técnicas"
         specifications={conteudoTecnicoQuepesMilitares}
       />
@@ -230,6 +232,7 @@ function BarretinasQuepes() {
         images={quepesCasquetesImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
+        whatsappMessage="Olá, vim pela página de Quepes e Barretinas da Fera Proart e gostaria de solicitar um orçamento para quepes casquetes."
         specificationsLabel="Ver especificações técnicas"
         specifications={conteudoTecnicoQuepesCasquetes}
       />
@@ -242,6 +245,7 @@ function BarretinasQuepes() {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
+        whatsappMessage="Olá, vim pela página de Quepes e Barretinas da Fera Proart e gostaria de solicitar um orçamento."
       />
     </>
   )

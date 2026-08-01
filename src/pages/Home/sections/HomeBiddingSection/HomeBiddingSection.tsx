@@ -4,6 +4,7 @@ import supplierImage from '../../../../assets/icons/home/beneficio-fornecedor-co
 import standardImage from '../../../../assets/icons/home/beneficio-padronizacao-visual.svg'
 import simplePurchaseImage from '../../../../assets/icons/home/compra-simples.svg'
 import whatsappIcon from '../../../../assets/icons/home/whatsapp.svg'
+import { openWhatsApp } from '../../../../utils/whatsapp'
 import './HomeBiddingSection.css'
 
 type BiddingBenefitProps = {
@@ -11,8 +12,6 @@ type BiddingBenefitProps = {
   title: string
   description: string
 }
-
-const whatsappHref = 'https://wa.me/?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20sobre%20licita%C3%A7%C3%B5es%20da%20Fera%20Proart.'
 
 const benefits: BiddingBenefitProps[] = [
   {
@@ -66,15 +65,14 @@ function HomeBiddingSection() {
             </p>
           </div>
 
-          <a
+          <button
             className="home-bidding-section__cta"
-            href={whatsappHref}
-            target="_blank"
-            rel="noopener noreferrer"
+            type="button"
+            onClick={() => openWhatsApp('Olá, vim pelo site da Fera Proart e gostaria de falar com um especialista sobre licitações.')}
           >
             <img src={whatsappIcon} alt="" aria-hidden="true" />
             <span>Falar com um especialista</span>
-          </a>
+          </button>
         </div>
 
         <div className="home-bidding-section__image-wrap">

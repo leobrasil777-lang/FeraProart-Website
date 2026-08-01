@@ -108,7 +108,7 @@ function Header() {
         </div>
         <div className="site-header__actions">
           <CTAButton href="/uniformes" variant="outline" className="site-header__catalog">Catálogo</CTAButton>
-          <CTAButton href="/licitacao" className="site-header__quote">Solicitar Orçamento</CTAButton>
+          <CTAButton className="site-header__quote" whatsappMessage="Olá, vim pelo site da Fera Proart e gostaria de solicitar um orçamento.">Solicitar Orçamento</CTAButton>
         </div>
         <button
           className="site-header__menu-button"

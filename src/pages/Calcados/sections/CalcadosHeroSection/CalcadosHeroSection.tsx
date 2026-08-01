@@ -26,7 +26,8 @@ function CalcadosHeroSection() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
             </p>
             <div className="calcados-hero__actions" aria-label="Ações de Calçados">
-              <CTAButton href="/licitacao" className="calcados-hero__button calcados-hero__button--primary">
+              <CTAButton href="/licitacao"
+                whatsappMessage="Olá, vim pela página de Calçados da Fera Proart e gostaria de solicitar um orçamento." className="calcados-hero__button calcados-hero__button--primary">
                 Solicitar orçamento
               </CTAButton>
               <CTAButton

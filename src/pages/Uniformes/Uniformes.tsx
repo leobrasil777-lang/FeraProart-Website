@@ -175,6 +175,7 @@ function Uniformes() {
         images={corpoCoreograficoImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
+        whatsappMessage="Olá, vim pela página de Uniformes da Fera Proart e gostaria de solicitar um orçamento para uniformes de corpo musical."
         specificationsLabel="Ver especificações técnicas"
         specifications={
           <p>
@@ -194,6 +195,7 @@ Macacão: estilo jardineira confeccionado em tecido Oxford 100% poliéster com c
         images={linhaDeFrenteImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
+        whatsappMessage="Olá, vim pela página de Uniformes da Fera Proart e gostaria de solicitar um orçamento para uniformes de linha de frente."
         specificationsLabel="Ver especificações técnicas"
         specifications={
           <p>
@@ -214,6 +216,7 @@ Macacão: estilo jardineira confeccionado em tecido Oxford 100% poliéster com c
         images={uniformesBalizaImages}
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
+        whatsappMessage="Olá, vim pela página de Uniformes da Fera Proart e gostaria de solicitar um orçamento para uniformes de baliza."
         specificationsLabel="Ver especificações técnicas"
         specifications={
           <p>
@@ -230,6 +233,7 @@ Macacão: estilo jardineira confeccionado em tecido Oxford 100% poliéster com c
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
+        whatsappMessage="Olá, vim pela página de Uniformes da Fera Proart e gostaria de solicitar um orçamento."
       />
     </>
   )
