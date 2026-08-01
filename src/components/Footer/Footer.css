@@ -21,36 +21,20 @@
 .site-footer__brand {
   display: flex;
   width: 215px;
-  min-height: 231px;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 999px 999px 24px 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.03));
-  text-align: center;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
-.site-footer__brand-mark {
-  font-size: 46px;
-  font-weight: 900;
-  letter-spacing: -0.06em;
-  line-height: 0.9;
-}
-
-.site-footer__brand-name {
-  font-size: 36px;
-  font-weight: 900;
-  letter-spacing: -0.05em;
-  line-height: 1;
-}
-
-.site-footer__brand-subtitle {
-  margin-top: 10px;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.15px;
-  text-transform: uppercase;
+.site-footer__brand-logo {
+  display: block;
+  width: 100%;
+  max-width: 215px;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: screen;
 }
 
 .site-footer__group {
@@ -204,14 +188,6 @@
   .site-footer__brand {
     width: 154px;
     min-height: 168px;
-  }
-
-  .site-footer__brand-mark {
-    font-size: 36px;
-  }
-
-  .site-footer__brand-name {
-    font-size: 29px;
   }
 
   .site-footer__group,

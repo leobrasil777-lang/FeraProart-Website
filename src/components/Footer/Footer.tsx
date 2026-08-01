@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import whatsappIcon from '../../assets/icons/home/whatsapp.svg'
+import footerLogo from '../../assets/images/logo-rodape.png'
 import { openWhatsApp } from '../../utils/whatsapp'
 import './Footer.css'
 
@@ -42,9 +43,11 @@ function Footer() {
       <div className="site-footer__inner">
         <div className="site-footer__content">
           <Link className="site-footer__brand" to="/" aria-label="Fera Proart - Home">
-            <span className="site-footer__brand-mark">Fera</span>
-            <span className="site-footer__brand-name">Proart</span>
-            <span className="site-footer__brand-subtitle">Uniformes</span>
+            <img
+              className="site-footer__brand-logo"
+              src={footerLogo}
+              alt="Logo Fera Proart"
+            />
           </Link>
 
           <nav className="site-footer__group" aria-labelledby="footer-quick-links">
