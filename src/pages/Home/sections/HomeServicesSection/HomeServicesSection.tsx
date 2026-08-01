@@ -97,7 +97,18 @@ function HomeServicesSection() {
         </header>
 
         <div className="home-services-section__visual" aria-hidden="true">
-          <img src={activeService.image} alt="" />
+          <img
+            className={[
+              'home-services-section__image',
+              activeService.to === '/acessorios'
+                ? 'home-services-section__image--acessorios'
+                : '',
+            ]
+              .filter(Boolean)
+              .join(' ')}
+            src={activeService.image}
+            alt=""
+          />
         </div>
 
         <div className="home-services-section__cards" aria-label="Categorias de produtos">

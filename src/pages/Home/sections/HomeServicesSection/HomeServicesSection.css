@@ -115,6 +115,11 @@
   object-position: center bottom;
 }
 
+.home-services-section__image--acessorios {
+  transform: scale(1.6);
+  transform-origin: center;
+}
+
 @media (max-width: 64rem) {
   .home-services-section__inner {
     width: min(calc(100% - 40px), 920px);
