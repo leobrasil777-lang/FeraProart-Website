@@ -204,7 +204,7 @@ function Calcados() {
         imageAlt="Calçados apresentados sobre fundo cinza."
         title="Confie na"
         highlight="tradição"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Conte com quem entende de uniformes, acessórios e soluções personalizadas para bandas, fanfarras e instituições."
         ctaLabel="Quero um orçamento"
         ctaHref="/licitacao"
         whatsappMessage="Olá, vim pela página de Calçados da Fera Proart e gostaria de solicitar um orçamento."
