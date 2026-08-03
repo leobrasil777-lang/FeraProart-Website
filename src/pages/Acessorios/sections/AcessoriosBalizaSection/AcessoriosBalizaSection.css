@@ -49,54 +49,6 @@
   line-height: 0.72;
 }
 
-.acessorios-baliza-section__tabs {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  gap: 0.625rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: clamp(0.6rem, 1vw, 0.8rem);
-  background: var(--color-off-white);
-  box-shadow: var(--shadow-sm);
-}
-
-.acessorios-baliza-section__tab {
-  width: 100%;
-  min-height: 3.25rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  padding: 0.9rem clamp(1rem, 1.8vw, 1.4rem);
-  background: var(--color-white);
-  color: var(--color-black);
-  font-family: var(--font-primary);
-  font-size: clamp(0.72rem, 0.86vw, 0.82rem);
-  font-weight: 600;
-  letter-spacing: 0.075em;
-  line-height: 1.35;
-  text-align: left;
-  text-transform: uppercase;
-  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
-}
-
-.acessorios-baliza-section__tab:hover:not(.acessorios-baliza-section__tab--active) {
-  border-color: var(--color-silver-dark);
-  background: #faf9f6;
-}
-
-.acessorios-baliza-section__tab:focus-visible {
-  position: relative;
-  z-index: 1;
-  outline: 2px solid var(--color-black);
-  outline-offset: 2px;
-}
-
-.acessorios-baliza-section__tab--active {
-  border-color: var(--color-black);
-  background: var(--color-black);
-  color: var(--color-white);
-}
-
 .acessorios-baliza-section__viewer {
   display: grid;
   grid-area: viewer;
@@ -169,7 +121,7 @@
     width: 100%;
   }
 
-  .acessorios-baliza-section__tabs {
+  .acessorios-baliza-section__tabs-card {
     max-width: 36rem;
   }
 
@@ -196,21 +148,11 @@
     font-size: clamp(4rem, 20vw, 5.75rem);
   }
 
-  .acessorios-baliza-section__tabs {
+  .acessorios-baliza-section__tabs-card {
     max-width: none;
-  }
-
-  .acessorios-baliza-section__tab {
-    min-height: 3.5rem;
   }
 
   .acessorios-baliza-section__viewer {
     aspect-ratio: 1 / 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .acessorios-baliza-section__tab {
-    transition: none;
   }
 }

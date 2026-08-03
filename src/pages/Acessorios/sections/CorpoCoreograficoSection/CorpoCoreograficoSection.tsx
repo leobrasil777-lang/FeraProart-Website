@@ -1,5 +1,6 @@
-import { useRef, useState, type KeyboardEvent } from 'react'
+import { useState } from 'react'
 import Container from '../../../../components/Container/Container'
+import VerticalTabsCard from '../../../../components/VerticalTabsCard/VerticalTabsCard'
 import './CorpoCoreograficoSection.css'
 
 type CorpoCoreograficoItem = {
@@ -32,41 +33,9 @@ function CorpoCoreograficoSection() {
   const [activeItemId, setActiveItemId] = useState(
     corpoCoreograficoItems[0].id,
   )
-  const tabRefs = useRef<Array<HTMLButtonElement | null>>([])
-
   const activeItem =
     corpoCoreograficoItems.find((item) => item.id === activeItemId) ??
     corpoCoreograficoItems[0]
-
-  const handleTabKeyDown = (
-    event: KeyboardEvent<HTMLButtonElement>,
-    currentIndex: number,
-  ) => {
-    let nextIndex: number | undefined
-
-    switch (event.key) {
-      case 'ArrowDown':
-        nextIndex = (currentIndex + 1) % corpoCoreograficoItems.length
-        break
-      case 'ArrowUp':
-        nextIndex =
-          (currentIndex - 1 + corpoCoreograficoItems.length) %
-          corpoCoreograficoItems.length
-        break
-      case 'Home':
-        nextIndex = 0
-        break
-      case 'End':
-        nextIndex = corpoCoreograficoItems.length - 1
-        break
-      default:
-        return
-    }
-
-    event.preventDefault()
-    setActiveItemId(corpoCoreograficoItems[nextIndex].id)
-    tabRefs.current[nextIndex]?.focus()
-  }
 
   return (
     <section
@@ -94,40 +63,15 @@ function CorpoCoreograficoSection() {
               </h2>
             </header>
 
-            <div
-              className="corpo-coreografico-section__tabs"
-              role="tablist"
-              aria-label="Acessórios para Corpo Coreográfico"
-              aria-orientation="vertical"
-            >
-              {corpoCoreograficoItems.map((item, index) => {
-                const isActive = activeItem.id === item.id
-
-                return (
-                  <button
-                    key={item.id}
-                    ref={(element) => {
-                      tabRefs.current[index] = element
-                    }}
-                    id={`corpo-coreografico-tab-${item.id}`}
-                    className={`corpo-coreografico-section__tab ${
-                      isActive
-                        ? 'corpo-coreografico-section__tab--active'
-                        : ''
-                    }`}
-                    type="button"
-                    role="tab"
-                    aria-selected={isActive}
-                    aria-controls="corpo-coreografico-viewer"
-                    tabIndex={isActive ? 0 : -1}
-                    onClick={() => setActiveItemId(item.id)}
-                    onKeyDown={(event) => handleTabKeyDown(event, index)}
-                  >
-                    {item.label}
-                  </button>
-                )
-              })}
-            </div>
+            <VerticalTabsCard
+              className="corpo-coreografico-section__tabs-card"
+              items={corpoCoreograficoItems}
+              activeItemId={activeItem.id}
+              onItemChange={setActiveItemId}
+              ariaLabel="Acessórios para Corpo Coreográfico"
+              controlsId="corpo-coreografico-viewer"
+              idPrefix="corpo-coreografico"
+            />
           </div>
 
           <div

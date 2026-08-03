@@ -1,5 +1,6 @@
-import { useRef, useState, type KeyboardEvent } from 'react'
+import { useState } from 'react'
 import Container from '../../../../components/Container/Container'
+import VerticalTabsCard from '../../../../components/VerticalTabsCard/VerticalTabsCard'
 import './AcessoriosBalizaSection.css'
 
 type AcessoriosBalizaItem = {
@@ -32,41 +33,9 @@ function AcessoriosBalizaSection() {
   const [activeItemId, setActiveItemId] = useState(
     acessoriosBalizaItems[0].id,
   )
-  const tabRefs = useRef<Array<HTMLButtonElement | null>>([])
-
   const activeItem =
     acessoriosBalizaItems.find((item) => item.id === activeItemId) ??
     acessoriosBalizaItems[0]
-
-  const handleTabKeyDown = (
-    event: KeyboardEvent<HTMLButtonElement>,
-    currentIndex: number,
-  ) => {
-    let nextIndex: number | undefined
-
-    switch (event.key) {
-      case 'ArrowDown':
-        nextIndex = (currentIndex + 1) % acessoriosBalizaItems.length
-        break
-      case 'ArrowUp':
-        nextIndex =
-          (currentIndex - 1 + acessoriosBalizaItems.length) %
-          acessoriosBalizaItems.length
-        break
-      case 'Home':
-        nextIndex = 0
-        break
-      case 'End':
-        nextIndex = acessoriosBalizaItems.length - 1
-        break
-      default:
-        return
-    }
-
-    event.preventDefault()
-    setActiveItemId(acessoriosBalizaItems[nextIndex].id)
-    tabRefs.current[nextIndex]?.focus()
-  }
 
   return (
     <section
@@ -114,40 +83,15 @@ function AcessoriosBalizaSection() {
               </h2>
             </header>
 
-            <div
-              className="acessorios-baliza-section__tabs"
-              role="tablist"
-              aria-label="Acessórios para Baliza"
-              aria-orientation="vertical"
-            >
-              {acessoriosBalizaItems.map((item, index) => {
-                const isActive = activeItem.id === item.id
-
-                return (
-                  <button
-                    key={item.id}
-                    ref={(element) => {
-                      tabRefs.current[index] = element
-                    }}
-                    id={`acessorios-baliza-tab-${item.id}`}
-                    className={`acessorios-baliza-section__tab ${
-                      isActive
-                        ? 'acessorios-baliza-section__tab--active'
-                        : ''
-                    }`}
-                    type="button"
-                    role="tab"
-                    aria-selected={isActive}
-                    aria-controls="acessorios-baliza-viewer"
-                    tabIndex={isActive ? 0 : -1}
-                    onClick={() => setActiveItemId(item.id)}
-                    onKeyDown={(event) => handleTabKeyDown(event, index)}
-                  >
-                    {item.label}
-                  </button>
-                )
-              })}
-            </div>
+            <VerticalTabsCard
+              className="acessorios-baliza-section__tabs-card"
+              items={acessoriosBalizaItems}
+              activeItemId={activeItem.id}
+              onItemChange={setActiveItemId}
+              ariaLabel="Acessórios para Baliza"
+              controlsId="acessorios-baliza-viewer"
+              idPrefix="acessorios-baliza"
+            />
           </div>
         </div>
       </Container>
