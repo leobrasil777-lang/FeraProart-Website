@@ -1,8 +1,8 @@
 .corpo-coreografico-section {
   overflow-x: clip;
   padding-block: var(--section-spacing);
-  background: var(--color-off-white);
-  color: var(--color-text);
+  background: linear-gradient(90deg, #1a1a1a 0%, #242424 50%, #373737 100%);
+  color: #ffffff;
 }
 
 .corpo-coreografico-section__layout {

@@ -1,7 +1,7 @@
 .acessorios-baliza-section {
   overflow-x: clip;
   padding-block: var(--section-spacing);
-  background: var(--color-background-dark);
+  color: #ffffff;
   color: var(--color-text-on-dark);
 }
 
