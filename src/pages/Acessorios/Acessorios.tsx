@@ -1,14 +1,32 @@
 import ctaAcessorios from '../../assets/images/acessorios/cta-acessorios.png'
+import AccessoriesShowcaseSection, {
+  type AccessoriesShowcaseItem,
+} from '../../components/AccessoriesShowcaseSection'
 import FinalItemCTA from '../../components/FinalItemCTA'
 import AcessoriosBalizaSection from './sections/AcessoriosBalizaSection'
 import AcessoriosHeroSection from './sections/AcessoriosHeroSection'
 import CorpoCoreograficoSection from './sections/CorpoCoreograficoSection'
+
+const comandanteMorItems: AccessoriesShowcaseItem[] = [
+  { id: 'bastao-mace', label: 'Bastão Mace' },
+]
 
 function Acessorios() {
   return (
     <>
       <AcessoriosHeroSection />
       <CorpoCoreograficoSection />
+      <AccessoriesShowcaseSection
+        id="acessorios-comandante-mor"
+        eyebrow="Acessórios"
+        title="Comandante"
+        highlight="Mór"
+        items={comandanteMorItems}
+        theme="dark"
+        contentSide="left"
+        ariaLabel="Acessórios para Comandante Mór"
+        initialItemId="bastao-mace"
+      />
       <AcessoriosBalizaSection />
       <FinalItemCTA
         id="cta-final-acessorios"
