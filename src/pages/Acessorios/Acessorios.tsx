@@ -3,19 +3,44 @@ import AccessoriesShowcaseSection, {
   type AccessoriesShowcaseItem,
 } from '../../components/AccessoriesShowcaseSection'
 import FinalItemCTA from '../../components/FinalItemCTA'
-import AcessoriosBalizaSection from './sections/AcessoriosBalizaSection'
 import AcessoriosHeroSection from './sections/AcessoriosHeroSection'
-import CorpoCoreograficoSection from './sections/CorpoCoreograficoSection'
+
+const corpoCoreograficoItems: AccessoriesShowcaseItem[] = [
+  { id: 'airblades', label: 'Airblades' },
+  { id: 'bastao-led', label: 'Bastão de LED' },
+  {
+    id: 'bandeiras-corpo-coreografico',
+    label: 'Bandeiras para Corpo Coreográfico',
+  },
+  { id: 'bastao-com-bandeira', label: 'Bastão com Bandeira' },
+]
 
 const comandanteMorItems: AccessoriesShowcaseItem[] = [
   { id: 'bastao-mace', label: 'Bastão Mace' },
+]
+
+const acessoriosBalizaItems: AccessoriesShowcaseItem[] = [
+  { id: 'bolas', label: 'Bolas' },
+  { id: 'fitas', label: 'Fitas' },
+  { id: 'massas', label: 'Massas' },
+  { id: 'cordas', label: 'Cordas' },
 ]
 
 function Acessorios() {
   return (
     <>
       <AcessoriosHeroSection />
-      <CorpoCoreograficoSection />
+      <AccessoriesShowcaseSection
+        id="acessorios-corpo-coreografico"
+        eyebrow="Acessórios"
+        title="Corpo"
+        highlight="Coreográfico"
+        items={corpoCoreograficoItems}
+        theme="dark"
+        contentSide="left"
+        ariaLabel="Acessórios para Corpo Coreográfico"
+        initialItemId="airblades"
+      />
       <AccessoriesShowcaseSection
         id="acessorios-comandante-mor"
         eyebrow="Acessórios"
@@ -27,7 +52,16 @@ function Acessorios() {
         ariaLabel="Acessórios para Comandante Mór"
         initialItemId="bastao-mace"
       />
-      <AcessoriosBalizaSection />
+      <AccessoriesShowcaseSection
+        id="acessorios-baliza"
+        title="Acessórios"
+        highlight="Baliza"
+        items={acessoriosBalizaItems}
+        theme="dark"
+        contentSide="right"
+        ariaLabel="Acessórios para Baliza"
+        initialItemId="bolas"
+      />
       <FinalItemCTA
         id="cta-final-acessorios"
         image={ctaAcessorios}
