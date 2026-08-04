@@ -55,57 +55,6 @@
   line-height: 0.72;
 }
 
-.corpo-coreografico-section__tabs {
-  display: flex;
-  width: 100%;
-  min-width: 0;
-  flex-direction: column;
-  gap: clamp(0.35rem, 0.8vw, 0.75rem);
-  border: 0;
-  border-radius: clamp(1.75rem, 3vw, 2.75rem);
-  padding: clamp(0.75rem, 1.4vw, 1.15rem);
-  background: #f7f5f2;
-  box-shadow: 0 18px 32px rgba(20, 16, 12, 0.11);
-}
-
-.corpo-coreografico-section__tab {
-  width: 100%;
-  min-height: clamp(3.5rem, 5vw, 4.75rem);
-  border: 0;
-  border-radius: clamp(1.25rem, 2.2vw, 2rem);
-  padding: clamp(0.9rem, 1.5vw, 1.25rem) clamp(1.25rem, 2.5vw, 2rem);
-  background: transparent;
-  box-shadow: none;
-  color: #111111;
-  font-family: var(--font-primary);
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
-  font-weight: 400;
-  letter-spacing: normal;
-  line-height: 1.3;
-  text-align: left;
-  text-transform: none;
-  white-space: nowrap;
-  transition: background-color 200ms ease, color 200ms ease;
-}
-
-.corpo-coreografico-section__tab:hover:not(.corpo-coreografico-section__tab--active) {
-  background: rgba(17, 17, 17, 0.045);
-}
-
-.corpo-coreografico-section__tab:focus-visible {
-  position: relative;
-  z-index: 1;
-  outline: 2px solid var(--color-black);
-  outline-offset: 2px;
-}
-
-.corpo-coreografico-section__tab--active {
-  border: 0;
-  background: #171717;
-  color: #f7f7f7;
-  font-weight: 700;
-}
-
 .corpo-coreografico-section__viewer {
   display: grid;
   width: 100%;
@@ -166,7 +115,7 @@
     width: 100%;
   }
 
-  .corpo-coreografico-section__tabs {
+  .corpo-coreografico-section__tabs-card {
     max-width: 36rem;
   }
 
@@ -188,22 +137,11 @@
     font-size: clamp(4rem, 20vw, 5.75rem);
   }
 
-  .corpo-coreografico-section__tabs {
+  .corpo-coreografico-section__tabs-card {
     max-width: none;
-  }
-
-  .corpo-coreografico-section__tab {
-    min-height: 3.5rem;
-    white-space: normal;
   }
 
   .corpo-coreografico-section__viewer {
     aspect-ratio: 1 / 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .corpo-coreografico-section__tab {
-    transition: none;
   }
 }
