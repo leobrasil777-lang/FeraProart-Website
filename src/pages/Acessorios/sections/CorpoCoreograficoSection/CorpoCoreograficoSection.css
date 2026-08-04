@@ -1,0 +1,274 @@
+.corpo-coreografico-section {
+  overflow-x: clip;
+  padding-block: var(--section-spacing);
+  background: linear-gradient(90deg, #1a1a1a 0%, #242424 50%, #373737 100%);
+  color: #ffffff;
+}
+
+.corpo-coreografico-section__layout {
+  display: grid;
+  grid-template-areas: 'content viewer';
+  grid-template-columns: minmax(24rem, 0.9fr) minmax(30rem, 1.2fr);
+  align-items: center;
+  gap: clamp(3rem, 7vw, 7rem);
+}
+
+.corpo-coreografico-section__content {
+  grid-area: content;
+  min-width: 0;
+}
+
+.corpo-coreografico-section__header {
+  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+}
+
+.corpo-coreografico-section__eyebrow {
+  display: block;
+  margin-bottom: clamp(0.8rem, 1.4vw, 1.15rem);
+  font-family: var(--font-primary);
+  font-size: clamp(0.7rem, 0.8vw, 0.8rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.corpo-coreografico-section__title {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 0.8;
+}
+
+.corpo-coreografico-section__title-main {
+  font-family: var(--font-primary);
+  font-size: clamp(2.75rem, 4.7vw, 4.75rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+
+.corpo-coreografico-section__title-highlight {
+  margin-top: -0.02em;
+  font-family: var(--font-highlight);
+  font-size: clamp(4.25rem, 7.5vw, 7.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.72;
+}
+
+.corpo-coreografico-section__viewer {
+  position: relative;
+  display: grid;
+  grid-area: viewer;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 1.15 / 1;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--color-black-soft);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+}
+
+.corpo-coreografico-section__placeholder {
+  display: flex;
+  max-width: 23rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  color: var(--color-text-muted);
+  font-family: var(--font-primary);
+  text-align: center;
+}
+
+.corpo-coreografico-section__placeholder-label {
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.corpo-coreografico-section__placeholder-text {
+  font-size: clamp(0.72rem, 1vw, 0.85rem);
+  line-height: 1.5;
+}
+
+.corpo-coreografico-section__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+.corpo-coreografico-section__viewer:has(.corpo-coreografico-section__gallery-controls)
+  .corpo-coreografico-section__image {
+  padding-bottom: clamp(5rem, 8vw, 6.5rem);
+}
+
+.corpo-coreografico-section__gallery-controls {
+  position: absolute;
+  right: clamp(1rem, 2vw, 1.5rem);
+  bottom: clamp(1rem, 2vw, 1.5rem);
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+.corpo-coreografico-section__gallery-button {
+  display: inline-grid;
+  width: clamp(2.75rem, 3.5vw, 3.25rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: #171717;
+  color: #ffffff;
+  font-family: var(--font-primary);
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.corpo-coreografico-section__gallery-button:focus-visible {
+  outline: 3px solid #5b9dd9;
+  outline-offset: 3px;
+}
+
+.corpo-coreografico-section__gallery-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
+.corpo-coreografico-section__gallery-counter {
+  min-width: 3.5rem;
+  color: var(--color-black-soft);
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.corpo-coreografico-section__tabs {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  flex-direction: column;
+  gap: clamp(0.35rem, 0.8vw, 0.75rem);
+  border: 0;
+  border-radius: 20px;
+  padding: clamp(0.75rem, 1.4vw, 1.15rem);
+  background: #f7f5f2;
+  box-shadow: 0 18px 32px rgba(20, 16, 12, 0.11);
+}
+
+.corpo-coreografico-section__tab {
+  width: 100%;
+  min-height: clamp(3.5rem, 5vw, 4.75rem);
+  border: 0;
+  border-radius: 10px;
+  padding: clamp(0.9rem, 1.5vw, 1.25rem) clamp(1.25rem, 2.5vw, 2rem);
+  background: transparent;
+  box-shadow: none;
+  color: #111111;
+  font-family: var(--font-primary);
+  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.3;
+  text-align: left;
+  text-transform: none;
+  white-space: nowrap;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.corpo-coreografico-section__tab:hover:not(.corpo-coreografico-section__tab--active) {
+  background: rgba(17, 17, 17, 0.045);
+}
+
+.corpo-coreografico-section__tab:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.corpo-coreografico-section__tab--active {
+  border: 0;
+  background: #171717;
+  color: #f7f7f7;
+  font-weight: 700;
+}
+
+@media (max-width: 68.75rem) {
+  .corpo-coreografico-section__layout {
+    grid-template-columns: minmax(22rem, 0.9fr) minmax(25rem, 1.1fr);
+    gap: clamp(2.25rem, 5vw, 4rem);
+  }
+}
+
+@media (max-width: 56.25rem) {
+  .corpo-coreografico-section__layout {
+    grid-template-areas:
+      'content'
+      'viewer';
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(2.5rem, 7vw, 4rem);
+  }
+
+  .corpo-coreografico-section__content {
+    width: 100%;
+  }
+
+  .corpo-coreografico-section__tabs-card {
+    max-width: 36rem;
+  }
+
+  .corpo-coreografico-section__viewer {
+    aspect-ratio: 1.25 / 1;
+  }
+}
+
+@media (max-width: 40rem) {
+  .corpo-coreografico-section {
+    padding-block: var(--section-spacing-small);
+  }
+
+  .corpo-coreografico-section__header {
+    margin-bottom: 2rem;
+  }
+
+  .corpo-coreografico-section__title-highlight {
+    font-size: clamp(4rem, 20vw, 5.75rem);
+  }
+
+  .corpo-coreografico-section__tabs-card {
+    max-width: none;
+  }
+
+  .corpo-coreografico-section__viewer {
+    aspect-ratio: 1 / 1;
+  }
+
+  .corpo-coreografico-section__gallery-controls {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .corpo-coreografico-section__gallery-button {
+    width: 2.75rem;
+  }
+
+  .corpo-coreografico-section__tab {
+    min-height: 3.5rem;
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .corpo-coreografico-section__tab {
+    transition: none;
+  }
+}
