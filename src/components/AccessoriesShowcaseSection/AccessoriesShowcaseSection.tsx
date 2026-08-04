@@ -6,8 +6,12 @@ import './AccessoriesShowcaseSection.css'
 export type AccessoriesShowcaseItem = {
   id: string
   label: string
-  image?: string
-  alt?: string
+  images?: AccessoriesShowcaseImage[]
+}
+
+export type AccessoriesShowcaseImage = {
+  src: string
+  alt: string
 }
 
 export interface AccessoriesShowcaseSectionProps {
@@ -37,14 +41,39 @@ function AccessoriesShowcaseSection({
 }: AccessoriesShowcaseSectionProps) {
   const initialId = initialItemId ?? items[0]?.id ?? ''
   const [activeItemId, setActiveItemId] = useState(initialId)
+  const [activeImageIndex, setActiveImageIndex] = useState(0)
   const activeItem =
     items.find((item) => item.id === activeItemId) ?? items[0]
+  const activeImages = activeItem?.images ?? []
+  const activeImage = activeImages[activeImageIndex]
 
   useEffect(() => {
     if (!items.some((item) => item.id === activeItemId)) {
       setActiveItemId(items[0]?.id ?? '')
+      setActiveImageIndex(0)
     }
   }, [activeItemId, items])
+
+  useEffect(() => {
+    if (activeImageIndex >= activeImages.length) {
+      setActiveImageIndex(0)
+    }
+  }, [activeImageIndex, activeImages.length])
+
+  const handleItemChange = (itemId: string) => {
+    setActiveItemId(itemId)
+    setActiveImageIndex(0)
+  }
+
+  const handlePreviousImage = () => {
+    setActiveImageIndex((currentIndex) => Math.max(0, currentIndex - 1))
+  }
+
+  const handleNextImage = () => {
+    setActiveImageIndex((currentIndex) =>
+      Math.min(activeImages.length - 1, currentIndex + 1),
+    )
+  }
 
   const sectionClassName = [
     'accessories-showcase-section',
@@ -87,7 +116,7 @@ function AccessoriesShowcaseSection({
               className="accessories-showcase-section__tabs-card"
               items={items}
               activeItemId={activeItem?.id ?? ''}
-              onItemChange={setActiveItemId}
+              onItemChange={handleItemChange}
               ariaLabel={ariaLabel}
               controlsId={`${id}-viewer`}
               idPrefix={id}
@@ -102,12 +131,46 @@ function AccessoriesShowcaseSection({
               activeItem ? `${id}-tab-${activeItem.id}` : undefined
             }
           >
-            {activeItem?.image ? (
-              <img
-                className="accessories-showcase-section__image"
-                src={activeItem.image}
-                alt={activeItem.alt ?? activeItem.label}
-              />
+            {activeImage ? (
+              <>
+                <img
+                  key={activeImage.src}
+                  className="accessories-showcase-section__image"
+                  src={activeImage.src}
+                  alt={activeImage.alt}
+                />
+                {activeImages.length > 1 && activeItem && (
+                  <div
+                    className="accessories-showcase-section__gallery-controls"
+                    aria-label={`Galeria de ${activeItem.label}`}
+                  >
+                    <button
+                      type="button"
+                      className="accessories-showcase-section__gallery-button accessories-showcase-section__gallery-button--previous"
+                      aria-label={`Imagem anterior de ${activeItem.label}`}
+                      onClick={handlePreviousImage}
+                      disabled={activeImageIndex === 0}
+                    >
+                      <span aria-hidden="true">←</span>
+                    </button>
+                    <span
+                      className="accessories-showcase-section__gallery-counter"
+                      aria-live="polite"
+                    >
+                      {activeImageIndex + 1} / {activeImages.length}
+                    </span>
+                    <button
+                      type="button"
+                      className="accessories-showcase-section__gallery-button accessories-showcase-section__gallery-button--next"
+                      aria-label={`Próxima imagem de ${activeItem.label}`}
+                      onClick={handleNextImage}
+                      disabled={activeImageIndex === activeImages.length - 1}
+                    >
+                      <span aria-hidden="true">→</span>
+                    </button>
+                  </div>
+                )}
+              </>
             ) : (
               <div className="accessories-showcase-section__placeholder">
                 <span className="accessories-showcase-section__placeholder-label">
