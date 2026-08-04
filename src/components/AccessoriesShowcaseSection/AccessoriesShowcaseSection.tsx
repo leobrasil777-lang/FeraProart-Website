@@ -133,12 +133,14 @@ function AccessoriesShowcaseSection({
           >
             {activeImage ? (
               <>
-                <img
-                  key={activeImage.src}
-                  className="accessories-showcase-section__image"
-                  src={activeImage.src}
-                  alt={activeImage.alt}
-                />
+                <div className="accessories-showcase-section__image-frame">
+                  <img
+                    key={activeImage.src}
+                    className="accessories-showcase-section__image"
+                    src={activeImage.src}
+                    alt={activeImage.alt}
+                  />
+                </div>
                 {activeImages.length > 1 && activeItem && (
                   <div
                     className="accessories-showcase-section__gallery-controls"
