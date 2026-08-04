@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: clamp(0.35rem, 0.8vw, 0.75rem);
   border: 0;
-  border-radius: clamp(1.75rem, 3vw, 2.75rem);
+  border-radius: 20px;
   padding: clamp(0.75rem, 1.4vw, 1.15rem);
   background: #f7f5f2;
   box-shadow: 0 18px 32px rgba(20, 16, 12, 0.11);
@@ -15,7 +15,7 @@
   width: 100%;
   min-height: clamp(3.5rem, 5vw, 4.75rem);
   border: 0;
-  border-radius: clamp(1.25rem, 2.2vw, 2rem);
+  border-radius: 10px;
   padding: clamp(0.9rem, 1.5vw, 1.25rem) clamp(1.25rem, 2.5vw, 2rem);
   background: transparent;
   box-shadow: none;
