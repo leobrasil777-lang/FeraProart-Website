@@ -38,7 +38,10 @@
   position: relative;
   z-index: 1;
   min-height: clamp(560px, 88vh, 700px);
-  background: transparent;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .home-hero-shell .container {
