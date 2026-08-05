@@ -24,10 +24,6 @@
   overflow: visible;
 }
 
-.corpo-coreografico-section__viewer {
-  max-width: 38rem;
-}
-
 .corpo-coreografico-section__image-frame,
 .acessorios-baliza-section__image-frame,
 .comandante-mor-section__image-frame,
@@ -50,6 +46,26 @@
   border-radius: 10px;
   object-fit: contain;
   object-position: center;
+}
+
+.corpo-coreografico-section__image {
+  transform: translateY(2.5rem) scale(0.76);
+  transform-origin: center;
+}
+
+.acessorios-baliza-section__image {
+  transform: translateY(5.5rem) scale(0.76);
+  transform-origin: center;
+}
+
+.comandante-mor-section__image {
+  transform: translateY(2.5rem) scale(0.76);
+  transform-origin: center;
+}
+
+.pavilhao-section__image {
+  transform: translateY(2.5rem) scale(0.76);
+  transform-origin: center;
 }
 
 .corpo-coreografico-section__viewer:has(.corpo-coreografico-section__gallery-controls)
@@ -94,9 +110,6 @@
     max-width: 38rem;
   }
 
-  .corpo-coreografico-section__viewer {
-    max-width: 34rem;
-  }
 }
 
 @media (max-width: 56.25rem) {
@@ -108,10 +121,6 @@
     max-width: 40rem;
     justify-self: center;
   }
-
-  .corpo-coreografico-section__viewer {
-    max-width: 34rem;
-  }
 }
 
 @media (max-width: 40rem) {
@@ -120,9 +129,5 @@
   .comandante-mor-section__viewer,
   .pavilhao-section__viewer {
     max-width: 100%;
-  }
-
-  .corpo-coreografico-section__viewer {
-    max-width: 30rem;
   }
 }
