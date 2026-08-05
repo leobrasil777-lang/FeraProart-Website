@@ -32,6 +32,9 @@ import quepesCasqueteVerdePrata2 from '../../assets/images/barretinas-e-quepes/q
 import quepesCasqueteVerdePrataFrontal from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-verde-prata-frontal.png'
 import quepesCasqueteVerdePreto from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-verde-preto.png'
 import quepesCasqueteVerdePreto2 from '../../assets/images/barretinas-e-quepes/quepes casquetes/casquete-verde-preto2.png'
+import quepeMilitarAzul3 from '../../assets/images/barretinas-e-quepes/quepes militares/quepe-militar-veludo-azul3.png'
+import quepeMilitarAzul4 from '../../assets/images/barretinas-e-quepes/quepes militares/quepe-militar-veludo-azul4.png'
+
 
 const ctaBarretinas = '/src/assets/images/barretinas-e-quepes/cta-barretinas.jpg'
 
@@ -182,6 +185,14 @@ const quepesCasquetesImages: ItemCategorySectionImage[] = [
   {
     src: quepesCasqueteVerdePreto2,
     alt: 'Quepe casquete preto com detalhes verdes em vista alternativa.',
+  },
+  {
+    src: quepeMilitarAzul3,
+    alt: 'Quepe militar azul com aba branca.',
+  },
+  {
+    src: quepeMilitarAzul4,
+    alt: 'Quepe militar azul com aba branca.',
   },
 ]
 
