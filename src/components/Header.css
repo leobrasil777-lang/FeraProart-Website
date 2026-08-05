@@ -214,3 +214,25 @@
 @media (max-width: 36rem) {
   .site-header { top: 16px; width: calc(100% - 32px); }
 }
+
+@media (max-width: 48rem) {
+  .site-header {
+    top: 18px;
+    width: calc(100% - 28px);
+  }
+
+  .site-header__nav {
+    min-height: 74px;
+    padding: 12px 16px 12px 22px;
+  }
+
+  .site-header__logo-image {
+    width: clamp(132px, 38vw, 164px);
+  }
+
+  .site-header__menu-button {
+    min-width: 50px;
+    min-height: 50px;
+    font-size: 1.85rem;
+  }
+}
