@@ -236,7 +236,6 @@ Macacão: estilo jardineira confeccionado em tecido Oxford 100% poliéster com c
         ctaHref="/licitacao"
         whatsappMessage="Olá, vim pela página de Uniformes da Fera Proart e gostaria de solicitar um orçamento."
       />
-      <UniformesStoryCTASection />
     </>
   )
 }
