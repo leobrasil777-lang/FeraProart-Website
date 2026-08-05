@@ -1,5 +1,5 @@
 .site-footer {
-  min-height: 529px;
+  min-height: 440px;
   background: var(--color-background-dark);
   color: var(--color-white);
   font-family: var(--font-primary);
@@ -8,19 +8,19 @@
 .site-footer__inner {
   width: min(100% - (var(--container-padding) * 2), 1123px);
   margin-inline: auto;
-  padding-block: 66px 38px;
+  padding-block: 52px 30px;
 }
 
 .site-footer__content {
   display: grid;
   grid-template-columns: 215px minmax(180px, 1fr) minmax(250px, 1.1fr) minmax(260px, 1fr);
-  gap: clamp(2rem, 4vw, 4.5rem);
+  gap: clamp(1.75rem, 3.5vw, 4rem);
   align-items: start;
 }
 
 .site-footer__brand {
   display: flex;
-  width: 215px;
+  width: 205px;
   align-items: center;
   justify-content: center;
   border: 0;
@@ -31,7 +31,7 @@
 .site-footer__brand-logo {
   display: block;
   width: 100%;
-  max-width: 215px;
+  max-width: 205px;
   height: auto;
   object-fit: contain;
   mix-blend-mode: screen;
@@ -46,7 +46,7 @@
 }
 
 .site-footer__title {
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   color: var(--color-white);
   font-size: 20px;
   font-weight: 900;
@@ -59,19 +59,19 @@
   margin: 0;
   padding: 0;
   flex-direction: column;
-  gap: 9px;
+  gap: 7px;
   list-style: none;
 }
 
 .site-footer__link {
   display: inline-flex;
-  min-height: 28px;
+  min-height: 26px;
   align-items: center;
   color: var(--color-white);
 }
 
 .site-footer__contact-list {
-  gap: 12px;
+  gap: 10px;
 }
 
 .site-footer__contact-link {
@@ -101,7 +101,7 @@
 }
 
 .site-footer__social {
-  margin-top: 32px;
+  margin-top: 26px;
 }
 
 .site-footer__social-list {
@@ -129,13 +129,13 @@
 
 .site-footer__divider {
   height: 1px;
-  margin-top: 58px;
+  margin-top: 44px;
   background: rgba(255, 255, 255, 0.7);
 }
 
 .site-footer__copyright {
   max-width: 499px;
-  margin: 47px auto 0;
+  margin: 34px auto 0;
   color: var(--color-white);
   font-size: 20px;
   font-weight: 500;
@@ -162,7 +162,7 @@
   }
 
   .site-footer__inner {
-    padding-block: 48px 34px;
+    padding-block: 40px 28px;
   }
 
   .site-footer__content {
@@ -177,17 +177,17 @@
 @media (max-width: 640px) {
   .site-footer__inner {
     width: min(100% - 32px, 1123px);
-    padding-block: 40px 30px;
+    padding-block: 34px 26px;
   }
 
   .site-footer__content {
     grid-template-columns: 1fr;
-    gap: 2.25rem;
+    gap: 1.9rem;
   }
 
   .site-footer__brand {
-    width: 154px;
-    min-height: 168px;
+    width: 146px;
+    min-height: 158px;
   }
 
   .site-footer__group,
@@ -197,16 +197,16 @@
   }
 
   .site-footer__title {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     font-size: 18px;
     line-height: 22px;
   }
 
   .site-footer__divider {
-    margin-top: 38px;
+    margin-top: 32px;
   }
 
   .site-footer__copyright {
-    margin-top: 30px;
+    margin-top: 24px;
   }
 }
