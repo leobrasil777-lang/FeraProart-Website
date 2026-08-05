@@ -24,13 +24,13 @@ const timelineMilestones: TimelineMilestone[] = [
     position: 'bottom',
   },
   {
-    label: '1900',
-    description: 'Formação: Trompete na faculdade de Marcelo Tuinambá.',
+    label: '1980',
+    description: 'Formação: Trompete na faculdade de Marcelo Tupinambá.',
     position: 'top',
     isWide: true,
   },
   {
-    label: '1900',
+    label: '1982',
     description: 'Regência de importantes corporações',
     position: 'bottom',
   },
