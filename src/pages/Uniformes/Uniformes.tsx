@@ -75,6 +75,7 @@ import uniformeLinhaDeFrenteVinho4 from '../../assets/images/uniformes/linha-de-
 import uniformeLinhaDeFrenteVinho5 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-vinho5.png'
 import uniformeLinhaDeFrenteVinho6 from '../../assets/images/uniformes/linha-de-frente/uniforme-linhadefrente-vinho6.png'
 import UniformesHeroSection from './sections/UniformesHeroSection/UniformesHeroSection'
+import UniformesStoryCTASection from './sections/UniformesStoryCTASection/UniformesStoryCTASection'
 
 const ctaUniformes = '/src/assets/images/uniformes/cta-uniformes.jpg'
 
@@ -235,6 +236,7 @@ Macacão: estilo jardineira confeccionado em tecido Oxford 100% poliéster com c
         ctaHref="/licitacao"
         whatsappMessage="Olá, vim pela página de Uniformes da Fera Proart e gostaria de solicitar um orçamento."
       />
+      <UniformesStoryCTASection />
     </>
   )
 }
