@@ -3,7 +3,12 @@ import ItemCategorySection, { type ItemCategorySectionImage } from '../../compon
 import uniformeBaliza1 from '../../assets/images/uniformes/baliza/uniforme-baliza1.png'
 import uniformeBaliza2 from '../../assets/images/uniformes/baliza/uniforme-baliza2.png'
 import uniformeBaliza3 from '../../assets/images/uniformes/baliza/uniforme-baliza3.png'
-import uniformeBaliza4 from '../../assets/images/uniformes/baliza/uniforme-baliza4.png'
+import uniformeBalizaVinho from '../../assets/images/uniformes/baliza/uniforme-baliza-vinho.png'
+import uniformeBalizaVermelho from '../../assets/images/uniformes/baliza/uniforme-baliza-vermelho.png'
+import uniformeBalizaPreto from '../../assets/images/uniformes/baliza/uniforme-baliza-preto.png'
+import uniformeBalizaPreto2 from '../../assets/images/uniformes/baliza/uniforme-baliza-preto2.png'
+import uniformeBalizaAzulMarinho from '../../assets/images/uniformes/baliza/uniforme-baliza-azulmarinho.png'
+import uniformeBalizaAzulMarinho2 from '../../assets/images/uniformes/baliza/uniforme-baliza-azulmarinho2.png'
 import uniformeCorpoAzul1 from '../../assets/images/uniformes/corpo-coreografico/uniforme-corpo-azul1.png'
 import uniformeCorpoAzul2 from '../../assets/images/uniformes/corpo-coreografico/uniforme-corpo-azul2.png'
 import uniformeCorpoAzul3 from '../../assets/images/uniformes/corpo-coreografico/uniforme-corpo-azul3.png'
@@ -159,7 +164,12 @@ const uniformesBalizaImages: ItemCategorySectionImage[] = [
   { src: uniformeBaliza1, alt: 'Uniforme de Baliza azul-marinho e turquesa com calça, em vista frontal.' },
   { src: uniformeBaliza2, alt: 'Uniforme de Baliza azul-marinho e turquesa com saia, em vista frontal.' },
   { src: uniformeBaliza3, alt: 'Uniforme de Baliza azul-marinho e turquesa com saia de duas camadas, em vista frontal.' },
-  { src: uniformeBaliza4, alt: 'Uniforme de Baliza azul-marinho e turquesa de mangas longas, em vista frontal.' },
+  { src: uniformeBalizaVinho, alt: 'Uniforme de Baliza vinho de mangas longas, em vista frontal.' },
+  { src: uniformeBalizaVermelho, alt: 'Uniforme de Baliza vermelho de mangas longas, em vista frontal.' },
+  { src: uniformeBalizaPreto, alt: 'Uniforme de Baliza preto de mangas longas, em vista frontal.' },
+  { src: uniformeBalizaPreto2, alt: 'Uniforme de Baliza preto de mangas longas, em vista frontal.' },
+  { src: uniformeBalizaAzulMarinho, alt: 'Uniforme de Baliza azul-marinho em vista frontal.' },
+  { src: uniformeBalizaAzulMarinho2, alt: 'Uniforme de Baliza azul-marinho em vista frontal.' },
 ]
 
 function Uniformes() {
