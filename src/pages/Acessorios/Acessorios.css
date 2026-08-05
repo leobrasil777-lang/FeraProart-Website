@@ -123,6 +123,6 @@
   }
 
   .corpo-coreografico-section__viewer {
-    width: 92%;
+    max-width: 30rem;
   }
 }
