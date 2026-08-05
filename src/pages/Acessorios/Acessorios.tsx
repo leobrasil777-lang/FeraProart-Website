@@ -5,6 +5,7 @@ import AcessoriosHeroSection from './sections/AcessoriosHeroSection'
 import ComandanteMorSection from './sections/ComandanteMorSection'
 import CorpoCoreograficoSection from './sections/CorpoCoreograficoSection'
 import PavilhaoSection from './sections/PavilhaoSection'
+import './Acessorios.css'
 
 function Acessorios() {
   return (
