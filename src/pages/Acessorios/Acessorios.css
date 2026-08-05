@@ -1,0 +1,112 @@
+/* Shared image-viewer sizing for the Accessories product sections. */
+.corpo-coreografico-section__layout,
+.comandante-mor-section__layout {
+  grid-template-columns: minmax(22rem, 1fr) minmax(0, clamp(38rem, 40vw, 44rem));
+  gap: clamp(2.5rem, 5vw, 5rem);
+}
+
+.acessorios-baliza-section__layout,
+.pavilhao-section__layout {
+  grid-template-columns: minmax(0, clamp(38rem, 40vw, 44rem)) minmax(22rem, 1fr);
+  gap: clamp(2.5rem, 5vw, 5rem);
+}
+
+.corpo-coreografico-section__viewer,
+.acessorios-baliza-section__viewer,
+.comandante-mor-section__viewer,
+.pavilhao-section__viewer {
+  width: 100%;
+  max-width: 44rem;
+  justify-self: center;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.corpo-coreografico-section__image-frame,
+.acessorios-baliza-section__image-frame,
+.comandante-mor-section__image-frame,
+.pavilhao-section__image-frame {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  min-width: 0;
+}
+
+.corpo-coreografico-section__image,
+.acessorios-baliza-section__image,
+.comandante-mor-section__image,
+.pavilhao-section__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border-radius: 10px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.corpo-coreografico-section__viewer:has(.corpo-coreografico-section__gallery-controls)
+  .corpo-coreografico-section__image,
+.acessorios-baliza-section__viewer:has(.acessorios-baliza-section__gallery-controls)
+  .acessorios-baliza-section__image,
+.comandante-mor-section__viewer:has(.comandante-mor-section__gallery-controls)
+  .comandante-mor-section__image,
+.pavilhao-section__viewer:has(.pavilhao-section__gallery-controls)
+  .pavilhao-section__image {
+  padding-bottom: 0;
+}
+
+.corpo-coreografico-section__gallery-controls,
+.acessorios-baliza-section__gallery-controls,
+.comandante-mor-section__gallery-controls,
+.pavilhao-section__gallery-controls {
+  z-index: 2;
+  right: clamp(0.75rem, 1.5vw, 1.25rem);
+  bottom: clamp(0.75rem, 1.5vw, 1.25rem);
+  padding: 0.35rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 68.75rem) {
+  .corpo-coreografico-section__layout,
+  .comandante-mor-section__layout {
+    grid-template-columns: minmax(20rem, 1fr) minmax(0, 38rem);
+  }
+
+  .acessorios-baliza-section__layout,
+  .pavilhao-section__layout {
+    grid-template-columns: minmax(0, 38rem) minmax(20rem, 1fr);
+  }
+
+  .corpo-coreografico-section__viewer,
+  .acessorios-baliza-section__viewer,
+  .comandante-mor-section__viewer,
+  .pavilhao-section__viewer {
+    max-width: 38rem;
+  }
+}
+
+@media (max-width: 56.25rem) {
+  .corpo-coreografico-section__viewer,
+  .acessorios-baliza-section__viewer,
+  .comandante-mor-section__viewer,
+  .pavilhao-section__viewer {
+    width: 100%;
+    max-width: 40rem;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 40rem) {
+  .corpo-coreografico-section__viewer,
+  .acessorios-baliza-section__viewer,
+  .comandante-mor-section__viewer,
+  .pavilhao-section__viewer {
+    max-width: 100%;
+  }
+}
