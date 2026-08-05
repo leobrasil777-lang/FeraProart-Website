@@ -75,20 +75,20 @@ function HomeBiddingSection() {
           </button>
         </div>
 
-        <div className="home-bidding-section__image-wrap">
-          <img
-            className="home-bidding-section__image"
-            src={biddingImage}
-            alt="Martelo de juiz representando processos de licitação"
-          />
-        </div>
-
         <div className="home-bidding-section__benefits" aria-label="Benefícios para licitações">
           {benefits.map((benefit) => (
             <BiddingBenefit key={benefit.title} {...benefit} />
           ))}
         </div>
       </Container>
+
+      <div className="home-bidding-section__image-wrap">
+        <img
+          className="home-bidding-section__image"
+          src={biddingImage}
+          alt="Martelo de juiz representando processos de licitação"
+        />
+      </div>
     </section>
   )
 }
