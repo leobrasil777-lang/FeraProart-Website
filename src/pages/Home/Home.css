@@ -299,6 +299,25 @@
   }
 }
 
+@media (max-width: 68rem) {
+  .home-hero-shell .hero-section {
+    min-height: clamp(520px, 82vh, 640px);
+  }
+
+  .home-hero-shell .container {
+    width: min(100% - 64px, 1172px);
+  }
+
+  .home-hero-shell .hero-section__content {
+    padding-top: clamp(130px, 16vh, 160px);
+    padding-bottom: 54px;
+  }
+
+  .home-hero-shell .hero-section__title {
+    font-size: clamp(46px, 6.5vw, 58px);
+  }
+}
+
 @media (max-width: 36rem) {
   .home-section-heading-row {
     display: block;
@@ -316,34 +335,7 @@
   .home-institution-list span {
     text-align: left;
   }
-}
 
-@media (max-width: 68rem) {
-  .home-hero-shell .hero-section {
-    min-height: min(680px, 100vh);
-  }
-
-  .home-hero-shell .container {
-    width: min(100% - 64px, 1172px);
-  }
-
-  .home-hero-shell .hero-section__content {
-    padding-top: 190px;
-    padding-bottom: 78px;
-  }
-
-  .home-hero-shell .hero-section__title {
-    font-size: clamp(46px, 6.5vw, 58px);
-  }
-}
-
-@media (max-width: 44rem) {
-  .home-hero-shell .hero-section__title-line--primary {
-    gap: 0.2em;
-  }
-}
-
-@media (max-width: 36rem) {
   .home-hero-shell {
     background:
       linear-gradient(90deg, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.88) 58%, rgba(0, 0, 0, 0.36) 100%),
@@ -365,7 +357,7 @@
   }
 
   .home-hero-shell .hero-section__title {
-    font-size: clamp(38px, 11vw, 44px);
+    font-size: clamp(2.35rem, 11vw, 3.1rem);
   }
 
   .home-hero-shell .hero-section__identity {
@@ -385,14 +377,10 @@
   }
 }
 
-@media (max-width: 68rem) {
-  .home-hero-shell .hero-section { min-height: clamp(520px, 82vh, 640px); }
-  .home-hero-shell .hero-section__content { padding-top: clamp(130px, 16vh, 160px); padding-bottom: 54px; }
-}
-
-@media (max-width: 36rem) {
-  .home-hero-shell .container { width: calc(100% - 40px); }
-  .home-hero-shell .hero-section__title { font-size: clamp(2.35rem, 11vw, 3.1rem); }
+@media (max-width: 44rem) {
+  .home-hero-shell .hero-section__title-line--primary {
+    gap: 0.2em;
+  }
 }
 
 @media (max-width: 48rem) {
@@ -419,8 +407,8 @@
   .home-hero-shell .hero-section {
     min-height: 100svh;
     align-items: flex-end;
-    background-size: auto 100%;
-    background-position: 58% center;
+    background-size: cover;
+    background-position: 54% center;
   }
 
   .home-hero-shell .container {
