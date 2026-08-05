@@ -20,6 +20,13 @@ import botaCanoLongoBranca2 from '../../assets/images/calcados/bota-canolongo-br
 import botaCanoLongoPreta3 from '../../assets/images/calcados/bota-canolongo-preta3.png'
 import botaCanoLongoBranca3 from '../../assets/images/calcados/bota-canolongo-branca3.png'
 import botaCanoLongoPreta4 from '../../assets/images/calcados/bota-canolongo-preta4.png'
+import botaCanoCurtoPreta3 from '../../assets/images/calcados/bota-canocurto-preto3.png'
+import botaCanoCurtoPreta4 from '../../assets/images/calcados/bota-canocurto-preto4.png'
+import botaCanoCurtoPreta5 from '../../assets/images/calcados/bota-canocurto-preto5.png'
+import botaCanoCurtoBranca2 from '../../assets/images/calcados/bota-canocurto-branca2.png'
+
+
+
 
 const ctaCalcados = '/src/assets/images/calcados/cta-calcados.jpg'
 
@@ -58,6 +65,22 @@ const botasCanoCurtoImages: ItemCategorySectionImage[] = [
   {
     src: botaCanoCurtoBranca,
     alt: 'Par de botas brancas de cano curto com cadarço.',
+  },
+  {  
+    src: botaCanoCurtoBranca2,
+    alt: 'Par de botas brancas de cano curto sem cadarço.',
+  },
+  {
+      src: botaCanoCurtoPreta3,
+    alt: 'Par de botas pretas de cano curto sem cadarço.',
+   },
+  {
+    src: botaCanoCurtoPreta4,
+    alt: 'Par de botas pretas de cano curto sem cadarço.',
+  },
+  {
+    src: botaCanoCurtoPreta5,
+    alt: 'Par de botas pretas de cano curto sem cadarço.',
   },
 ]
 
