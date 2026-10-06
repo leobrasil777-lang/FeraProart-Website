@@ -1,0 +1,63 @@
+:root {
+  /* Cores da marca */
+  --color-black: #0a0a0a;
+  --color-black-soft: #151515;
+  --color-off-white: #f5f2ea;
+  --color-white: #ffffff;
+  --color-silver: #b9bcc1;
+  --color-silver-light: #d9dbde;
+  --color-silver-dark: #777b82;
+
+  /* Cores semânticas */
+  --color-text: #202020;
+  --color-text-muted: #65676b;
+  --color-text-light: var(--color-off-white);
+  --color-text-on-dark: var(--color-off-white);
+  --color-background: var(--color-off-white);
+  --color-background-light: var(--color-off-white);
+  --color-background-dark: var(--color-black);
+  --color-border: rgba(119, 123, 130, 0.35);
+  --color-border-light: rgba(245, 242, 234, 0.22);
+
+  /* Tipografia */
+  --font-primary: 'Epilogue Variable', sans-serif;
+  --font-highlight: 'Italianno', cursive;
+
+  /* Layout */
+  --container-max-width: 1200px;
+  --container-padding: clamp(1rem, 4vw, 2.5rem);
+  --section-spacing: clamp(4rem, 9vw, 8rem);
+  --section-spacing-small: clamp(2.5rem, 6vw, 5rem);
+
+  /* Espaçamentos internos */
+  --spacing-2xs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* Bordas */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-pill: 999px;
+
+  /* Sombras */
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.14);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.2);
+
+  /* Movimento */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* Camadas */
+  --z-index-base: 1;
+  --z-index-header: 100;
+  --z-index-overlay: 200;
+  --z-index-modal: 300;
+}

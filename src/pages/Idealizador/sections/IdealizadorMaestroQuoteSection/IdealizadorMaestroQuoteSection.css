@@ -1,0 +1,216 @@
+.idealizador-maestro-quote {
+  overflow: hidden;
+  background: #000000;
+  color: var(--color-white);
+  padding-block: clamp(58px, 7.4vw, 98px) clamp(40px, 5vw, 67px);
+}
+
+.idealizador-maestro-quote__container {
+  width: min(calc(100% - clamp(48px, 11.8vw, 156px)), 1180px);
+}
+
+.idealizador-maestro-quote__banner {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  aspect-ratio: 2.93 / 1;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: clamp(6px, 0.7vw, 10px);
+  background: #000000;
+}
+
+.idealizador-maestro-quote__image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.idealizador-maestro-quote__content {
+  display: grid;
+  height: 100%;
+  align-items: center;
+  padding: clamp(22px, 3.5vw, 42px) clamp(26px, 4vw, 52px) clamp(24px, 3.9vw, 45px) clamp(22px, 3.3vw, 32px);
+  grid-template-columns: minmax(0, 39%) minmax(0, 38%) minmax(128px, 23%);
+}
+
+.idealizador-maestro-quote__title {
+  max-width: 380px;
+  margin: 0;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: clamp(30px, 3.45vw, 46px);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 0.94;
+  transform: translateY(-90px);
+
+}
+
+.idealizador-maestro-quote__title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.idealizador-maestro-quote__title-highlight {
+  display: inline-block;
+  color: var(--color-white);
+  font-family: var(--font-highlight);
+  font-size: clamp(48px, 8vw, 74px);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0;
+  transform: translateY(-0.02em);
+  vertical-align: baseline;
+}
+
+.idealizador-maestro-quote__quote {
+  min-width: 0;
+  margin: 0;
+  grid-column: 3;
+  color: var(--color-white);
+  transform: translateX(100px);
+}
+
+.idealizador-maestro-quote__quote-mark {
+  display: block;
+  height: clamp(44px, 5.6vw, 70px);
+  color: var(--color-white);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(72px, 6.4vw, 84px);
+  font-weight: 700;
+  line-height: 0.72;
+}
+
+.idealizador-maestro-quote__quote-text {
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(17px, 2.05vw, 27px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.86;
+}
+
+.idealizador-maestro-quote__quote-footer {
+  margin-top: clamp(10px, 1.35vw, 17px);
+}
+
+.idealizador-maestro-quote__cite {
+  color: var(--color-white);
+  font-family: var(--font-highlight);
+  font-size: clamp(38px, 4.1vw, 54px);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.75;
+}
+
+@media (max-width: 61.9375rem) {
+  .idealizador-maestro-quote {
+    padding-block: clamp(44px, 7vw, 64px) clamp(38px, 6vw, 54px);
+  }
+
+  .idealizador-maestro-quote__container {
+    width: min(calc(100% - 48px), 860px);
+  }
+
+  .idealizador-maestro-quote__content {
+    padding: clamp(18px, 3.2vw, 28px) clamp(18px, 3.4vw, 30px);
+    grid-template-columns: minmax(0, 40%) minmax(0, 38%) minmax(104px, 22%);
+  }
+
+  .idealizador-maestro-quote__title {
+    font-size: clamp(27px, 3.8vw, 32px);
+  }
+
+  .idealizador-maestro-quote__title-highlight {
+    font-size: clamp(38px, 5.8vw, 48px);
+  }
+
+  .idealizador-maestro-quote__quote-mark {
+    height: clamp(34px, 5vw, 46px);
+    font-size: clamp(56px, 7.8vw, 72px);
+  }
+
+  .idealizador-maestro-quote__quote-text {
+    font-size: clamp(16px, 2.2vw, 19px);
+  }
+
+  .idealizador-maestro-quote__cite {
+    font-size: clamp(32px, 5.3vw, 42px);
+  }
+}
+
+@media (max-width: 42.5rem) {
+  .idealizador-maestro-quote {
+    padding-block: 42px 48px;
+  }
+
+  .idealizador-maestro-quote__container {
+    width: calc(100% - 44px);
+  }
+
+  .idealizador-maestro-quote__banner {
+    min-height: clamp(500px, 140vw, 620px);
+    aspect-ratio: auto;
+  }
+
+  .idealizador-maestro-quote__image {
+    object-position: center;
+  }
+
+  .idealizador-maestro-quote__content {
+    display: flex;
+    height: auto;
+    min-height: clamp(500px, 140vw, 620px);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: clamp(28px, 8vw, 40px);
+    padding: 24px clamp(20px, 6vw, 24px) 28px;
+  }
+
+  .idealizador-maestro-quote__title {
+    max-width: min(100%, 320px);
+    font-size: clamp(31px, 9.2vw, 40px);
+    line-height: 0.98;
+    transform: none;
+  }
+
+  .idealizador-maestro-quote__title-line {
+    white-space: normal;
+  }
+
+  .idealizador-maestro-quote__title-highlight {
+    font-size: clamp(46px, 14vw, 58px);
+    transform: none;
+  }
+
+  .idealizador-maestro-quote__quote {
+    align-self: flex-start;
+    max-width: 150px;
+    text-align: left;
+    transform: none;
+  }
+
+  .idealizador-maestro-quote__quote-mark {
+    height: 42px;
+    font-size: 68px;
+  }
+
+  .idealizador-maestro-quote__quote-text {
+    font-size: clamp(18px, 5.4vw, 23px);
+    line-height: 0.9;
+  }
+
+  .idealizador-maestro-quote__quote-footer {
+    margin-top: 12px;
+  }
+
+  .idealizador-maestro-quote__cite {
+    font-size: clamp(38px, 12vw, 50px);
+  }
+}

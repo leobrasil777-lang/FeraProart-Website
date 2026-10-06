@@ -1,0 +1,225 @@
+.licitacao-process-comparison {
+  background: #000000;
+  color: var(--color-white);
+  padding-block: clamp(46px, 5.2vw, 72px) clamp(54px, 6.7vw, 92px);
+}
+
+.licitacao-process-comparison__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.licitacao-process-comparison__title {
+  display: flex;
+  width: min(100%, 530px);
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: clamp(56px, 3.55vw, 56px);
+  font-weight: 520;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+  text-align: center;
+}
+
+.licitacao-process-comparison__title span {
+  display: block;
+}
+
+.licitacao-process-comparison__title-highlight {
+  margin-top: -0.12em;
+  font-size: clamp(88px, 9.25vw, 96px);
+  -webkit-text-stroke: 7px #000000;
+  paint-order: stroke fill;
+  letter-spacing: 0;
+  line-height: 0.82;
+}
+
+.licitacao-process-comparison__panels {
+  display: flex;
+  width: min(100%, 980px);
+  flex-direction: column;
+  gap: clamp(24px, 3vw, 38px);
+  margin-top: clamp(48px, 4.4vw, 62px);
+}
+
+.licitacao-process-comparison__panel {
+  overflow: visible;
+  width: 100%;
+  border: 1px solid #b7b7b7;
+  border-radius: 6px;
+  background: #000000;
+}
+
+.licitacao-process-comparison__panel-header {
+  display: flex;
+  min-height: clamp(52px, 4.4vw, 62px);
+  align-items: center;
+  border-bottom: 1px solid #b7b7b7;
+  padding: clamp(14px, 1.15vw, 18px) clamp(20px, 2.6vw, 30px);
+  background: linear-gradient(180deg, #343434 0%, #2f2f2f 100%);
+}
+
+.licitacao-process-comparison__panel-header h3 {
+  margin: 0;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: clamp(18px, 1.95vw, 26px);
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  line-height: 1.05;
+}
+
+.licitacao-process-comparison__panel-body {
+  background: #000000;
+}
+
+.licitacao-process-comparison__panel-body--image {
+  padding: 0;
+}
+
+.licitacao-process-comparison__figure {
+  margin: 0;
+}
+
+.licitacao-process-comparison__figure img {
+  width: 100%;
+  height: clamp(240px, 25vw, 340px);
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+.licitacao-process-comparison__panel-body--steps {
+  padding: clamp(28px, 3.4vw, 42px) clamp(20px, 4.2vw, 54px) clamp(38px, 4.6vw, 56px);
+}
+
+.licitacao-process-comparison__flow-wrapper {
+  width: min(100%, 980px);
+  margin-inline: auto;
+}
+
+.licitacao-process-comparison__flow-image {
+  width: 100%;
+  height: auto;
+}
+
+.licitacao-process-comparison__steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: clamp(18px, 3vw, 42px);
+  margin: clamp(7px, 0.8vw, 10px) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.licitacao-process-comparison__step {
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  text-align: center;
+}
+
+.licitacao-process-comparison__step h4 {
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(16px, 1.35vw, 17px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.18;
+}
+
+.licitacao-process-comparison__step p {
+  max-width: 245px;
+  margin: 8px auto 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: clamp(14px, 1.15vw, 15px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.42;
+}
+
+@media (min-width: 62rem) {
+  .licitacao-process-comparison__panels {
+    gap: 0;
+    overflow: visible;
+  }
+
+  .licitacao-process-comparison__panel--bureaucratic {
+    position: sticky;
+    top: 100px;
+    z-index: 1;
+  }
+
+  .licitacao-process-comparison__panel--fera {
+    position: relative;
+    z-index: 2;
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 56rem) {
+  .licitacao-process-comparison {
+    padding-block: clamp(44px, 7vw, 62px) clamp(50px, 8vw, 76px);
+  }
+
+  .licitacao-process-comparison__panels {
+    gap: clamp(24px, 4.8vw, 36px);
+  }
+
+  .licitacao-process-comparison__panel-body--steps {
+    padding-inline: clamp(18px, 4vw, 34px);
+  }
+}
+
+@media (max-width: 47.5rem) {
+  .licitacao-process-comparison__steps {
+    grid-template-columns: 1fr;
+    row-gap: 22px;
+    margin-top: 0;
+  }
+
+  .licitacao-process-comparison__flow-image {
+    display: none;
+  }
+
+  .licitacao-process-comparison__step p {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 43.75rem) {
+  .licitacao-process-comparison {
+    padding-block: clamp(40px, 10vw, 56px) clamp(44px, 12vw, 64px);
+  }
+
+  .licitacao-process-comparison__title {
+    width: min(100%, 390px);
+    font-size: clamp(36px, 10.6vw, 44px);
+    line-height: 0.92;
+  }
+
+  .licitacao-process-comparison__title-highlight {
+    font-size: clamp(52px, 15.6vw, 66px);
+  }
+
+  .licitacao-process-comparison__panels {
+    margin-top: clamp(46px, 13vw, 64px);
+  }
+
+  .licitacao-process-comparison__panel-header {
+    min-height: clamp(62px, 18vw, 74px);
+    padding: clamp(16px, 4.8vw, 20px) clamp(20px, 6vw, 24px);
+  }
+
+  .licitacao-process-comparison__panel-header h3 {
+    font-size: clamp(20px, 6.2vw, 24px);
+  }
+
+  .licitacao-process-comparison__panel-body--steps {
+    padding: 26px 20px 34px;
+  }
+}
+

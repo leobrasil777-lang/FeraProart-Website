@@ -1,0 +1,190 @@
+.acessorios-hero {
+  overflow-x: clip;
+  background: #f5f4f2;
+  color: #1b1b1b;
+}
+
+.acessorios-hero__main {
+  position: relative;
+  display: flex;
+  min-height: clamp(620px, 86vh, 712px);
+  overflow: hidden;
+  isolation: isolate;
+  background: #f5f4f2;
+}
+
+.acessorios-hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 62% center;
+}
+
+.acessorios-hero__container {
+  display: flex;
+  min-height: inherit;
+  align-items: flex-end;
+  padding-block: clamp(9.5rem, 17vw, 12rem) clamp(4rem, 7vw, 5.5rem);
+}
+
+.acessorios-hero__content {
+  display: flex;
+  width: min(42%, 28rem);
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.acessorios-hero__title {
+  margin: 0;
+  color: #1b1b1b;
+  font-family: var(--font-primary);
+  font-size: clamp(3.25rem, 4.75vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.acessorios-hero__description {
+  max-width: 20rem;
+  margin: clamp(0.75rem, 1.2vw, 1rem) 0 0;
+  color: #1b1b1b;
+  font-family: var(--font-primary);
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  line-height: 1.25;
+}
+
+.acessorios-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.875rem, 1.8vw, 1.5rem);
+  margin-top: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+.acessorios-hero__button.cta-button {
+  min-height: 3rem;
+  border-radius: 0.5rem;
+  padding: 0.75rem clamp(1.35rem, 2vw, 1.75rem);
+  font-size: clamp(0.875rem, 1.05vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  transform: none;
+}
+
+.acessorios-hero__button--primary.cta-button {
+  min-width: 12.8125rem;
+  background: #171717;
+  color: #ffffff;
+}
+
+.acessorios-hero__button--secondary.cta-button {
+  min-width: 9.5625rem;
+  background: #d1d1d1;
+  color: #1b1b1b;
+}
+
+.acessorios-hero__button--primary.cta-button:hover { background: #2a2a2a; }
+.acessorios-hero__button--secondary.cta-button:hover { background: #c3c3c3; }
+
+.acessorios-hero__button.cta-button:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 4px;
+}
+
+.acessorios-hero__signature {
+  padding: clamp(0.42rem, 0.78vw, 0.55rem) var(--container-padding) clamp(0.32rem, 0.58vw, 0.43rem);
+  background: #171717;
+  color: #ffffff;
+  font-family: var(--font-primary);
+  font-size: clamp(0.95rem, 1.35vw, 1.2rem);
+  font-weight: 700;
+  letter-spacing: clamp(0.14em, 1.75vw, 0.36em);
+  line-height: 1.15;
+  text-align: center;
+}
+
+@media (max-width: 74.9375rem) {
+  .acessorios-hero__main { min-height: clamp(560px, 68vw, 680px); }
+  .acessorios-hero__image { object-position: 65% center; }
+  .acessorios-hero__content { width: min(43%, 24rem); }
+}
+
+@media (max-width: 56.1875rem) {
+  .acessorios-hero__main { min-height: clamp(540px, 76vw, 640px); }
+  .acessorios-hero__image { object-position: 69% center; }
+  .acessorios-hero__container { padding-bottom: clamp(3rem, 6vw, 4rem); }
+  .acessorios-hero__content { width: min(48%, 21rem); }
+  .acessorios-hero__title { font-size: clamp(2.6rem, 6vw, 3.25rem); }
+  .acessorios-hero__description { max-width: 18rem; font-size: 1rem; }
+}
+
+@media (max-width: 43.6875rem) {
+  .acessorios-hero__main {
+    min-height: clamp(620px, 92svh, 720px);
+    align-items: flex-end;
+  }
+
+  .acessorios-hero__main::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08) 0%,
+      rgba(0, 0, 0, 0.16) 36%,
+      rgba(0, 0, 0, 0.68) 66%,
+      rgba(0, 0, 0, 0.98) 100%
+    );
+    content: '';
+    pointer-events: none;
+  }
+
+  .acessorios-hero__image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 72% center;
+  }
+
+  .container.acessorios-hero__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: calc(100% - 48px);
+    min-height: inherit;
+    align-items: flex-end;
+    padding-top: 140px;
+    padding-bottom: clamp(40px, 10vw, 56px);
+  }
+
+  .acessorios-hero__content {
+    width: 100%;
+    min-width: 0;
+    max-width: 23rem;
+  }
+
+  .acessorios-hero__title,
+  .acessorios-hero__description {
+    color: #ffffff;
+  }
+
+  .acessorios-hero__description {
+    line-height: 1.4;
+  }
+
+  .acessorios-hero__title { font-size: clamp(2.5rem, 12vw, 3.25rem); }
+  .acessorios-hero__actions { width: 100%; max-width: 22rem; flex-direction: column; gap: 0.75rem; }
+  .acessorios-hero__button.cta-button { width: 100%; }
+  .acessorios-hero__signature {
+    padding-block: 0.625rem 0.5rem;
+    font-size: clamp(0.72rem, 3.25vw, 0.92rem);
+    letter-spacing: clamp(0.05em, 2vw, 0.13em);
+  }
+}

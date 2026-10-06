@@ -1,0 +1,240 @@
+.calcados-hero {
+  overflow-x: clip;
+  background: #f5f4f2;
+  color: #1b1b1b;
+}
+
+.calcados-hero__main {
+  position: relative;
+  display: flex;
+  isolation: isolate;
+  min-height: clamp(620px, 86vh, 712px);
+  overflow: hidden;
+  background: #f5f4f2;
+}
+
+.calcados-hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 61% 62%;
+}
+
+.calcados-hero__container {
+  display: flex;
+  width: min(
+    calc(100% - clamp(48px, 8vw, 120px)),
+    1172px
+  );
+  min-height: inherit;
+  margin-inline: auto;
+  align-items: center;
+  padding-top: clamp(150px, 17vh, 190px);
+  padding-bottom: clamp(64px, 8vh, 86px);
+}
+
+.calcados-hero__content {
+  width: min(48%, 28rem);
+  animation: heroContentEnter 3000ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.calcados-hero__title {
+  margin: 0;
+  color: #1b1b1b;
+  font-family: var(--font-primary);
+  font-size: clamp(3.25rem, 4.45vw, 4.95rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.calcados-hero__description {
+  max-width: 19.5rem;
+  margin: clamp(0.375rem, 0.8vw, 0.625rem) 0 0;
+  color: #1b1b1b;
+  font-family: var(--font-primary);
+  font-size: clamp(1.0625rem, 1.25vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.calcados-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 2vw, 1.625rem);
+  margin-top: clamp(1.625rem, 2.5vw, 2rem);
+}
+
+.calcados-hero__button.cta-button {
+  min-height: 2.5rem;
+  border-radius: 0.5rem;
+  padding: 0.72rem clamp(1.5rem, 2vw, 1.75rem) 0.62rem;
+  font-size: clamp(0.9375rem, 1.1vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  transform: none;
+}
+
+.calcados-hero__button--primary.cta-button {
+  min-width: 12.8125rem;
+  background: #171717;
+  color: #ffffff;
+}
+
+.calcados-hero__button--secondary.cta-button {
+  min-width: 9.5625rem;
+  background: #dddddd;
+  color: #1b1b1b;
+}
+
+.calcados-hero__button--primary.cta-button:hover {
+  background: #2a2a2a;
+}
+
+.calcados-hero__button--secondary.cta-button:hover {
+  background: #cfcfcf;
+}
+
+.calcados-hero__button.cta-button:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 4px;
+}
+
+.calcados-hero__tagline {
+  margin: 0;
+  padding: clamp(0.42rem, 0.8vw, 0.55rem) var(--container-padding) clamp(0.32rem, 0.6vw, 0.45rem);
+  background: #171717;
+  color: #ffffff;
+  font-family: var(--font-primary);
+  font-size: clamp(0.95rem, 1.42vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: clamp(0.14em, 1.9vw, 0.38em);
+  line-height: 1.15;
+  text-align: center;
+}
+
+@media (max-width: 74.9375rem) {
+  .calcados-hero__main {
+    min-height: clamp(520px, 62vw, 680px);
+  }
+
+  .calcados-hero__image {
+    object-position: 64% center;
+  }
+
+  .calcados-hero__container {
+    padding-block-end: clamp(4rem, 8vw, 7rem);
+  }
+
+  .calcados-hero__content {
+    width: min(42%, 22rem);
+  }
+}
+
+@media (max-width: 56.1875rem) {
+  .calcados-hero__main {
+    min-height: clamp(500px, 68vw, 620px);
+  }
+
+  .calcados-hero__image {
+    object-position: 69% center;
+  }
+
+  .calcados-hero__content {
+    width: min(45%, 20rem);
+  }
+
+  .calcados-hero__title {
+    font-size: clamp(2.6rem, 6vw, 3.2rem);
+  }
+
+  .calcados-hero__description {
+    font-size: 1rem;
+  }
+
+  .calcados-hero__actions {
+    gap: 0.875rem;
+  }
+}
+
+@media (max-width: 43.6875rem) {
+  .calcados-hero__main {
+    min-height: clamp(620px, 92svh, 720px);
+    align-items: flex-end;
+  }
+
+  .calcados-hero__main::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08) 0%,
+      rgba(0, 0, 0, 0.16) 36%,
+      rgba(0, 0, 0, 0.68) 66%,
+      rgba(0, 0, 0, 0.98) 100%
+    );
+    content: '';
+    pointer-events: none;
+  }
+
+  .calcados-hero__image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 84% center;
+  }
+
+  .container.calcados-hero__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: calc(100% - 48px);
+    min-height: inherit;
+    align-items: flex-end;
+    padding-top: 140px;
+    padding-bottom: clamp(40px, 10vw, 56px);
+  }
+
+  .calcados-hero__content {
+    width: 100%;
+    min-width: 0;
+    max-width: 24rem;
+  }
+
+  .calcados-hero__title {
+    color: #ffffff;
+    font-size: clamp(2.5rem, 12vw, 3rem);
+  }
+
+  .calcados-hero__description {
+    max-width: 18.5rem;
+    color: #ffffff;
+    line-height: 1.4;
+  }
+
+  .calcados-hero__actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 22rem;
+  }
+
+  .calcados-hero__button.cta-button {
+    width: 100%;
+    min-height: 2.75rem;
+  }
+
+  .calcados-hero__tagline {
+    padding-block: 0.625rem 0.5rem;
+    font-size: clamp(0.78rem, 3.7vw, 0.95rem);
+    letter-spacing: clamp(0.08em, 2.6vw, 0.16em);
+  }
+}

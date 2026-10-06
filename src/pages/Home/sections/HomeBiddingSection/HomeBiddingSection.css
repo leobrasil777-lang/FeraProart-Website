@@ -1,0 +1,363 @@
+.home-bidding-section {
+  position: relative;
+  min-height: clamp(540px, 52vw, 650px);
+  background: linear-gradient(90deg, #1a1a1a 0%, #2f2f2f 52%, #383838 100%);
+  color: var(--color-white);
+  isolation: isolate;
+}
+
+.home-bidding-section::before {
+  content: none;
+}
+
+.home-bidding-section__container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: clamp(540px, 52vw, 650px);
+  grid-template-areas:
+    "copy"
+    "benefits";
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-content: center;
+  row-gap: clamp(22px, 3vw, 40px);
+  padding-top: clamp(50px, 5.3vw, 72px);
+  padding-bottom: clamp(42px, 4.2vw, 56px);
+}
+
+.home-bidding-section__copy {
+  position: relative;
+  z-index: 2;
+  grid-area: copy;
+  align-self: center;
+}
+
+.home-bidding-section__title {
+  display: flex;
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  flex-direction: row;
+  align-items: baseline;
+  gap: clamp(12px, 1.2vw, 20px);
+  margin: 0 0 16px;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+.home-bidding-section__title-line {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(12px, 1.45vw, 21px);
+  white-space: nowrap;
+}
+
+.home-bidding-section__title-main {
+  font-size: clamp(44px, 4.25vw, 60px);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+
+.home-bidding-section__title-script {
+  display: inline-block;
+  margin-left: 1px;
+  font-size: clamp(74px, 8vw, 88px);
+  line-height: 0.62;
+  transform: translateY(-0.001em);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.18);
+}
+
+.home-bidding-section__description {
+  display: grid;
+  max-width: 505px;
+  gap: 15px;
+  margin-bottom: clamp(22px, 2.6vw, 30px);
+  color: var(--color-white);
+  font-size: clamp(15px, 1.28vw, 18px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.16;
+}
+
+.home-bidding-section__description p {
+  margin: 0;
+}
+
+.home-bidding-section__cta {
+  display: inline-flex;
+  width: min(100%, 405px);
+  min-height: clamp(56px, 4.7vw, 62px);
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  border-radius: 10px;
+  margin-bottom: clamp(24px, 3.4vw, 36px);
+  padding: 13px 26px;
+  background: linear-gradient(180deg, rgb(16, 191, 0) 0%, rgb(18, 141, 7) 50%, rgb(16, 191, 0) 100%);
+  color: var(--color-white);
+  font-size: clamp(17px, 1.45vw, 21px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  transition: filter var(--transition-base), transform var(--transition-base);
+}
+
+.home-bidding-section__cta:hover {
+  opacity: 1;
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+}
+
+.home-bidding-section__cta:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: 4px;
+}
+
+.home-bidding-section__cta img {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+}
+
+.home-bidding-section__image-wrap {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  bottom: clamp(42px, 4.2vw, 56px);
+  width: min(58vw, clamp(560px, 58vw, 920px));
+  max-width: 58vw;
+  height: calc(100% - clamp(50px, 5.3vw, 72px) - clamp(42px, 4.2vw, 56px));
+  max-height: 100%;
+  margin: 0;
+  pointer-events: none;
+}
+
+.home-bidding-section__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right center;
+}
+
+.home-bidding-section__benefits {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  min-height: 0;
+  grid-area: benefits;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-self: end;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  padding: clamp(18px, 2vw, 24px) clamp(20px, 2.5vw, 28px);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.bidding-benefit {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-width: 0;
+}
+
+.bidding-benefit__image {
+  width: clamp(56px, 4.9vw, 66px);
+  height: clamp(56px, 4.9vw, 66px);
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.bidding-benefit__content h3 {
+  margin: 0 0 7px;
+  color: var(--color-white);
+  font-size: clamp(16px, 1.35vw, 19px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.bidding-benefit__content p {
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(14px, 1.12vw, 16px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+}
+
+@media (max-width: 75rem) {
+  .home-bidding-section,
+  .home-bidding-section__container {
+    min-height: clamp(520px, 54vw, 610px);
+  }
+
+  .home-bidding-section__container {
+    row-gap: clamp(20px, 2.6vw, 34px);
+    padding-top: 52px;
+    padding-bottom: 42px;
+  }
+
+  .home-bidding-section__title-main {
+    font-size: clamp(46px, 4.7vw, 58px);
+  }
+
+  .home-bidding-section__title-script {
+    font-size: clamp(68px, 6.8vw, 84px);
+  }
+
+  .home-bidding-section__description {
+    margin-bottom: 24px;
+  }
+
+  .home-bidding-section__cta {
+    min-height: 60px;
+    margin-bottom: 34px;
+  }
+
+  .home-bidding-section__image-wrap {
+    bottom: 42px;
+    width: min(57vw, clamp(500px, 57vw, 720px));
+    max-width: 57vw;
+    height: calc(100% - 94px);
+  }
+
+  .home-bidding-section__benefits {
+    padding: 20px 24px;
+  }
+
+  .bidding-benefit__image {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+@media (max-width: 58rem) {
+  .home-bidding-section,
+  .home-bidding-section__container {
+    min-height: 0;
+  }
+
+  .home-bidding-section {
+    padding-block: 58px;
+  }
+
+  .home-bidding-section__container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .home-bidding-section__image-wrap {
+    display: none;
+  }
+
+  .home-bidding-section__title {
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    white-space: normal;
+  }
+
+  .home-bidding-section__description {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .home-bidding-section__cta {
+    margin-bottom: 6px;
+  }
+
+  .home-bidding-section__benefits {
+    order: 3;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    align-self: stretch;
+    margin-bottom: 0;
+    padding: 26px 26px;
+  }
+}
+
+@media (max-width: 36rem) {
+  .home-bidding-section {
+    padding-block: 46px;
+  }
+
+  .home-bidding-section__container {
+    width: calc(100% - 40px);
+  }
+
+  .home-bidding-section__title {
+    display: block;
+  }
+
+  .home-bidding-section__title-line {
+    display: flex;
+    gap: 15px;
+  }
+
+  .home-bidding-section__title-main {
+    font-size: clamp(38px, 11vw, 44px);
+    letter-spacing: -0.045em;
+  }
+
+  .home-bidding-section__title-script {
+    font-size: clamp(54px, 16vw, 66px);
+    transform: translateY(0.06em);
+  }
+
+  .home-bidding-section__description {
+    gap: 15px;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .home-bidding-section__cta {
+    width: 100%;
+    min-height: 56px;
+    gap: 15px;
+    padding-inline: 18px;
+    font-size: clamp(16px, 4.5vw, 18px);
+  }
+
+  .home-bidding-section__cta img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .home-bidding-section__image-wrap {
+    height: clamp(240px, 66vw, 330px);
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .home-bidding-section__benefits {
+    gap: 20px;
+    padding: 24px 20px;
+  }
+
+  .bidding-benefit {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .bidding-benefit__image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .bidding-benefit__content h3 {
+    font-size: 19px;
+  }
+
+  .bidding-benefit__content p {
+    font-size: 16px;
+  }
+}

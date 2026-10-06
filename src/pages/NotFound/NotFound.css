@@ -1,0 +1,138 @@
+.not-found-page {
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  overflow: hidden;
+  padding: clamp(2rem, 6vh, 4.5rem) clamp(1rem, 4vw, 3rem);
+  background:
+    radial-gradient(circle at 50% 34%, rgba(255, 255, 255, 0.045), transparent 35%),
+    linear-gradient(135deg, #050505 0%, #111111 48%, #050505 100%);
+  color: #ffffff;
+  font-family: 'Epilogue', sans-serif;
+  text-align: center;
+}
+
+.not-found-page__content {
+  display: flex;
+  width: min(100%, 64rem);
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-found-page__logo {
+  width: clamp(9rem, 15vw, 13rem);
+  margin-bottom: clamp(3.5rem, 8vh, 6.5rem);
+}
+
+.not-found-page__title {
+  margin: 0;
+  background: linear-gradient(125deg, #7f7f7f 6%, #eeeeee 47%, #a1a1a1 94%);
+  background-clip: text;
+  color: #d8d8d8;
+  font-family: 'Epilogue', sans-serif;
+  font-size: clamp(7rem, 19vw, 16rem);
+  font-weight: 600;
+  letter-spacing: -0.085em;
+  line-height: 0.78;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.not-found-page__status {
+  margin: clamp(2.5rem, 5vh, 3.75rem) 0 0;
+  color: #ffffff;
+  font-family: 'Epilogue', sans-serif;
+  font-size: clamp(0.78rem, 1.4vw, 1.08rem);
+  font-weight: 600;
+  letter-spacing: clamp(0.14em, 0.65vw, 0.34em);
+  line-height: 1.35;
+}
+
+.not-found-page__description {
+  max-width: 42rem;
+  margin: clamp(1.25rem, 2.5vh, 1.75rem) 0 0;
+  color: #bdbdbd;
+  font-family: 'Epilogue', sans-serif;
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.not-found-page__link {
+  display: inline-flex;
+  min-height: 3.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: clamp(2.25rem, 4.5vh, 3.5rem);
+  border: 1px solid #8f8f8f;
+  border-radius: 10px;
+  padding: 0.9rem clamp(1.5rem, 4vw, 2.5rem);
+  color: #ffffff;
+  font-family: 'Epilogue', sans-serif;
+  font-size: clamp(0.76rem, 1.2vw, 0.92rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  transition:
+    border-color 250ms ease,
+    background-color 250ms ease,
+    color 250ms ease,
+    opacity 250ms ease;
+}
+
+.not-found-page__link:hover {
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #050505;
+  opacity: 1;
+}
+
+.not-found-page__link:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+.not-found-page__arrow {
+  font-size: 1.25em;
+  line-height: 1;
+}
+
+@media (max-width: 40rem) {
+  .not-found-page {
+    padding-inline: 1rem;
+  }
+
+  .not-found-page__logo {
+    width: clamp(8rem, 42vw, 10rem);
+    margin-bottom: clamp(3rem, 9vh, 4.5rem);
+  }
+
+  .not-found-page__title {
+    font-size: clamp(5rem, 27vw, 7rem);
+    letter-spacing: -0.075em;
+  }
+
+  .not-found-page__status {
+    max-width: 22rem;
+  }
+
+  .not-found-page__description {
+    max-width: 30rem;
+    padding-inline: 0.25rem;
+  }
+
+  .not-found-page__description-break {
+    display: none;
+  }
+
+  .not-found-page__link {
+    width: min(100%, 20rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .not-found-page__link {
+    transition: none;
+  }
+}

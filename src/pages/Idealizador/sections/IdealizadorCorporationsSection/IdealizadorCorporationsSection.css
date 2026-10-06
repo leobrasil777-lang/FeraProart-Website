@@ -1,0 +1,254 @@
+.idealizador-corporations {
+  background: #000000;
+  color: var(--color-white);
+  padding-block: clamp(28px, 2.5vw, 34px) clamp(64px, 5.8vw, 76px);
+}
+
+.idealizador-corporations__container {
+  width: min(calc(100% - 156px), 1166px);
+}
+
+.idealizador-corporations__title {
+  margin: 0;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.idealizador-corporations__title-line {
+  display: block;
+}
+
+.idealizador-corporations__title-presence {
+  display: inline-block;
+  font-size: clamp(78px, 8.2vw, 92px);
+  letter-spacing: 0;
+  line-height: 0.85;
+  vertical-align: baseline;
+}
+
+.idealizador-corporations__title-em {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.idealizador-corporations__title-em,
+.idealizador-corporations__title-line--corporations {
+  font-size: clamp(44px, 3.8vw, 50px);
+  line-height: 1;
+}
+
+.idealizador-corporations__description {
+  max-width: 620px;
+  margin: 14px 0 0;
+  color: var(--color-white);
+  font-size: clamp(20px, 1.65vw, 22px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.idealizador-corporations__list {
+  display: grid;
+  margin: 30px 0 0;
+  padding: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px clamp(58px, 5.4vw, 72px);
+  list-style: none;
+}
+
+.idealizador-corporations__item {
+  opacity: 0;
+  transform: translateX(-34px);
+  transition:
+    opacity 720ms ease,
+    transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.idealizador-corporations__item--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.idealizador-corporations__item--delay-0.idealizador-corporations__item--visible {
+  transition-delay: 0ms;
+}
+
+.idealizador-corporations__item--delay-1.idealizador-corporations__item--visible {
+  transition-delay: 140ms;
+}
+
+.idealizador-corporations__item--delay-2.idealizador-corporations__item--visible {
+  transition-delay: 280ms;
+}
+
+.idealizador-corporations__card {
+  display: flex;
+  min-height: 112px;
+  align-items: center;
+  border: 2px solid var(--color-white);
+  border-radius: 9px;
+  padding: 18px 20px;
+  background: #1e1e1e;
+  color: var(--color-white);
+}
+
+.idealizador-corporations__number {
+  flex: 0 0 38px;
+  color: var(--color-white);
+  font-size: clamp(64px, 5.3vw, 74px);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.idealizador-corporations__divider {
+  width: 2px;
+  height: 58px;
+  flex: 0 0 2px;
+  margin-inline: 18px;
+  background: var(--color-white);
+}
+
+.idealizador-corporations__name {
+  min-width: 0;
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(18px, 1.55vw, 21px);
+  font-weight: 700;
+  line-height: 1.06;
+}
+
+@media (max-width: 74.9375rem) {
+  .idealizador-corporations {
+    padding-block: 32px 66px;
+  }
+
+  .idealizador-corporations__container {
+    width: min(calc(100% - 80px), 1080px);
+  }
+
+  .idealizador-corporations__title-presence {
+    font-size: clamp(62px, 6.4vw, 72px);
+  }
+
+  .idealizador-corporations__title-em,
+  .idealizador-corporations__title-line--corporations {
+    font-size: clamp(40px, 4.5vw, 48px);
+  }
+
+  .idealizador-corporations__description {
+    max-width: 580px;
+    font-size: clamp(18px, 1.9vw, 20px);
+    line-height: 1.12;
+  }
+
+  .idealizador-corporations__list {
+    margin-top: 28px;
+    gap: 20px clamp(24px, 3.4vw, 38px);
+  }
+
+  .idealizador-corporations__card {
+    min-height: 106px;
+    padding: 17px 18px;
+  }
+
+  .idealizador-corporations__number {
+    flex-basis: 34px;
+    font-size: clamp(58px, 6vw, 68px);
+  }
+
+  .idealizador-corporations__divider {
+    height: 54px;
+    margin-inline: 15px;
+  }
+
+  .idealizador-corporations__name {
+    font-size: clamp(16px, 1.75vw, 19px);
+  }
+}
+
+@media (max-width: 61.9375rem) {
+  .idealizador-corporations {
+    padding-block: 38px 70px;
+  }
+
+  .idealizador-corporations__container {
+    width: min(calc(100% - 64px), 820px);
+  }
+
+  .idealizador-corporations__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .idealizador-corporations__card {
+    width: 100%;
+    min-height: 116px;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .idealizador-corporations {
+    padding-block: 42px 68px;
+  }
+
+  .idealizador-corporations__container {
+    width: calc(100% - 44px);
+  }
+
+  .idealizador-corporations__title {
+    line-height: 1;
+  }
+
+  .idealizador-corporations__title-presence {
+    font-size: clamp(56px, 17vw, 66px);
+  }
+
+  .idealizador-corporations__title-em,
+  .idealizador-corporations__title-line--corporations {
+    font-size: clamp(34px, 10vw, 40px);
+  }
+
+  .idealizador-corporations__description {
+    margin-top: 18px;
+    font-size: clamp(16px, 4.6vw, 18px);
+    line-height: 1.18;
+  }
+
+  .idealizador-corporations__list {
+    max-width: 400px;
+    margin: 34px auto 0;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .idealizador-corporations__card {
+    min-height: 112px;
+    padding: 18px 20px;
+  }
+
+  .idealizador-corporations__number {
+    flex-basis: 32px;
+    font-size: clamp(52px, 15vw, 64px);
+  }
+
+  .idealizador-corporations__divider {
+    height: 54px;
+    margin-inline: 16px;
+  }
+
+  .idealizador-corporations__name {
+    font-size: clamp(16px, 4.7vw, 18px);
+    line-height: 1.08;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .idealizador-corporations__item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

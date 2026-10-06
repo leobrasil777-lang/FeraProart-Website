@@ -1,0 +1,314 @@
+.licitacao-agility {
+  background: #000000;
+  color: var(--color-white);
+  padding-block: clamp(42px, 5.1vw, 72px) clamp(32px, 4.7vw, 56px);
+}
+
+.licitacao-agility__container {
+  display: flex;
+  justify-content: center;
+}
+
+.licitacao-agility__grid {
+  display: grid;
+  width: min(100%, 970px);
+  grid-template-columns: minmax(0, 1fr) minmax(330px, 0.98fr);
+  align-items: start;
+  gap: clamp(24px, 3vw, 36px);
+}
+
+.licitacao-agility__content {
+  max-width: 430px;
+  opacity: 0;
+  transform: translateX(-56px);
+  transition:
+    opacity 1200ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.licitacao-agility--visible .licitacao-agility__content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.licitacao-agility__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 clamp(9px, 1.05vw, 14px);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  line-height: 0.82;
+}
+
+.licitacao-agility__title-main {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+  font-size: clamp(56px, 5.2vw, 64px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+
+.licitacao-agility__title-highlight {
+  position: relative;
+  z-index: 2;
+  margin-top: -0.24em;
+  color: var(--color-white);
+  -webkit-text-stroke: 7px #000000;
+  paint-order: stroke fill;
+  font-size: clamp(84px, 9.9vw, 134px);
+  letter-spacing: 0;
+  line-height: 0.76;
+}
+
+.licitacao-agility__subtitle,
+.licitacao-agility__benefits-title {
+  margin: 0;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: clamp(19px, 1.7vw, 21px);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.licitacao-agility__subtitle span,
+.licitacao-agility__benefits-title span {
+  display: block;
+}
+
+.licitacao-agility__description {
+  max-width: 415px;
+  margin: clamp(16px, 1.6vw, 20px) 0 clamp(34px, 4.3vw, 50px);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: clamp(18px, 1.62vw, 20px);
+  font-weight: 400;
+  letter-spacing: -0.043em;
+  line-height: 1.15;
+}
+
+.licitacao-agility__benefits {
+  max-width: 395px;
+  margin: clamp(18px, 2.3vw, 28px) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.licitacao-agility__benefit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 57px;
+  padding-block: 10px;
+  color: var(--color-white);
+  border-bottom: 1px solid #969696;
+  font-family: var(--font-primary);
+  font-size: clamp(18px, 1.55vw, 20px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.licitacao-agility__benefit:last-child {
+  border-bottom: 0;
+}
+
+.licitacao-agility__benefit-icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  object-fit: contain;
+}
+
+.licitacao-agility__media {
+  width: min(100%, 390px);
+  margin: 18px 0 0;
+  justify-self: end;
+  opacity: 0;
+  transform: translateX(56px);
+  transition:
+    opacity 1200ms cubic-bezier(0.22, 1, 0.36, 1) 100ms,
+    transform 1200ms cubic-bezier(0.22, 1, 0.36, 1) 100ms;
+}
+
+.licitacao-agility--visible .licitacao-agility__media {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.licitacao-agility__image {
+  width: 100%;
+  height: min(580px, 68vw);
+  max-height: 580px;
+  border: 1px solid #c5c5c5;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-height: 760px) and (min-width: 56.01rem) {
+  .licitacao-agility {
+    padding-block: 30px 26px;
+  }
+
+  .licitacao-agility__grid {
+    width: min(100%, 915px);
+    gap: 28px;
+  }
+
+  .licitacao-agility__title {
+    margin-bottom: 8px;
+  }
+
+  .licitacao-agility__title-main {
+    font-size: clamp(54px, 4.7vw, 62px);
+  }
+
+  .licitacao-agility__title-highlight {
+    font-size: clamp(62px, 5.25vw, 68px);
+  }
+
+  .licitacao-agility__subtitle,
+  .licitacao-agility__benefits-title {
+    font-size: 19px;
+  }
+
+  .licitacao-agility__description {
+    margin-block: 14px 31px;
+    font-size: 18px;
+    line-height: 1.12;
+  }
+
+  .licitacao-agility__benefits {
+    margin-top: 16px;
+  }
+
+  .licitacao-agility__benefit {
+    min-height: 53px;
+    padding-block: 8px;
+    font-size: 18px;
+  }
+
+  .licitacao-agility__media {
+    width: min(100%, 360px);
+    margin-top: 14px;
+  }
+
+  .licitacao-agility__image {
+    height: 535px;
+    max-height: 535px;
+  }
+}
+
+@media (max-width: 56rem) {
+  .licitacao-agility {
+    padding-block: clamp(46px, 8vw, 68px);
+  }
+
+  .licitacao-agility__grid {
+    width: min(100%, 720px);
+    grid-template-columns: 1fr;
+    gap: clamp(34px, 6vw, 48px);
+  }
+
+  .licitacao-agility__content {
+    max-width: 600px;
+  }
+
+  .licitacao-agility__description,
+  .licitacao-agility__benefits {
+    max-width: 520px;
+  }
+
+  .licitacao-agility__media {
+    width: min(100%, 470px);
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .licitacao-agility__image {
+    height: auto;
+    max-height: 620px;
+  }
+}
+
+@media (max-width: 43.75rem) {
+  .licitacao-agility {
+    padding-block: clamp(40px, 10vw, 56px);
+  }
+
+  .licitacao-agility__content,
+  .licitacao-agility__media {
+    transform: none;
+  }
+
+  .licitacao-agility__title-main {
+    font-size: clamp(46px, 13.8vw, 54px);
+  }
+
+  .licitacao-agility__title-highlight {
+    margin-top: 0;
+    -webkit-text-stroke-width: 5px;
+    font-size: clamp(78px, 22vw, 104px);
+  }
+
+  .licitacao-agility__subtitle,
+  .licitacao-agility__benefits-title {
+    font-size: clamp(17px, 5vw, 20px);
+  }
+
+  .licitacao-agility__description {
+    margin-block: 16px 30px;
+    font-size: clamp(16px, 4.45vw, 18px);
+    line-height: 1.2;
+  }
+
+  .licitacao-agility__benefit {
+    min-height: 52px;
+    font-size: clamp(16px, 4.45vw, 18px);
+    line-height: 1.18;
+  }
+
+  .licitacao-agility__benefit-icon {
+    width: 23px;
+    height: 23px;
+    flex-basis: 23px;
+  }
+
+  .licitacao-agility__media {
+    width: min(100%, 440px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .licitacao-agility__content,
+  .licitacao-agility__media {
+    opacity: 1;
+    transform: translateX(0);
+    transition: none;
+  }
+}
+
+/* Ajuste do destaque "máxima:" */
+
+.licitacao-agility__title-highlight {
+  font-size: clamp(82px, 7.8vw, 108px);
+}
+
+/* Tablet / telas médias */
+@media (max-width: 56rem) {
+  .licitacao-agility__title-highlight {
+    font-size: clamp(82px, 14vw, 116px);
+    -webkit-text-stroke-width: 6px;
+  }
+}
+
+/* Notebook com pouca altura */
+@media (max-height: 760px) and (min-width: 56.01rem) {
+  .licitacao-agility__title-highlight {
+    font-size: clamp(84px, 9.9vw, 134px);  ;
+  }
+}

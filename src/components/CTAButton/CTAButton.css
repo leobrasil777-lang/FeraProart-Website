@@ -1,0 +1,70 @@
+.cta-button {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.cta-button:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.cta-button--primary {
+  background-color: var(--color-black);
+  color: var(--color-text-light);
+}
+
+.cta-button--primary:hover {
+  background-color: var(--color-black-soft);
+}
+
+.cta-button--secondary {
+  background-color: var(--color-silver-light);
+  color: var(--color-black);
+}
+
+.cta-button--secondary:hover {
+  background-color: var(--color-silver);
+}
+
+.cta-button--outline {
+  border-color: currentColor;
+  background-color: transparent;
+  color: inherit;
+}
+
+.cta-button--outline:hover {
+  background-color: var(--color-black);
+  color: var(--color-text-light);
+}
+
+.section-dark .cta-button--primary {
+  background-color: var(--color-off-white);
+  color: var(--color-black);
+}
+
+.cta-button__label {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  color: inherit !important;
+  font-size: inherit;
+  line-height: 1;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-indent: 0;
+  -webkit-text-fill-color: currentColor;
+}
